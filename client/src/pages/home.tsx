@@ -4,6 +4,8 @@ import { HeroSection } from '@/components/hero-section';
 import { FileUpload } from '@/components/file-upload';
 import { StatsDashboard } from '@/components/stats-dashboard';
 import { LiveDemo } from '@/components/live-demo';
+import { SocialProof } from '@/components/social-proof';
+import { SEOContent } from '@/components/seo-content';
 import { HowItWorks } from '@/components/how-it-works';
 import { Features } from '@/components/features';
 import { BlogSection } from '@/components/blog-section';
@@ -46,13 +48,15 @@ export default function Home() {
       <main>
         <HeroSection />
         <LiveDemo />
+        <Features />
+        <SEOContent />
+        <SocialProof />
         <FileUpload onFileUploaded={handleFileUploaded} />
         
         {/* Show results dashboard after file upload */}
         {hasUploadedFile && <StatsDashboard />}
         
         <HowItWorks />
-        <Features />
         <BlogSection />
         <FAQSection />
         

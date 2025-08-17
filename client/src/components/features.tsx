@@ -76,8 +76,26 @@ export function Features() {
     <section className="py-20 bg-gray-50" id="features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Tool?</h2>
-          <p className="text-lg text-gray-600">The safest and most comprehensive Instagram analytics tool</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Instagram Unfollowers & Followers Analytics</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Comprehensive Instagram insights with advanced analytics tools for tracking your followers
+          </p>
+          
+          {/* SEO Bullet Points */}
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <div className="text-left bg-gradient-to-br from-purple-50 to-pink-50 p-4 rounded-lg">
+              <div className="font-semibold text-purple-700 text-sm">✓ Track who unfollowed you on Instagram</div>
+            </div>
+            <div className="text-left bg-gradient-to-br from-blue-50 to-purple-50 p-4 rounded-lg">
+              <div className="font-semibold text-blue-700 text-sm">✓ Discover new followers instantly</div>
+            </div>
+            <div className="text-left bg-gradient-to-br from-green-50 to-blue-50 p-4 rounded-lg">
+              <div className="font-semibold text-green-700 text-sm">✓ Analyze mutual followers and lost connections</div>
+            </div>
+            <div className="text-left bg-gradient-to-br from-orange-50 to-pink-50 p-4 rounded-lg">
+              <div className="font-semibold text-orange-700 text-sm">✓ Engagement & activity insights</div>
+            </div>
+          </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

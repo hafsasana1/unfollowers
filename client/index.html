@@ -29,14 +29,84 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Instagram Followers Tracker",
-        "description": "Free and secure tool to track Instagram followers and unfollowers",
+        "description": "Free and secure tool to track Instagram followers and unfollowers without login",
         "applicationCategory": "SocialMediaApplication",
         "operatingSystem": "Web Browser",
+        "url": "https://unfollowers-tracker.replit.app",
         "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
-        }
+        },
+        "featureList": [
+            "Track who unfollowed you on Instagram",
+            "Discover new followers instantly",
+            "Analyze mutual followers and lost connections",
+            "Engagement & activity insights",
+            "No login required",
+            "100% secure and private"
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How can I track Unfollowers on Instagram?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To track unfollowers on Instagram, request your data from Instagram (Settings → Privacy and Security → Download Your Information), download the ZIP file when ready, and upload it to our secure tool. We'll analyze your followers and following lists to show you exactly who doesn't follow you back."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is UnfollowersTracker secure to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our tool is completely secure. We don't require your Instagram login credentials, and your data is processed locally in your browser. We never store your personal information or Instagram data on our servers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need to provide my Instagram password?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, you never need to provide your Instagram password or login credentials. Our tool works by analyzing the data that Instagram provides to you directly through their official data download feature."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- HowTo Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Track Instagram Unfollowers",
+        "description": "Step-by-step guide to track who unfollowed you on Instagram safely and securely",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Request Instagram Data",
+                "text": "Go to Instagram Settings → Privacy and Security → Download Your Information and request your data in JSON format."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Download ZIP File",
+                "text": "Wait for Instagram to prepare your data (usually 24-48 hours) then download the ZIP file when ready."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Upload and Analyze",
+                "text": "Upload your ZIP file to our secure tool for instant analysis of your followers, unfollowers, and insights."
+            }
+        ]
     }
     </script>
     

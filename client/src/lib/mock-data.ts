@@ -56,21 +56,21 @@ export const mockAnalysisResults: AnalysisResults = {
 export const mockBlogArticles: BlogArticle[] = [
   {
     id: '1',
-    title: 'How to See Pending Follow Requests on Instagram',
-    excerpt: 'Find out how to see your Pending Follow Requests on Instagram and know who hasn\'t accepted your follow requests yet.',
-    publishDate: '2025-08-03',
-    category: 'Instagram',
+    title: 'Best Instagram Unfollowers Apps in 2025',
+    excerpt: 'Complete guide to the top Instagram unfollower tracking apps. Compare features, safety, and pricing to find the perfect tool.',
+    publishDate: '2025-08-17',
+    category: 'Instagram Tools',
     imageUrl: 'https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250',
-    slug: 'how-to-see-pending-follow-requests-on-instagram',
+    slug: 'best-instagram-unfollowers-apps-2025',
   },
   {
     id: '2',
-    title: 'Best apps to download Instagram videos in HD',
-    excerpt: 'Discover the 3 best apps to download Instagram videos for free and in high-quality',
-    publishDate: '2024-10-02',
-    category: 'Instagram',
+    title: 'How to See Who Unfollowed You Without an App',
+    excerpt: 'Learn manual methods to track Instagram unfollowers without downloading apps. Step-by-step guide for 2025.',
+    publishDate: '2025-08-15',
+    category: 'Instagram Tips',
     imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250',
-    slug: 'best-apps-to-download-instagram-videos-in-hd',
+    slug: 'how-to-see-who-unfollowed-you-without-app',
   },
   {
     id: '3',
@@ -108,5 +108,20 @@ export const mockFAQs: FAQItem[] = [
     id: '5',
     question: 'Is there a cost to find out who has unfollowed me?',
     answer: 'No, our Instagram unfollowers tracker is completely free to use. There are no hidden costs, premium features, or subscription fees. All features are available at no charge, and we\'re committed to keeping it free forever.',
+  },
+  {
+    id: '6',
+    question: 'How often can I check unfollowers on Instagram?',
+    answer: 'You can check your Instagram unfollowers as often as you like. However, Instagram only allows you to request your data export once every few days. For the most accurate results, we recommend checking monthly or when you notice significant changes in your follower count.',
+  },
+  {
+    id: '7',
+    question: 'Does Instagram notify someone if I use an unfollower tracker?',
+    answer: 'No, Instagram does not notify other users when you use our unfollower tracker. Our tool analyzes your own data that Instagram provides to you, so it\'s completely private and undetectable to other users. Your account activity remains normal.',
+  },
+  {
+    id: '8',
+    question: 'Can I track unfollowers for multiple accounts?',
+    answer: 'Yes, if you manage multiple Instagram accounts, you can track unfollowers for each one separately. Simply download the data export for each account and analyze them individually using our tool. Each analysis is independent and secure.',
   },
 ];

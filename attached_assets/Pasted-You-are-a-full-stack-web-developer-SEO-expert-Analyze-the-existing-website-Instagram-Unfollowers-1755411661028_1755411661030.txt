@@ -1,0 +1,140 @@
+You are a full-stack web developer + SEO expert.
+Analyze the existing website (Instagram Unfollowers Tracker) and make the following SEO & UI/UX improvements across navigation, homepage, footer, and structured data:
+
+🔹 Navigation Updates
+
+Replace current nav items: How It Works | Features | About | Contact | FAQ
+
+Use keyword-rich SEO navigation:
+
+Home
+
+Unfollowers Tracker
+
+Followers Insights
+
+Instagram Analytics
+
+Tools (dropdown → profile viewer, engagement calculator, hashtag tracker)
+
+Blog / Guides
+
+FAQ
+
+About / Contact
+
+Ensure mobile-responsive hamburger menu keeps same order.
+
+🔹 Homepage SEO Fixes
+
+Hero Section (Top Banner)
+
+H1 → Free Instagram Unfollowers Tracker – See Who Unfollowed You in Seconds
+
+Add Subheading (H2) → Track unfollowers, new followers, and Instagram insights without login. 100% safe and secure.
+
+Keep “Discover Unfollowers” CTA button, but add secondary CTA → “Track Followers Growth”.
+
+Feature Section (What You’ll Get)
+
+Change heading → Instagram Unfollowers & Followers Analytics
+
+Add bullet points with keywords:
+
+Track who unfollowed you on Instagram
+
+Discover new followers instantly
+
+Analyze mutual followers and lost connections
+
+Engagement & activity insights
+
+Upload Section
+
+Add trust text: No Instagram password required – Your data stays private and secure.
+
+Blog Section
+
+Rename heading → Instagram Growth & Tracking Guides
+
+Ensure each article uses keyword-rich titles, e.g.:
+
+“Best Instagram Unfollowers Apps in 2025”
+
+“How to See Who Unfollowed You Without an App”
+
+“Top Instagram Growth Hacks”
+
+FAQ Section
+
+Add more FAQs:
+
+“How often can I check unfollowers on Instagram?”
+
+“Does Instagram notify someone if I use an unfollower tracker?”
+
+“Can I track unfollowers for multiple accounts?”
+
+Implement FAQPage schema.
+
+🔹 Footer Improvements
+
+Add keyword-rich internal links:
+
+Instagram Unfollowers Tracker Tool
+
+Free Instagram Analytics
+
+Track Instagram Followers Online
+
+Sitemap
+
+Add social proof icons (Twitter, LinkedIn, GitHub).
+
+Keep Privacy Policy / Terms for AdSense compliance.
+
+🔹 Technical SEO & Schema
+
+Add structured data:
+
+FAQPage schema for FAQs
+
+HowTo schema for “How It Works” section
+
+Article schema for blogs
+
+Product schema for tool page (Unfollowers Tracker).
+
+Optimize headings hierarchy:
+
+Only one H1 per page
+
+Use H2/H3 for features, blog, FAQ.
+
+Expand homepage content → at least 1,000 words with semantic keywords: Instagram unfollowers tracker, free Instagram analytics, track followers, see who unfollowed me, Instagram insights.
+
+Add sitemap.xml & robots.txt links in footer.
+
+🔹 UX / Performance
+
+Ensure responsive design with smooth scrolling & clear CTAs.
+
+Optimize images (lazy loading + WebP).
+
+Test and improve Core Web Vitals (PageSpeed 90+).
+
+👉 Deliverables in Replit:
+
+Updated header/nav with SEO menu items.
+
+Updated index.html homepage with optimized H1/H2, features, blog, FAQ.
+
+Updated footer with keyword-rich links, sitemap, and social proof icons.
+
+Implement structured data in <head> using JSON-LD.
+
+Expanded homepage content with at least 1,000 words (use semantic SEO).
+
+Maintain same modern Instagram-styled UI/UX with gradients & cards.
+
+⚡ Final Note: Keep the Instagram theme colors, gradients, and clean layout – only improve content, SEO, and navigation while maintaining the professional look.

@@ -29,13 +29,13 @@ export function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            See Who's Not Following You Back on{' '}
-            <span className="text-yellow-300">Instagram</span>
+            Free Instagram Unfollowers Tracker –{' '}
+            <span className="text-yellow-300">See Who Unfollowed You in Seconds</span>
           </h1>
           
-          <p className="text-lg sm:text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
-            The safest way to discover who unfollowed you on Instagram. No login required, your data stays secure.
-          </p>
+          <h2 className="text-lg sm:text-xl text-gray-100 mb-8 max-w-3xl mx-auto font-medium">
+            Track unfollowers, new followers, and Instagram insights without login. 100% safe and secure.
+          </h2>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
@@ -49,11 +49,16 @@ export function HeroSection() {
             <Button 
               size="lg"
               variant="outline"
-              onClick={scrollToHowItWorks}
+              onClick={() => {
+                const element = document.getElementById('live-demo');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
               className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all bg-transparent"
             >
               <Play className="mr-2" size={20} />
-              How it Works
+              Track Followers Growth
             </Button>
           </div>
           
