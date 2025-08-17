@@ -3,6 +3,7 @@ import { Header } from '@/components/header';
 import { HeroSection } from '@/components/hero-section';
 import { FileUpload } from '@/components/file-upload';
 import { StatsDashboard } from '@/components/stats-dashboard';
+import { LiveDemo } from '@/components/live-demo';
 import { HowItWorks } from '@/components/how-it-works';
 import { Features } from '@/components/features';
 import { BlogSection } from '@/components/blog-section';
@@ -44,6 +45,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
+        <LiveDemo />
         <FileUpload onFileUploaded={handleFileUploaded} />
         
         {/* Show results dashboard after file upload */}

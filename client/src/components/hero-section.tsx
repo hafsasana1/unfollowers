@@ -17,10 +17,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Instagram-inspired background */}
-      <div className="absolute inset-0 instagram-gradient opacity-90"></div>
-      
+    <section className="relative py-20 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 overflow-hidden">
       {/* Floating elements for visual appeal */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-20 h-20 bg-white opacity-10 rounded-full animate-float"></div>
@@ -31,12 +28,12 @@ export function HeroSection() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             See Who's Not Following You Back on{' '}
             <span className="text-yellow-300">Instagram</span>
           </h1>
           
-          <p className="text-xl sm:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
             The safest way to discover who unfollowed you on Instagram. No login required, your data stays secure.
           </p>
           

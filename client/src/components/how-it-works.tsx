@@ -59,23 +59,7 @@ export function HowItWorks() {
           ))}
         </div>
         
-        {/* Video Tutorial Section */}
-        <div className="mt-16 text-center">
-          <Card className="bg-gray-900 rounded-2xl overflow-hidden max-w-4xl mx-auto shadow-2xl">
-            <div className="aspect-video bg-gradient-to-br from-purple-900 to-blue-900 flex items-center justify-center relative cursor-pointer hover:opacity-90 transition-opacity">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-opacity-30 transition-all">
-                  <div className="w-0 h-0 border-l-[12px] border-l-white border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
-                </div>
-                <h4 className="text-white text-xl font-bold mb-2">Watch Tutorial</h4>
-                <p className="text-gray-300">Learn how to use our tool step by step</p>
-              </div>
-              <div className="absolute bottom-4 left-4 text-white text-sm opacity-75">
-                by Axel Cruz
-              </div>
-            </div>
-          </Card>
-        </div>
+
       </div>
     </section>
   );

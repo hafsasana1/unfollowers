@@ -84,10 +84,10 @@ export function Footer() {
             <h4 className="text-lg font-semibold mb-6">Support</h4>
             <ul className="space-y-3">
               <li><a href="mailto:unfollowerstracker2024@gmail.com" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
+              <li><a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="/cookie-policy" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a></li>
+              <li><a href="/help-center" className="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
             </ul>
           </div>
         </div>

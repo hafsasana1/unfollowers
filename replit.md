@@ -4,6 +4,15 @@
 
 This is a full-stack web application that helps users analyze their Instagram followers and discover who has unfollowed them. The application provides a secure, privacy-focused approach where users upload their Instagram data export (ZIP file) to get detailed insights about their followers, unfollowers, and account statistics. The tool emphasizes security by not requiring Instagram login credentials and processing data locally without permanent storage.
 
+## Recent Updates (August 17, 2025)
+
+- **Hero Section Redesigned**: Reduced from full-screen to normal height for better UX
+- **Live Demo Component**: Added animated celebrity profile mockups showing real-time stat changes
+- **Legal Pages Added**: Created comprehensive Privacy Policy, Terms of Service, Cookie Policy, and Help Center
+- **Navigation Enhanced**: All footer links now connect to proper legal pages
+- **Removed Video Tutorial**: Simplified how-it-works section by removing video placeholder
+- **Modern Design**: All pages now feature beautiful hero sections with Instagram-inspired gradients
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
