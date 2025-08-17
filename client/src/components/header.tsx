@@ -31,41 +31,38 @@ export function Header() {
           </Link>
           
           <div className="hidden md:flex items-center space-x-1">
-            <button 
-              onClick={() => scrollToSection('upload')}
-              className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium"
-              data-testid="nav-unfollowers-tracker"
-            >
-              Unfollowers Tracker
-            </button>
-            <button 
-              onClick={() => scrollToSection('features')}
-              className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium"
-              data-testid="nav-followers-insights"
-            >
-              Followers Insights
-            </button>
-            <button 
-              onClick={() => scrollToSection('live-demo')}
-              className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium"
-              data-testid="nav-instagram-analytics"
-            >
-              Instagram Analytics
-            </button>
-            <button 
-              onClick={() => scrollToSection('how-it-works')}
-              className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium"
-              data-testid="nav-how-it-works"
-            >
-              How It Works
-            </button>
-            <Button 
-              onClick={() => scrollToSection('upload')}
-              className="ml-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 rounded-xl px-6 py-2"
-              data-testid="button-cta-header"
-            >
-              Track Unfollowers Free
-            </Button>
+            <Link href="/unfollowers-tracker">
+              <span className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium cursor-pointer"
+                data-testid="nav-unfollowers-tracker">
+                Unfollowers Tracker
+              </span>
+            </Link>
+            <Link href="/followers-insights">
+              <span className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium cursor-pointer"
+                data-testid="nav-followers-insights">
+                Followers Insights
+              </span>
+            </Link>
+            <Link href="/instagram-analytics">
+              <span className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium cursor-pointer"
+                data-testid="nav-instagram-analytics">
+                Instagram Analytics
+              </span>
+            </Link>
+            <Link href="/how-it-works">
+              <span className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium cursor-pointer"
+                data-testid="nav-how-it-works">
+                How It Works
+              </span>
+            </Link>
+            <Link href="/unfollowers-tracker">
+              <Button 
+                className="ml-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 rounded-xl px-6 py-2"
+                data-testid="button-cta-header"
+              >
+                Track Unfollowers Free
+              </Button>
+            </Link>
           </div>
           
           <button 
@@ -80,41 +77,38 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden py-6 border-t border-purple-100 bg-white/95 backdrop-blur-md">
             <div className="flex flex-col space-y-2">
-              <button 
-                onClick={() => scrollToSection('upload')}
-                className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all text-left py-3 px-4 font-medium"
-                data-testid="mobile-nav-unfollowers-tracker"
-              >
-                Unfollowers Tracker
-              </button>
-              <button 
-                onClick={() => scrollToSection('features')}
-                className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all text-left py-3 px-4 font-medium"
-                data-testid="mobile-nav-followers-insights"
-              >
-                Followers Insights
-              </button>
-              <button 
-                onClick={() => scrollToSection('live-demo')}
-                className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all text-left py-3 px-4 font-medium"
-                data-testid="mobile-nav-instagram-analytics"
-              >
-                Instagram Analytics
-              </button>
-              <button 
-                onClick={() => scrollToSection('how-it-works')}
-                className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all text-left py-3 px-4 font-medium"
-                data-testid="mobile-nav-how-it-works"
-              >
-                How It Works
-              </button>
-              <Button 
-                onClick={() => scrollToSection('upload')}
-                className="mt-4 mx-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-semibold shadow-lg rounded-xl"
-                data-testid="mobile-button-cta"
-              >
-                Track Unfollowers Free
-              </Button>
+              <Link href="/unfollowers-tracker">
+                <span className="block text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all py-3 px-4 font-medium cursor-pointer"
+                  data-testid="mobile-nav-unfollowers-tracker">
+                  Unfollowers Tracker
+                </span>
+              </Link>
+              <Link href="/followers-insights">
+                <span className="block text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all py-3 px-4 font-medium cursor-pointer"
+                  data-testid="mobile-nav-followers-insights">
+                  Followers Insights
+                </span>
+              </Link>
+              <Link href="/instagram-analytics">
+                <span className="block text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all py-3 px-4 font-medium cursor-pointer"
+                  data-testid="mobile-nav-instagram-analytics">
+                  Instagram Analytics
+                </span>
+              </Link>
+              <Link href="/how-it-works">
+                <span className="block text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all py-3 px-4 font-medium cursor-pointer"
+                  data-testid="mobile-nav-how-it-works">
+                  How It Works
+                </span>
+              </Link>
+              <Link href="/unfollowers-tracker">
+                <Button 
+                  className="mt-4 mx-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-semibold shadow-lg rounded-xl"
+                  data-testid="mobile-button-cta"
+                >
+                  Track Unfollowers Free
+                </Button>
+              </Link>
             </div>
           </div>
         )}
