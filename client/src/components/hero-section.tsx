@@ -41,11 +41,11 @@ export function HeroSection() {
             <Button 
               size="lg"
               onClick={scrollToUpload}
-              className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl"
+              className="bg-white text-purple-600 px-10 py-4 rounded-xl font-bold text-xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-2xl"
               data-testid="button-start-tracking"
             >
-              <Upload className="mr-2" size={20} />
-              Start Tracking Now
+              <Upload className="mr-3" size={24} />
+              Track Unfollowers Free
             </Button>
             <Button 
               size="lg"
@@ -60,7 +60,7 @@ export function HeroSection() {
               data-testid="button-discover-insights"
             >
               <Play className="mr-2" size={20} />
-              Discover Insights
+              See Live Demo
             </Button>
           </div>
           

@@ -92,44 +92,88 @@ export function FileUpload({ onFileUploaded }: FileUploadProps) {
   });
 
   return (
-    <section className="py-20 bg-white" id="upload">
+    <section className="py-16 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50" id="upload">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Upload Your Instagram Data</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Simply upload your Instagram data ZIP file and we'll analyze your followers instantly. 
-            Your data is processed locally and never stored on our servers.
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Track Your Instagram Unfollowers Now</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+            Upload your Instagram data export and discover who unfollowed you in seconds. 
+            100% secure, no login required, completely free.
           </p>
+          
+          {/* Trust indicators */}
+          <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-gray-600 mb-8">
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <span>✓ No login required</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span>✓ 100% secure & private</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+              <span>✓ Results in under 10 seconds</span>
+            </div>
+          </div>
         </div>
         
         {!uploadedFile ? (
           <Card 
             {...getRootProps()}
-            className={`border-2 border-dashed rounded-2xl p-12 text-center cursor-pointer transition-all hover:shadow-lg ${
+            className={`border-3 border-dashed rounded-3xl p-16 text-center cursor-pointer transition-all hover:shadow-2xl transform hover:scale-[1.02] ${
               isDragActive 
-                ? 'border-purple-400 bg-purple-50' 
-                : 'border-purple-300 bg-gradient-to-br from-purple-50 to-pink-50 hover:border-purple-400'
+                ? 'border-purple-500 bg-purple-100 shadow-2xl scale-[1.02]' 
+                : 'border-purple-400 bg-gradient-to-br from-white via-purple-50 to-pink-50 hover:border-purple-500'
             }`}
+            data-testid="upload-dropzone"
           >
             <input {...getInputProps()} />
             <CardContent className="pt-0">
-              <div className={`transition-transform ${isDragActive ? 'scale-105' : 'group-hover:scale-105'}`}>
-                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 hover:bg-purple-700 transition-colors">
-                  <CloudUpload className="text-white" size={24} />
+              <div className={`transition-transform ${isDragActive ? 'scale-110' : 'hover:scale-105'}`}>
+                <div className="w-24 h-24 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-8 hover:from-purple-700 hover:to-pink-700 transition-all shadow-xl">
+                  <CloudUpload className="text-white" size={32} />
                 </div>
                 
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {isDragActive ? 'Drop your file here' : 'Drop your Instagram ZIP file here'}
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  {isDragActive ? 'Drop Your File Here!' : 'Drag & Drop Your Instagram Data'}
                 </h3>
-                <p className="text-gray-600 mb-6">or click to browse and select your file</p>
+                <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto">
+                  Drop your Instagram ZIP file here or click the button below to browse your files
+                </p>
                 
-                <Button className="bg-purple-600 text-white hover:bg-purple-700 transition-colors font-medium">
-                  Choose File
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-bold text-lg px-10 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105"
+                  data-testid="button-choose-file"
+                >
+                  <FileArchive className="mr-3" size={20} />
+                  Choose Your ZIP File
                 </Button>
                 
-                <div className="mt-6 text-sm text-gray-500">
-                  <p>Supported format: .zip (Instagram data export)</p>
-                  <p>Maximum file size: 50MB</p>
+                <div className="mt-8 bg-gray-50 rounded-xl p-6 space-y-3">
+                  <div className="flex items-center justify-center space-x-8 text-sm text-gray-600">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                      <span className="font-medium">ZIP format only</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                      <span className="font-medium">Max 50MB</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                      <span className="font-medium">Instant results</span>
+                    </div>
+                  </div>
+                  <div className="text-sm text-gray-500 text-center">
+                    Need help? <button 
+                      onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                      className="text-purple-600 hover:text-purple-700 font-medium underline"
+                    >
+                      Learn how to download your Instagram data
+                    </button>
+                  </div>
                 </div>
               </div>
             </CardContent>

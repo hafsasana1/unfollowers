@@ -48,19 +48,19 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <HowItWorks />
-        <WhyUseOurTool />
-        <Features />
-        <LiveDemo />
-        <SEOContent />
-        <SocialProof />
         <FileUpload onFileUploaded={handleFileUploaded} />
         
         {/* Show results dashboard after file upload */}
         {hasUploadedFile && <StatsDashboard />}
         
-        <BlogSection />
+        <LiveDemo />
+        <HowItWorks />
+        <WhyUseOurTool />
+        <Features />
+        <SocialProof />
         <FAQSection />
+        <BlogSection />
+        <SEOContent />
         
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 relative overflow-hidden">

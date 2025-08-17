@@ -31,66 +31,40 @@ export function Header() {
           </Link>
           
           <div className="hidden md:flex items-center space-x-1">
-            <Link href="/">
-              <span className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium cursor-pointer">
-                Home
-              </span>
-            </Link>
             <button 
               onClick={() => scrollToSection('upload')}
               className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium"
+              data-testid="nav-unfollowers-tracker"
             >
               Unfollowers Tracker
             </button>
             <button 
               onClick={() => scrollToSection('features')}
               className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium"
+              data-testid="nav-followers-insights"
             >
               Followers Insights
             </button>
             <button 
               onClick={() => scrollToSection('live-demo')}
               className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium"
+              data-testid="nav-instagram-analytics"
             >
               Instagram Analytics
             </button>
-            <div className="relative group">
-              <button className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium flex items-center">
-                Tools
-                <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-                <div className="py-2">
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">Profile Viewer</a>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">Engagement Calculator</a>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">Hashtag Tracker</a>
-                </div>
-              </div>
-            </div>
             <button 
-              onClick={() => scrollToSection('blog')}
+              onClick={() => scrollToSection('how-it-works')}
               className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium"
+              data-testid="nav-how-it-works"
             >
-              Blog / Guides
+              How It Works
             </button>
-            <button 
-              onClick={() => scrollToSection('faq')}
-              className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium"
-            >
-              FAQ
-            </button>
-            <Link href="/about">
-              <span className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium cursor-pointer">
-                About / Contact
-              </span>
-            </Link>
             <Button 
               onClick={() => scrollToSection('upload')}
-              className="ml-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 rounded-xl px-6"
+              className="ml-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 rounded-xl px-6 py-2"
+              data-testid="button-cta-header"
             >
-              Discover Unfollowers
+              Track Unfollowers Free
             </Button>
           </div>
           
@@ -106,59 +80,40 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden py-6 border-t border-purple-100 bg-white/95 backdrop-blur-md">
             <div className="flex flex-col space-y-2">
-              <Link href="/">
-                <span className="block text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all py-3 px-4 font-medium cursor-pointer">
-                  Home
-                </span>
-              </Link>
               <button 
                 onClick={() => scrollToSection('upload')}
                 className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all text-left py-3 px-4 font-medium"
+                data-testid="mobile-nav-unfollowers-tracker"
               >
                 Unfollowers Tracker
               </button>
               <button 
                 onClick={() => scrollToSection('features')}
                 className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all text-left py-3 px-4 font-medium"
+                data-testid="mobile-nav-followers-insights"
               >
                 Followers Insights
               </button>
               <button 
                 onClick={() => scrollToSection('live-demo')}
                 className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all text-left py-3 px-4 font-medium"
+                data-testid="mobile-nav-instagram-analytics"
               >
                 Instagram Analytics
               </button>
-              <div className="px-4 py-3">
-                <div className="text-gray-700 font-medium mb-2">Tools</div>
-                <div className="pl-4 space-y-2">
-                  <div className="text-sm text-gray-600">Profile Viewer</div>
-                  <div className="text-sm text-gray-600">Engagement Calculator</div>
-                  <div className="text-sm text-gray-600">Hashtag Tracker</div>
-                </div>
-              </div>
               <button 
-                onClick={() => scrollToSection('blog')}
+                onClick={() => scrollToSection('how-it-works')}
                 className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all text-left py-3 px-4 font-medium"
+                data-testid="mobile-nav-how-it-works"
               >
-                Blog / Guides
+                How It Works
               </button>
-              <button 
-                onClick={() => scrollToSection('faq')}
-                className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all text-left py-3 px-4 font-medium"
-              >
-                FAQ
-              </button>
-              <Link href="/about">
-                <span className="block text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all py-3 px-4 font-medium cursor-pointer">
-                  About / Contact
-                </span>
-              </Link>
               <Button 
                 onClick={() => scrollToSection('upload')}
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-semibold w-full mt-4 rounded-xl shadow-lg"
+                className="mt-4 mx-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-semibold shadow-lg rounded-xl"
+                data-testid="mobile-button-cta"
               >
-                Discover Unfollowers
+                Track Unfollowers Free
               </Button>
             </div>
           </div>

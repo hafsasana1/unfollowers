@@ -39,24 +39,48 @@ export function Footer() {
             </div>
           </div>
           
-          {/* Quick Links */}
+          {/* Instagram Tools */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-6">Instagram Tools</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Profile Viewer
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Engagement Calculator
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Hashtag Tracker
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Story Saver
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Username Checker
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Resources & Guides */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6">Resources & Guides</h4>
             <ul className="space-y-3">
               <li>
                 <button 
-                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' })}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  How it Works
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Features
+                  Blog & Guides
                 </button>
               </li>
               <li>
@@ -68,26 +92,25 @@ export function Footer() {
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Blog
-                </button>
+                <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
+                  Privacy Policy
+                </a>
               </li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Tutorial</a></li>
-            </ul>
-          </div>
-          
-          {/* Support */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Support</h4>
-            <ul className="space-y-3">
-              <li><a href="mailto:unfollowerstracker2024@gmail.com" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
-              <li><a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="/cookie-policy" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a></li>
-              <li><a href="/help-center" className="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
+              <li>
+                <a href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors">
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <a href="/help-center" className="text-gray-400 hover:text-white transition-colors">
+                  Help Center
+                </a>
+              </li>
             </ul>
           </div>
         </div>
