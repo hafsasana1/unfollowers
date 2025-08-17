@@ -9,10 +9,23 @@ export function BlogSection() {
     <section className="py-20 bg-white" id="blog">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Instagram Growth & Tracking Guides</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Instagram Articles & Guides</h2>
           <p className="text-lg text-gray-600">
-            Expert guides and tips for Instagram analytics and follower growth
+            Expert insights on Instagram analytics, growth strategies, and follower tracking
           </p>
+          
+          {/* Featured article topics */}
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-200 px-4 py-2">
+              📈 Instagram Growth Hacks 2025
+            </Badge>
+            <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 px-4 py-2">
+              🔍 How to See Who Unfollowed You
+            </Badge>
+            <Badge className="bg-green-100 text-green-700 hover:bg-green-200 px-4 py-2">
+              🛡️ Safe Instagram Tracking
+            </Badge>
+          </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

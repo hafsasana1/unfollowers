@@ -14,8 +14,8 @@ export function FAQSection() {
     <section className="py-20 bg-gray-50" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-          <p className="text-lg text-gray-600">Get answers to common questions about our Instagram followers tracker</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Instagram Unfollowers Tracker FAQ</h2>
+          <p className="text-lg text-gray-600">Get answers to the most common questions about tracking Instagram unfollowers and followers</p>
         </div>
         
         <div className="space-y-6">
@@ -48,14 +48,23 @@ export function FAQSection() {
         </div>
         
         <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">Have another question?</p>
-          <a 
-            href="mailto:unfollowerstracker2024@gmail.com" 
-            className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium transition-colors"
-          >
-            <Mail className="mr-2" size={16} />
-            Contact us by email
-          </a>
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-100">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Still have questions about Instagram unfollower tracking?</h3>
+            <p className="text-gray-600 mb-6">
+              Our team is here to help you understand how to safely track your Instagram followers and unfollowers.
+            </p>
+            <a 
+              href="mailto:support@unfollowerstracker.com" 
+              className="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-purple-700 transition-colors shadow-lg"
+              data-testid="link-contact-support"
+            >
+              <Mail className="mr-2" size={16} />
+              Get Expert Help
+            </a>
+            <div className="mt-4 text-sm text-gray-500">
+              Usually respond within 24 hours
+            </div>
+          </div>
         </div>
       </div>
     </section>

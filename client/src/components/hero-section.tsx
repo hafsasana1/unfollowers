@@ -30,21 +30,22 @@ export function HeroSection() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Free Instagram Unfollowers Tracker –{' '}
-            <span className="text-yellow-300">See Who Unfollowed You in Seconds</span>
+            <span className="text-yellow-300">See Who Unfollowed You Instantly</span>
           </h1>
           
-          <h2 className="text-lg sm:text-xl text-gray-100 mb-8 max-w-3xl mx-auto font-medium">
-            Track unfollowers, new followers, and Instagram insights without login. 100% safe and secure.
-          </h2>
+          <p className="text-lg sm:text-xl text-gray-100 mb-8 max-w-3xl mx-auto font-medium">
+            Track unfollowers, new followers, and Instagram insights – no password required, 100% secure.
+          </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
               size="lg"
               onClick={scrollToUpload}
               className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl"
+              data-testid="button-start-tracking"
             >
               <Upload className="mr-2" size={20} />
-              Discover Unfollowers
+              Start Tracking Now
             </Button>
             <Button 
               size="lg"
@@ -56,9 +57,10 @@ export function HeroSection() {
                 }
               }}
               className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all bg-transparent"
+              data-testid="button-discover-insights"
             >
               <Play className="mr-2" size={20} />
-              Track Followers Growth
+              Discover Insights
             </Button>
           </div>
           

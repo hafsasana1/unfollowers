@@ -8,6 +8,7 @@ import { SocialProof } from '@/components/social-proof';
 import { SEOContent } from '@/components/seo-content';
 import { HowItWorks } from '@/components/how-it-works';
 import { Features } from '@/components/features';
+import { WhyUseOurTool } from '@/components/why-use-our-tool';
 import { BlogSection } from '@/components/blog-section';
 import { FAQSection } from '@/components/faq-section';
 import { Footer } from '@/components/footer';
@@ -47,8 +48,10 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <LiveDemo />
+        <HowItWorks />
+        <WhyUseOurTool />
         <Features />
+        <LiveDemo />
         <SEOContent />
         <SocialProof />
         <FileUpload onFileUploaded={handleFileUploaded} />
@@ -56,7 +59,6 @@ export default function Home() {
         {/* Show results dashboard after file upload */}
         {hasUploadedFile && <StatsDashboard />}
         
-        <HowItWorks />
         <BlogSection />
         <FAQSection />
         

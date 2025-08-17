@@ -86,42 +86,42 @@ export const mockBlogArticles: BlogArticle[] = [
 export const mockFAQs: FAQItem[] = [
   {
     id: '1',
-    question: 'How can I track Unfollowers on Instagram?',
-    answer: 'To track unfollowers on Instagram, request your data from Instagram (Settings → Privacy and Security → Download Your Information), download the ZIP file when ready, and upload it to our secure tool. We\'ll analyze your followers and following lists to show you exactly who doesn\'t follow you back.',
+    question: 'How do I see who unfollowed me on Instagram?',
+    answer: 'To see who unfollowed you on Instagram, request your data from Instagram (Settings → Privacy and Security → Download Your Information), download the ZIP file when ready, and upload it to our free tracker. Our tool analyzes your followers and following lists to show exactly who unfollowed you, including recent unfollowers and mutual connections.',
   },
   {
     id: '2',
-    question: 'Is UnfollowersTracker secure to use?',
-    answer: 'Yes, our tool is completely secure. We don\'t require your Instagram login credentials, and your data is processed locally in your browser. We never store your personal information or Instagram data on our servers, ensuring your privacy and account security at all times.',
+    question: 'Can I track Instagram followers without login?',
+    answer: 'Yes! Our Instagram tracker works completely without requiring your login credentials. You upload your Instagram data export (ZIP file) that you download directly from Instagram. This ensures your account stays secure while giving you comprehensive follower insights without sharing passwords or login information.',
   },
   {
     id: '3',
-    question: 'Do I need to provide my Instagram password?',
-    answer: 'No, you never need to provide your Instagram password or login credentials. Our tool works by analyzing the data that Instagram provides to you directly through their official data download feature. This ensures your account remains completely secure and private.',
+    question: 'What is the best Instagram tracker in 2025?',
+    answer: 'The best Instagram tracker in 2025 is one that prioritizes your privacy and security. Our tool offers instant results, requires no login, processes data locally, and provides comprehensive analytics including unfollower detection, new follower tracking, and mutual follower analysis - all completely free.',
   },
   {
     id: '4',
-    question: 'Can I use UnfollowersTracker for multiple Instagram accounts?',
-    answer: 'Yes, you can analyze multiple Instagram accounts. Simply request and download the data for each account separately from Instagram, then upload each ZIP file to our tool individually. Each analysis is independent and secure.',
+    question: 'Is it safe to use Instagram unfollower trackers?',
+    answer: 'Yes, our Instagram unfollower tracker is completely safe. We never ask for your password, process your data locally in your browser, and don\'t store any personal information. Your Instagram account remains secure because we only analyze the data that Instagram provides to you through their official download feature.',
   },
   {
     id: '5',
-    question: 'Is there a cost to find out who has unfollowed me?',
-    answer: 'No, our Instagram unfollowers tracker is completely free to use. There are no hidden costs, premium features, or subscription fees. All features are available at no charge, and we\'re committed to keeping it free forever.',
+    question: 'Can Instagram block unfollower tools?',
+    answer: 'Instagram cannot block our tool because it doesn\'t interact with Instagram\'s servers directly. We analyze your own data export that you download from Instagram, making it undetectable and completely safe. Instagram has no way of knowing you\'re using our tracker since it works offline with your personal data.',
   },
   {
     id: '6',
-    question: 'How often can I check unfollowers on Instagram?',
-    answer: 'You can check your Instagram unfollowers as often as you like. However, Instagram only allows you to request your data export once every few days. For the most accurate results, we recommend checking monthly or when you notice significant changes in your follower count.',
+    question: 'Does this work on business accounts?',
+    answer: 'Yes, our Instagram unfollowers tracker works perfectly with both personal and business accounts. Instagram\'s data export feature is available for all account types, so you can analyze followers, unfollowers, and engagement data regardless of whether you have a personal, creator, or business Instagram account.',
   },
   {
     id: '7',
-    question: 'Does Instagram notify someone if I use an unfollower tracker?',
-    answer: 'No, Instagram does not notify other users when you use our unfollower tracker. Our tool analyzes your own data that Instagram provides to you, so it\'s completely private and undetectable to other users. Your account activity remains normal.',
+    question: 'How often should I check unfollowers?',
+    answer: 'For optimal insights, check your Instagram unfollowers monthly or when you notice significant follower count changes. Instagram limits data export requests to once every few days, so frequent checking isn\'t possible. Monthly tracking gives you meaningful trends without overwhelming data while maintaining account security.',
   },
   {
     id: '8',
-    question: 'Can I track unfollowers for multiple accounts?',
-    answer: 'Yes, if you manage multiple Instagram accounts, you can track unfollowers for each one separately. Simply download the data export for each account and analyze them individually using our tool. Each analysis is independent and secure.',
+    question: 'Can Instagram show unfollowers directly?',
+    answer: 'No, Instagram doesn\'t have a built-in feature to show who unfollowed you directly. Instagram only shows your current followers list, not who stopped following you. That\'s why third-party tools like ours are necessary - we analyze your Instagram data export to identify unfollowers, new followers, and mutual connections that Instagram doesn\'t display.',
   },
 ];

@@ -5,27 +5,27 @@ export function HowItWorks() {
   const steps = [
     {
       number: 1,
-      title: 'Request Your Data',
-      description: 'Go to Instagram Settings → Privacy and Security → Download Your Information. Request your data in JSON format.',
+      title: 'Upload Your Data',
+      description: 'Upload your Instagram data export (ZIP file) to our secure analyzer. No login required - we only process your data, never store it.',
       icon: Download,
       color: 'from-purple-400 to-pink-400',
-      time: '📱 Takes 5 minutes',
+      time: '📱 Drag & drop your ZIP file',
     },
     {
       number: 2,
-      title: 'Download the ZIP',
-      description: 'Instagram will prepare your data and send you a download link via email. Download the ZIP file to your device.',
+      title: 'Process Securely',
+      description: 'Our algorithm analyzes your follower data instantly and securely. All processing happens locally - your data never leaves your device.',
       icon: FileArchive,
       color: 'from-blue-400 to-purple-400',
-      time: '📧 Usually within 48 hours',
+      time: '🔒 100% secure processing',
     },
     {
       number: 3,
-      title: 'Get Instant Results',
-      description: 'Upload your ZIP file to our secure analyzer. Get detailed insights about your followers, unfollowers, and account growth.',
+      title: 'Get Detailed Results',
+      description: 'See who unfollowed you, new followers, mutual connections, and comprehensive analytics. Download your insights or view them online.',
       icon: BarChart3,
       color: 'from-green-400 to-blue-400',
-      time: '⚡ Results in seconds',
+      time: '⚡ Results in under 10 seconds',
     },
   ];
 
@@ -33,9 +33,9 @@ export function HowItWorks() {
     <section className="py-20 bg-white" id="how-it-works">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">How to Track Instagram Unfollowers in 3 Steps</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our simple 3-step process ensures your privacy while giving you the insights you need
+            Upload your data → Process securely → Get instant results. Simple 3-step process ensures your privacy while giving you complete follower insights.
           </p>
         </div>
         
