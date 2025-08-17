@@ -6,6 +6,10 @@ This is a full-stack web application that helps users analyze their Instagram fo
 
 ## Recent Updates (August 17, 2025)
 
+- **Font Updated**: Changed from Inter to Poppins for modern, clean typography
+- **Navigation Redesigned**: Beautiful modern header with gradient branding and improved UX
+- **About Us Page**: Created comprehensive about page with company story, values, and mission
+- **Contact Page**: Modern contact form with multiple contact methods and FAQ section
 - **Hero Section Redesigned**: Reduced from full-screen to normal height for better UX
 - **Live Demo Component**: Added animated celebrity profile mockups showing real-time stat changes
 - **Legal Pages Added**: Created comprehensive Privacy Policy, Terms of Service, Cookie Policy, and Help Center
