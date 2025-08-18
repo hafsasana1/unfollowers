@@ -34,11 +34,15 @@ export function BlogSection() {
             <article key={article.id} className="group">
               <Link href={`/${article.slug}`}>
                 <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
-                  <div className="aspect-[4/3] overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden bg-gray-100">
                     <img 
                       src={article.imageUrl} 
                       alt={article.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        e.currentTarget.src = 'https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250';
+                      }}
+                      loading="lazy"
                     />
                   </div>
                   
