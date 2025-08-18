@@ -27,24 +27,26 @@ export function HeroSection() {
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            Free Instagram Unfollowers Tracker –{' '}
-            <span className="text-yellow-300">See Who Unfollowed You Instantly</span>
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 leading-tight tracking-tight">
+            Free Instagram Unfollowers Tracker
           </h1>
+          <p className="text-lg sm:text-xl lg:text-2xl text-yellow-300 mb-6 font-semibold">
+            See Who Unfollowed You Instantly
+          </p>
           
-          <p className="text-lg sm:text-xl text-gray-100 mb-8 max-w-3xl mx-auto font-medium">
+          <p className="text-base sm:text-lg text-gray-100 mb-8 max-w-2xl mx-auto leading-relaxed">
             Track unfollowers, new followers, and Instagram insights – no password required, 100% secure.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
             <Button 
               size="lg"
               onClick={scrollToUpload}
-              className="bg-white text-purple-600 px-10 py-4 rounded-xl font-bold text-xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-2xl"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold text-base hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
               data-testid="button-start-tracking"
             >
-              <Upload className="mr-3" size={24} />
+              <Upload className="mr-2" size={18} />
               Track Unfollowers Free
             </Button>
             <Button 
@@ -56,31 +58,31 @@ export function HeroSection() {
                   element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
               }}
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all bg-transparent"
+              className="border-2 border-white text-white px-6 py-3 rounded-lg font-medium text-base hover:bg-white hover:text-purple-600 transition-all bg-transparent"
               data-testid="button-discover-insights"
             >
-              <Play className="mr-2" size={20} />
+              <Play className="mr-2" size={16} />
               See Live Demo
             </Button>
           </div>
           
           {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center items-center gap-8 text-white/80">
+          <div className="flex flex-wrap justify-center items-center gap-6 text-white/90">
             <div className="flex items-center gap-2">
-              <Shield className="text-green-300" size={16} />
-              <span className="text-sm font-medium">100% Secure</span>
+              <Shield className="text-green-300" size={14} />
+              <span className="text-xs font-medium">100% Secure</span>
             </div>
             <div className="flex items-center gap-2">
-              <Lock className="text-blue-300" size={16} />
-              <span className="text-sm font-medium">No Login Required</span>
+              <Lock className="text-blue-300" size={14} />
+              <span className="text-xs font-medium">No Login Required</span>
             </div>
             <div className="flex items-center gap-2">
-              <Zap className="text-yellow-300" size={16} />
-              <span className="text-sm font-medium">Instant Results</span>
+              <Zap className="text-yellow-300" size={14} />
+              <span className="text-xs font-medium">Instant Results</span>
             </div>
             <div className="flex items-center gap-2">
-              <Gift className="text-pink-300" size={16} />
-              <span className="text-sm font-medium">Completely Free</span>
+              <Gift className="text-pink-300" size={14} />
+              <span className="text-xs font-medium">Completely Free</span>
             </div>
           </div>
         </div>

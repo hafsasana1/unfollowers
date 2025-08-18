@@ -4,10 +4,12 @@
 
 This is a full-stack web application that helps users analyze their Instagram followers and discover who has unfollowed them. The application provides a secure, privacy-focused approach where users upload their Instagram data export (ZIP file) to get detailed insights about their followers, unfollowers, and account statistics. The tool emphasizes security by not requiring Instagram login credentials and processing data locally without permanent storage.
 
-## Recent Updates (August 17, 2025)
+## Recent Updates (August 18, 2025)
 
-- **Migration Completed**: Successfully migrated project from Replit Agent to Replit environment
+- **Migration Completed**: Successfully migrated project from Replit Agent to Replit environment  
 - **Dependencies Fixed**: Resolved tsx dependency issues and installed all required packages
+- **Professional UI Redesign**: Updated homepage typography with clean, professional sizing
+- **Typography Improved**: All headings and sections now use proper hierarchy and clean design
 - **Security Enhanced**: Implemented robust client/server separation following modern web practices
 - **Font Updated**: Changed from Inter to Poppins for modern, clean typography
 - **Navigation Redesigned**: Beautiful modern header with gradient branding and improved UX

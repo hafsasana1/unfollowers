@@ -74,26 +74,26 @@ export function Features() {
 
   return (
     <section className="py-20 bg-gray-50" id="features">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Instagram Unfollowers & Followers Analytics</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive Instagram insights with advanced analytics tools for tracking your followers
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Instagram Analytics Features</h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto leading-relaxed">
+            Comprehensive insights for tracking your followers and unfollowers
           </p>
           
-          {/* SEO Bullet Points */}
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="text-left bg-gradient-to-br from-purple-50 to-pink-50 p-4 rounded-lg">
-              <div className="font-semibold text-purple-700 text-sm">✓ Track who unfollowed you on Instagram</div>
+          {/* Key Benefits */}
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-3xl mx-auto">
+            <div className="text-center bg-gradient-to-br from-purple-50 to-pink-50 p-3 rounded-lg">
+              <div className="font-medium text-purple-700 text-xs">✓ Track Unfollowers</div>
             </div>
-            <div className="text-left bg-gradient-to-br from-blue-50 to-purple-50 p-4 rounded-lg">
-              <div className="font-semibold text-blue-700 text-sm">✓ Discover new followers instantly</div>
+            <div className="text-center bg-gradient-to-br from-blue-50 to-purple-50 p-3 rounded-lg">
+              <div className="font-medium text-blue-700 text-xs">✓ New Followers</div>
             </div>
-            <div className="text-left bg-gradient-to-br from-green-50 to-blue-50 p-4 rounded-lg">
-              <div className="font-semibold text-green-700 text-sm">✓ Analyze mutual followers and lost connections</div>
+            <div className="text-center bg-gradient-to-br from-green-50 to-blue-50 p-3 rounded-lg">
+              <div className="font-medium text-green-700 text-xs">✓ Mutual Followers</div>
             </div>
-            <div className="text-left bg-gradient-to-br from-orange-50 to-pink-50 p-4 rounded-lg">
-              <div className="font-semibold text-orange-700 text-sm">✓ Engagement & activity insights</div>
+            <div className="text-center bg-gradient-to-br from-orange-50 to-pink-50 p-3 rounded-lg">
+              <div className="font-medium text-orange-700 text-xs">✓ Instant Insights</div>
             </div>
           </div>
         </div>
@@ -104,17 +104,17 @@ export function Features() {
               key={index} 
               className="hover:shadow-xl transition-all hover:-translate-y-2 duration-300"
             >
-              <CardContent className="p-8">
-                <div className={`w-16 h-16 ${getColorClasses(feature.color)} rounded-xl flex items-center justify-center mb-6`}>
-                  <feature.icon size={24} />
+              <CardContent className="p-6">
+                <div className={`w-12 h-12 ${getColorClasses(feature.color)} rounded-lg flex items-center justify-center mb-4`}>
+                  <feature.icon size={20} />
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h3>
                 
-                <p className="text-gray-600 mb-4">{feature.description}</p>
+                <p className="text-sm text-gray-600 mb-3 leading-relaxed">{feature.description}</p>
                 
-                <div className={`flex items-center ${getHighlightColor(feature.color)} text-sm font-medium`}>
-                  <CheckCircle className="mr-2" size={16} />
+                <div className={`flex items-center ${getHighlightColor(feature.color)} text-xs font-medium`}>
+                  <CheckCircle className="mr-1" size={12} />
                   {feature.highlight}
                 </div>
               </CardContent>

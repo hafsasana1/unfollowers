@@ -55,12 +55,11 @@ export function WhyUseOurTool() {
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white" id="why-use">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Use Our Instagram Unfollowers Tracker?</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            The most secure, fastest, and comprehensive way to track your Instagram followers and discover who unfollowed you. 
-            Trusted by thousands of users worldwide.
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Why Choose Our Tool?</h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            The most secure, fastest, and comprehensive way to track your Instagram followers
           </p>
         </div>
         
@@ -70,20 +69,20 @@ export function WhyUseOurTool() {
               key={index} 
               className={`hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-2 ${getBorderColor(benefit.color)}`}
             >
-              <CardContent className="p-8">
+              <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className={`w-14 h-14 ${getColorClasses(benefit.color)} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                  <div className={`w-12 h-12 ${getColorClasses(benefit.color)} rounded-lg flex items-center justify-center flex-shrink-0`}>
                     <benefit.icon className="text-white" size={24} />
                   </div>
                   
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                    <p className="text-gray-600 mb-4">{benefit.description}</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                    <p className="text-sm text-gray-600 mb-3 leading-relaxed">{benefit.description}</p>
                     
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                       {benefit.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-gray-700">
-                          <CheckCircle className="text-green-500 mr-2" size={16} />
+                        <div key={idx} className="flex items-center text-xs text-gray-700">
+                          <CheckCircle className="text-green-500 mr-1" size={12} />
                           <span>{feature}</span>
                         </div>
                       ))}
@@ -96,23 +95,23 @@ export function WhyUseOurTool() {
         </div>
         
         {/* Trust indicators */}
-        <div className="mt-16 text-center">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div className="mt-12 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600 mb-2">100%</div>
-              <div className="text-gray-600 text-sm">Secure & Private</div>
+              <div className="text-xl font-bold text-purple-600 mb-1">100%</div>
+              <div className="text-gray-600 text-xs">Secure & Private</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600 mb-2">&lt;10s</div>
-              <div className="text-gray-600 text-sm">Processing Time</div>
+              <div className="text-xl font-bold text-blue-600 mb-1">&lt;10s</div>
+              <div className="text-gray-600 text-xs">Processing Time</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-green-600 mb-2">0$</div>
-              <div className="text-gray-600 text-sm">Completely Free</div>
+              <div className="text-xl font-bold text-green-600 mb-1">$0</div>
+              <div className="text-gray-600 text-xs">Completely Free</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-orange-600 mb-2">24/7</div>
-              <div className="text-gray-600 text-sm">Always Available</div>
+              <div className="text-xl font-bold text-orange-600 mb-1">24/7</div>
+              <div className="text-gray-600 text-xs">Always Available</div>
             </div>
           </div>
         </div>
