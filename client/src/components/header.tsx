@@ -37,16 +37,16 @@ export function Header() {
                 Unfollowers
               </span>
             </Link>
-            <Link href="/followers-insights">
+            <Link href="/ghost-followers">
               <span className="px-3 py-2 text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all font-medium cursor-pointer"
-                data-testid="nav-followers-insights">
-                Insights
+                data-testid="nav-ghost-followers">
+                Ghost Followers
               </span>
             </Link>
-            <Link href="/instagram-analytics">
+            <Link href="/inactive-followers">
               <span className="px-3 py-2 text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all font-medium cursor-pointer"
-                data-testid="nav-instagram-analytics">
-                Analytics
+                data-testid="nav-inactive-followers">
+                Inactive Followers
               </span>
             </Link>
             <Link href="/how-it-works">
@@ -90,16 +90,16 @@ export function Header() {
                   Unfollowers
                 </span>
               </Link>
-              <Link href="/followers-insights">
+              <Link href="/ghost-followers">
                 <span className="block text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all py-2 px-3 font-medium cursor-pointer"
-                  data-testid="mobile-nav-followers-insights">
-                  Insights
+                  data-testid="mobile-nav-ghost-followers">
+                  Ghost Followers
                 </span>
               </Link>
-              <Link href="/instagram-analytics">
+              <Link href="/inactive-followers">
                 <span className="block text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all py-2 px-3 font-medium cursor-pointer"
-                  data-testid="mobile-nav-instagram-analytics">
-                  Analytics
+                  data-testid="mobile-nav-inactive-followers">
+                  Inactive Followers
                 </span>
               </Link>
               <Link href="/how-it-works">

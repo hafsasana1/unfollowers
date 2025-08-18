@@ -13,8 +13,8 @@ import CookiePolicy from "@/pages/cookie-policy";
 import HelpCenter from "@/pages/help-center";
 import NotFound from "@/pages/not-found";
 import { UnfollowersTrackerPage } from "@/pages/unfollowers-tracker";
-import { FollowersInsightsPage } from "@/pages/followers-insights";
-import { InstagramAnalyticsPage } from "@/pages/instagram-analytics";
+import { GhostFollowersPage } from "@/pages/ghost-followers";
+import { InactiveFollowersPage } from "@/pages/inactive-followers";
 import { HowItWorksPage } from "@/pages/how-it-works";
 import { TrackUnfollowersFree } from "@/pages/track-unfollowers-free";
 import HowToSeeWhoUnfollowedYou from "@/pages/how-to-see-who-unfollowed-you";
@@ -28,8 +28,8 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/unfollowers-tracker" component={UnfollowersTrackerPage} />
-      <Route path="/followers-insights" component={FollowersInsightsPage} />
-      <Route path="/instagram-analytics" component={InstagramAnalyticsPage} />
+      <Route path="/ghost-followers" component={GhostFollowersPage} />
+      <Route path="/inactive-followers" component={InactiveFollowersPage} />
       <Route path="/how-it-works" component={HowItWorksPage} />
       <Route path="/track-unfollowers-free" component={TrackUnfollowersFree} />
       <Route path="/how-to-see-who-unfollowed-you" component={HowToSeeWhoUnfollowedYou} />
