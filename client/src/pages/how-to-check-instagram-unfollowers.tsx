@@ -1,5 +1,6 @@
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -208,6 +209,17 @@ export default function HowToCheckInstagramUnfollowers() {
 
       <div className="min-h-screen bg-gray-50">
         <Header />
+        
+        {/* Breadcrumbs */}
+        <section className="bg-white py-4 border-b border-gray-200">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Breadcrumbs items={[
+              { label: 'Home', href: '/' },
+              { label: 'Blog', href: '/blog' },
+              { label: 'How to Check Instagram Unfollowers', current: true }
+            ]} />
+          </div>
+        </section>
         
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 py-16 relative overflow-hidden">

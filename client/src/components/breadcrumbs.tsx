@@ -1,4 +1,5 @@
 import { Home, ChevronRight } from 'lucide-react';
+import { Link } from 'wouter';
 
 interface BreadcrumbItem {
   label: string;
@@ -18,12 +19,11 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
         <div key={index} className="flex items-center space-x-2">
           <ChevronRight size={14} className="text-gray-400" />
           {item.href && !item.current ? (
-            <a 
-              href={item.href} 
-              className="hover:text-purple-600 transition-colors"
-            >
-              {item.label}
-            </a>
+            <Link href={item.href}>
+              <span className="hover:text-purple-600 transition-colors cursor-pointer">
+                {item.label}
+              </span>
+            </Link>
           ) : (
             <span className={item.current ? 'text-purple-600 font-semibold' : ''}>
               {item.label}

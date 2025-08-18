@@ -55,6 +55,12 @@ export function Header() {
                 How It Works
               </span>
             </Link>
+            <Link href="/blog">
+              <span className="px-3 py-2 text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all font-medium cursor-pointer"
+                data-testid="nav-blog">
+                Blog
+              </span>
+            </Link>
             <Link href="/unfollowers-tracker">
               <Button 
                 size="sm"
@@ -100,6 +106,12 @@ export function Header() {
                 <span className="block text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all py-2 px-3 font-medium cursor-pointer"
                   data-testid="mobile-nav-how-it-works">
                   How It Works
+                </span>
+              </Link>
+              <Link href="/blog">
+                <span className="block text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all py-2 px-3 font-medium cursor-pointer"
+                  data-testid="mobile-nav-blog">
+                  Blog
                 </span>
               </Link>
               <Link href="/unfollowers-tracker">
