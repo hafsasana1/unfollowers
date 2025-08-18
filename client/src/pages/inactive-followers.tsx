@@ -119,16 +119,6 @@ export function InactiveFollowersPage() {
 
       <div className="min-h-screen bg-gray-50">
         <Header />
-        
-        {/* Breadcrumbs */}
-        <section className="bg-white py-4 border-b border-gray-200">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Breadcrumbs items={[
-              { label: 'Home', href: '/' },
-              { label: 'Inactive Followers Tracker', current: true }
-            ]} />
-          </div>
-        </section>
 
         {/* Hero Section */}
         <section className="py-12 bg-gradient-to-br from-orange-600 via-red-600 to-pink-600 text-white relative overflow-hidden">
@@ -176,6 +166,16 @@ export function InactiveFollowersPage() {
                 <span>No Login Required</span>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Breadcrumbs */}
+        <section className="bg-white py-4 border-b border-gray-200">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Breadcrumbs items={[
+              { label: 'Home', href: '/' },
+              { label: 'Inactive Followers Tracker', current: true }
+            ]} />
           </div>
         </section>
 

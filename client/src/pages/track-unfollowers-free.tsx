@@ -1,5 +1,6 @@
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 import { FileUpload } from '@/components/file-upload';
 import { StatsDashboard } from '@/components/stats-dashboard';
 import { FAQSection } from '@/components/faq-section';
@@ -61,6 +62,16 @@ export function TrackUnfollowersFree() {
               <span>50k+ Happy Users</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Breadcrumbs */}
+      <section className="bg-white py-4 border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={[
+            { label: 'Home', href: '/' },
+            { label: 'Track Unfollowers Free', current: true }
+          ]} />
         </div>
       </section>
 

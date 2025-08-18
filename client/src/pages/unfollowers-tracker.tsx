@@ -1,5 +1,6 @@
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
+import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { FileUpload } from '@/components/file-upload';
@@ -62,6 +63,16 @@ export function UnfollowersTrackerPage() {
               <span>No Login Required</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Breadcrumbs */}
+      <section className="bg-white py-4 border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={[
+            { label: 'Home', href: '/' },
+            { label: 'Unfollowers Tracker', current: true }
+          ]} />
         </div>
       </section>
 

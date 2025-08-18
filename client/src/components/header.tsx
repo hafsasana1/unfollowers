@@ -61,15 +61,7 @@ export function Header() {
                 Blog
               </span>
             </Link>
-            <Link href="/unfollowers-tracker">
-              <Button 
-                size="sm"
-                className="ml-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-medium rounded-md px-4 py-2"
-                data-testid="button-cta-header"
-              >
-                Start Free
-              </Button>
-            </Link>
+
           </div>
           
           <button 
@@ -114,15 +106,7 @@ export function Header() {
                   Blog
                 </span>
               </Link>
-              <Link href="/unfollowers-tracker">
-                <Button 
-                  size="sm"
-                  className="mt-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-medium rounded-md px-4 py-2 w-full"
-                  data-testid="mobile-button-cta"
-                >
-                  Start Free
-                </Button>
-              </Link>
+
             </div>
           </div>
         )}
