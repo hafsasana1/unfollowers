@@ -17,6 +17,10 @@ import { FollowersInsightsPage } from "@/pages/followers-insights";
 import { InstagramAnalyticsPage } from "@/pages/instagram-analytics";
 import { HowItWorksPage } from "@/pages/how-it-works";
 import { TrackUnfollowersFree } from "@/pages/track-unfollowers-free";
+import HowToSeeWhoUnfollowedYou from "@/pages/how-to-see-who-unfollowed-you";
+import WhoDoesntFollowBack from "@/pages/who-doesnt-follow-back";
+import InstagramWhoDoesntFollowMeBack from "@/pages/instagram-who-doesnt-follow-me-back";
+import HowToCheckInstagramUnfollowers from "@/pages/how-to-check-instagram-unfollowers";
 
 function Router() {
   return (
@@ -27,6 +31,10 @@ function Router() {
       <Route path="/instagram-analytics" component={InstagramAnalyticsPage} />
       <Route path="/how-it-works" component={HowItWorksPage} />
       <Route path="/track-unfollowers-free" component={TrackUnfollowersFree} />
+      <Route path="/how-to-see-who-unfollowed-you" component={HowToSeeWhoUnfollowedYou} />
+      <Route path="/who-doesnt-follow-back" component={WhoDoesntFollowBack} />
+      <Route path="/instagram-who-doesnt-follow-me-back" component={InstagramWhoDoesntFollowMeBack} />
+      <Route path="/how-to-check-instagram-unfollowers" component={HowToCheckInstagramUnfollowers} />
       <Route path="/results" component={Results} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
