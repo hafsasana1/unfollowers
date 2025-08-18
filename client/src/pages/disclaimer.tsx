@@ -2,12 +2,17 @@ import { useSEO } from '@/hooks/use-seo';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
 import { ChevronRight, Home, AlertTriangle, Shield, Info, ExternalLink } from 'lucide-react';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 
 export default function DisclaimerPage() {
   useSEO();
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Header />
+      
+      <main>
       {/* Breadcrumbs */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -23,7 +28,7 @@ export default function DisclaimerPage() {
       </div>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 py-8">
+      <div className="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
             <AlertTriangle className="w-8 h-8 text-white" />
@@ -38,7 +43,7 @@ export default function DisclaimerPage() {
       </div>
 
       {/* Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 sm:p-8">
           
           {/* General Disclaimer */}
@@ -193,6 +198,9 @@ export default function DisclaimerPage() {
 
         </div>
       </div>
+      </main>
+      
+      <Footer />
     </div>
   );
 }
