@@ -30,25 +30,25 @@ export function HowItWorks() {
   ];
 
   return (
-    <section className="py-20 bg-white" id="how-it-works">
+    <section className="py-16 bg-white" id="how-it-works">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">How It Works</h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto leading-relaxed">
             Simple 3-step process that ensures your privacy while giving you complete follower insights
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {steps.map((step) => (
             <div key={step.number} className="text-center group">
-              <div className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
-                <step.icon className="text-white" size={20} />
+              <div className={`w-12 h-12 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-105 transition-transform`}>
+                <step.icon className="text-white" size={18} />
               </div>
               
-              <Card className="group-hover:shadow-xl transition-shadow">
+              <Card className="group-hover:shadow-lg transition-shadow">
                 <CardContent className="p-5">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base font-semibold text-gray-900 mb-2">
                     {step.number}. {step.title}
                   </h3>
                   <p className="text-sm text-gray-600 mb-3 leading-relaxed">{step.description}</p>
@@ -58,7 +58,6 @@ export function HowItWorks() {
             </div>
           ))}
         </div>
-        
 
       </div>
     </section>

@@ -16,15 +16,15 @@ export function Header() {
   };
 
   return (
-    <header className="bg-white/95 backdrop-blur-md shadow-xl sticky top-0 z-50 border-b border-purple-100">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+    <header className="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-200">
+      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-3">
           <Link href="/">
-            <div className="flex items-center space-x-3 cursor-pointer group">
-              <div className="w-10 h-10 instagram-gradient rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                <Users className="text-white" size={18} />
+            <div className="flex items-center space-x-2 cursor-pointer group">
+              <div className="w-8 h-8 instagram-gradient rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
+                <Users className="text-white" size={16} />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="text-lg font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Unfollowers Tracker
               </span>
             </div>
@@ -32,35 +32,36 @@ export function Header() {
           
           <div className="hidden md:flex items-center space-x-1">
             <Link href="/unfollowers-tracker">
-              <span className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium cursor-pointer"
+              <span className="px-3 py-2 text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all font-medium cursor-pointer"
                 data-testid="nav-unfollowers-tracker">
-                Unfollowers Tracker
+                Unfollowers
               </span>
             </Link>
             <Link href="/followers-insights">
-              <span className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium cursor-pointer"
+              <span className="px-3 py-2 text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all font-medium cursor-pointer"
                 data-testid="nav-followers-insights">
-                Followers Insights
+                Insights
               </span>
             </Link>
             <Link href="/instagram-analytics">
-              <span className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium cursor-pointer"
+              <span className="px-3 py-2 text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all font-medium cursor-pointer"
                 data-testid="nav-instagram-analytics">
-                Instagram Analytics
+                Analytics
               </span>
             </Link>
             <Link href="/how-it-works">
-              <span className="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all font-medium cursor-pointer"
+              <span className="px-3 py-2 text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all font-medium cursor-pointer"
                 data-testid="nav-how-it-works">
                 How It Works
               </span>
             </Link>
             <Link href="/unfollowers-tracker">
               <Button 
-                className="ml-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 rounded-xl px-6 py-2"
+                size="sm"
+                className="ml-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-medium rounded-md px-4 py-2"
                 data-testid="button-cta-header"
               >
-                Track Unfollowers Free
+                Start Free
               </Button>
             </Link>
           </div>
@@ -69,44 +70,45 @@ export function Header() {
             className="md:hidden text-gray-600"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
         
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-6 border-t border-purple-100 bg-white/95 backdrop-blur-md">
-            <div className="flex flex-col space-y-2">
+          <div className="md:hidden py-4 border-t border-gray-200 bg-white/95 backdrop-blur-md">
+            <div className="flex flex-col space-y-1">
               <Link href="/unfollowers-tracker">
-                <span className="block text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all py-3 px-4 font-medium cursor-pointer"
+                <span className="block text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all py-2 px-3 font-medium cursor-pointer"
                   data-testid="mobile-nav-unfollowers-tracker">
-                  Unfollowers Tracker
+                  Unfollowers
                 </span>
               </Link>
               <Link href="/followers-insights">
-                <span className="block text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all py-3 px-4 font-medium cursor-pointer"
+                <span className="block text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all py-2 px-3 font-medium cursor-pointer"
                   data-testid="mobile-nav-followers-insights">
-                  Followers Insights
+                  Insights
                 </span>
               </Link>
               <Link href="/instagram-analytics">
-                <span className="block text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all py-3 px-4 font-medium cursor-pointer"
+                <span className="block text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all py-2 px-3 font-medium cursor-pointer"
                   data-testid="mobile-nav-instagram-analytics">
-                  Instagram Analytics
+                  Analytics
                 </span>
               </Link>
               <Link href="/how-it-works">
-                <span className="block text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all py-3 px-4 font-medium cursor-pointer"
+                <span className="block text-sm text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-all py-2 px-3 font-medium cursor-pointer"
                   data-testid="mobile-nav-how-it-works">
                   How It Works
                 </span>
               </Link>
               <Link href="/unfollowers-tracker">
                 <Button 
-                  className="mt-4 mx-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-semibold shadow-lg rounded-xl"
+                  size="sm"
+                  className="mt-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-all font-medium rounded-md px-4 py-2 w-full"
                   data-testid="mobile-button-cta"
                 >
-                  Track Unfollowers Free
+                  Start Free
                 </Button>
               </Link>
             </div>

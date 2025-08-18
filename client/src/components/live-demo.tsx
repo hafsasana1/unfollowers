@@ -84,11 +84,11 @@ export function LiveDemo() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50" id="live-demo">
+    <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50" id="live-demo">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">See It In Action</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">See It In Action</h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Watch live demo analysis of celebrity Instagram accounts. This is what you'll see after uploading your data.
           </p>
         </div>

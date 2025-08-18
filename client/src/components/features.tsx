@@ -73,43 +73,43 @@ export function Features() {
   };
 
   return (
-    <section className="py-20 bg-gray-50" id="features">
+    <section className="py-16 bg-gray-50" id="features">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Instagram Analytics Features</h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto leading-relaxed">
             Comprehensive insights for tracking your followers and unfollowers
           </p>
           
           {/* Key Benefits */}
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-3xl mx-auto">
-            <div className="text-center bg-gradient-to-br from-purple-50 to-pink-50 p-3 rounded-lg">
+          <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 max-w-3xl mx-auto">
+            <div className="text-center bg-gradient-to-br from-purple-50 to-pink-50 p-2 rounded-lg">
               <div className="font-medium text-purple-700 text-xs">✓ Track Unfollowers</div>
             </div>
-            <div className="text-center bg-gradient-to-br from-blue-50 to-purple-50 p-3 rounded-lg">
+            <div className="text-center bg-gradient-to-br from-blue-50 to-purple-50 p-2 rounded-lg">
               <div className="font-medium text-blue-700 text-xs">✓ New Followers</div>
             </div>
-            <div className="text-center bg-gradient-to-br from-green-50 to-blue-50 p-3 rounded-lg">
+            <div className="text-center bg-gradient-to-br from-green-50 to-blue-50 p-2 rounded-lg">
               <div className="font-medium text-green-700 text-xs">✓ Mutual Followers</div>
             </div>
-            <div className="text-center bg-gradient-to-br from-orange-50 to-pink-50 p-3 rounded-lg">
+            <div className="text-center bg-gradient-to-br from-orange-50 to-pink-50 p-2 rounded-lg">
               <div className="font-medium text-orange-700 text-xs">✓ Instant Insights</div>
             </div>
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="hover:shadow-xl transition-all hover:-translate-y-2 duration-300"
+              className="hover:shadow-lg transition-all hover:-translate-y-1 duration-300"
             >
-              <CardContent className="p-6">
-                <div className={`w-12 h-12 ${getColorClasses(feature.color)} rounded-lg flex items-center justify-center mb-4`}>
-                  <feature.icon size={20} />
+              <CardContent className="p-5">
+                <div className={`w-10 h-10 ${getColorClasses(feature.color)} rounded-lg flex items-center justify-center mb-3`}>
+                  <feature.icon size={18} />
                 </div>
                 
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <h3 className="text-base font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 
                 <p className="text-sm text-gray-600 mb-3 leading-relaxed">{feature.description}</p>
                 

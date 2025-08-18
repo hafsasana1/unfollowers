@@ -56,21 +56,21 @@ export default function About() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 py-16 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-32 h-32 bg-white opacity-10 rounded-full animate-float"></div>
           <div className="absolute bottom-20 right-20 w-24 h-24 bg-white opacity-10 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
         </div>
         
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge className="bg-white/20 text-white border-white/30 mb-6 px-4 py-2">
+          <Badge className="bg-white/20 text-white border-white/30 mb-4 px-3 py-1 text-sm">
             About Our Mission
           </Badge>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
             Empowering Social Media
             <span className="block text-yellow-300">Insights & Privacy</span>
           </h1>
-          <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-100 mb-6 max-w-3xl mx-auto leading-relaxed">
             We're on a mission to provide Instagram users with powerful analytics while keeping their data completely secure and private. 
             No logins, no data storage, just pure insights.
           </p>
@@ -78,16 +78,16 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="text-purple-600" size={24} />
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <stat.icon className="text-purple-600" size={20} />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">{stat.number}</div>
+                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -95,12 +95,12 @@ export default function About() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Our Story</h2>
+              <div className="space-y-3 text-gray-600 leading-relaxed text-sm sm:text-base">
                 <p>
                   Unfollowers Tracker was born from a simple frustration: existing Instagram analytics tools 
                   required users to compromise their account security by providing login credentials.
@@ -116,17 +116,19 @@ export default function About() {
                 </p>
               </div>
               
-              <div className="mt-8 flex items-center space-x-4">
-                <CheckCircle className="text-green-500" size={20} />
-                <span className="text-gray-700 font-medium">No login credentials required</span>
-              </div>
-              <div className="mt-2 flex items-center space-x-4">
-                <CheckCircle className="text-green-500" size={20} />
-                <span className="text-gray-700 font-medium">100% local data processing</span>
-              </div>
-              <div className="mt-2 flex items-center space-x-4">
-                <CheckCircle className="text-green-500" size={20} />
-                <span className="text-gray-700 font-medium">Open source and transparent</span>
+              <div className="mt-6 space-y-2">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="text-green-500" size={16} />
+                  <span className="text-gray-700 font-medium text-sm">No login credentials required</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="text-green-500" size={16} />
+                  <span className="text-gray-700 font-medium text-sm">100% local data processing</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="text-green-500" size={16} />
+                  <span className="text-gray-700 font-medium text-sm">Open source and transparent</span>
+                </div>
               </div>
             </div>
             

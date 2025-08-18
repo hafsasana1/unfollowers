@@ -2,69 +2,69 @@ import { Users, Instagram, Twitter, Youtube } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-8 h-8 instagram-gradient rounded-lg flex items-center justify-center">
-                <Users className="text-white" size={16} />
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-7 h-7 instagram-gradient rounded-lg flex items-center justify-center">
+                <Users className="text-white" size={14} />
               </div>
-              <span className="text-xl font-bold">Unfollowers Tracker</span>
+              <span className="text-lg font-semibold">Unfollowers Tracker</span>
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
+            <p className="text-gray-400 mb-4 max-w-md text-sm leading-relaxed">
               The safest and most comprehensive way to analyze your Instagram followers. 
               Discover who unfollowed you without compromising your account security.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-3">
               <a 
                 href="#" 
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-colors"
+                className="w-8 h-8 bg-gray-800 rounded-md flex items-center justify-center hover:bg-purple-600 transition-colors"
               >
-                <Instagram size={16} />
+                <Instagram size={14} />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-colors"
+                className="w-8 h-8 bg-gray-800 rounded-md flex items-center justify-center hover:bg-purple-600 transition-colors"
               >
-                <Twitter size={16} />
+                <Twitter size={14} />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-colors"
+                className="w-8 h-8 bg-gray-800 rounded-md flex items-center justify-center hover:bg-purple-600 transition-colors"
               >
-                <Youtube size={16} />
+                <Youtube size={14} />
               </a>
             </div>
           </div>
           
           {/* Instagram Tools */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Instagram Tools</h4>
-            <ul className="space-y-3">
+            <h4 className="text-base font-semibold mb-4">Instagram Tools</h4>
+            <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Profile Viewer
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Engagement Calculator
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Hashtag Tracker
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Story Saver
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Username Checker
                 </a>
               </li>
@@ -73,12 +73,12 @@ export function Footer() {
           
           {/* Resources & Guides */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Resources & Guides</h4>
-            <ul className="space-y-3">
+            <h4 className="text-base font-semibold mb-4">Resources & Guides</h4>
+            <ul className="space-y-2">
               <li>
                 <button 
                   onClick={() => document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
                   Blog & Guides
                 </button>
@@ -86,23 +86,23 @@ export function Footer() {
               <li>
                 <button 
                   onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
                   FAQ
                 </button>
               </li>
               <li>
-                <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/terms-of-service" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Contact Us
                 </a>
               </li>

@@ -84,21 +84,21 @@ export default function Contact() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 py-16 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-32 h-32 bg-white opacity-10 rounded-full animate-float"></div>
           <div className="absolute bottom-20 right-20 w-24 h-24 bg-white opacity-10 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
         </div>
         
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge className="bg-white/20 text-white border-white/30 mb-6 px-4 py-2">
+          <Badge className="bg-white/20 text-white border-white/30 mb-4 px-3 py-1 text-sm">
             Get In Touch
           </Badge>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
             We're Here to
             <span className="block text-yellow-300">Help You</span>
           </h1>
-          <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-100 mb-6 max-w-3xl mx-auto leading-relaxed">
             Have questions about our Instagram analytics tool? Need technical support? 
             Our friendly team is ready to assist you with anything you need.
           </p>
@@ -106,18 +106,18 @@ export default function Contact() {
       </section>
 
       {/* Contact Methods */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactMethods.map((method, index) => (
-              <Card key={index} className="text-center hover:shadow-xl transition-all hover:-translate-y-2 duration-300">
-                <CardContent className="p-8">
-                  <div className={`w-16 h-16 bg-${method.color}-100 rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                    <method.icon className={`text-${method.color}-600`} size={24} />
+              <Card key={index} className="text-center hover:shadow-lg transition-all hover:-translate-y-1 duration-300">
+                <CardContent className="p-6">
+                  <div className={`w-12 h-12 bg-${method.color}-100 rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                    <method.icon className={`text-${method.color}-600`} size={20} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{method.title}</h3>
-                  <p className="text-gray-600 mb-4">{method.description}</p>
-                  <p className="font-semibold text-gray-900">{method.contact}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{method.title}</h3>
+                  <p className="text-sm text-gray-600 mb-3">{method.description}</p>
+                  <p className="font-semibold text-gray-900 text-sm">{method.contact}</p>
                 </CardContent>
               </Card>
             ))}
