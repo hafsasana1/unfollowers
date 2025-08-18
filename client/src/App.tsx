@@ -23,6 +23,7 @@ import WhoDoesntFollowBack from "@/pages/who-doesnt-follow-back";
 import InstagramWhoDoesntFollowMeBack from "@/pages/instagram-who-doesnt-follow-me-back";
 import HowToCheckInstagramUnfollowers from "@/pages/how-to-check-instagram-unfollowers";
 import BlogPage from "@/pages/blog";
+import DisclaimerPage from "@/pages/disclaimer";
 
 function Router() {
   return (
@@ -45,6 +46,7 @@ function Router() {
       <Route path="/terms-of-service" component={TermsOfService} />
       <Route path="/cookie-policy" component={CookiePolicy} />
       <Route path="/help-center" component={HelpCenter} />
+      <Route path="/disclaimer" component={DisclaimerPage} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

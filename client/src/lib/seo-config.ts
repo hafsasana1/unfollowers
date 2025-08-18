@@ -140,6 +140,14 @@ export const seoConfig: Record<string, SEOData> = {
     keywords: 'instagram tracker help, followers tracking FAQ, troubleshooting guide, user support',
     ogTitle: 'Help Center - Expert Support Available',
     ogDescription: 'Comprehensive help center with guides and support for Instagram follower tracking.'
+  },
+
+  '/disclaimer': {
+    title: 'Disclaimer - Instagram Unfollowers Tracker',
+    description: 'Important disclaimers and limitations regarding the use of Instagram Unfollowers Tracker tool. Please read before using our service.',
+    keywords: 'disclaimer, terms, limitations, instagram tracker disclaimer, liability, accuracy',
+    ogTitle: 'Disclaimer - Terms and Limitations',
+    ogDescription: 'Important legal disclaimers and service limitations for Instagram followers tracking tool.'
   }
 };
 

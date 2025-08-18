@@ -77,8 +77,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/help-center" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/help-center" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Help Center
+                </a>
+              </li>
+              <li>
+                <a href="/disclaimer" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Disclaimer
                 </a>
               </li>
             </ul>
