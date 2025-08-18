@@ -87,7 +87,7 @@ export const mockBlogArticles: BlogArticle[] = [
     excerpt: 'Complete safety guide with troubleshooting tips to check Instagram unfollowers without risking your account.',
     publishDate: '2025-08-15',
     category: 'Safety Guide',
-    imageUrl: 'https://images.unsplash.com/photo-1566207474742-de921626ad0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250',
+    imageUrl: '/how-to-check-instagram-unfollowers.png',
     slug: 'how-to-check-instagram-unfollowers',
   },
 ];
