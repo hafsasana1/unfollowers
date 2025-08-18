@@ -121,7 +121,7 @@ export function InactiveFollowersPage() {
         <Header />
 
         {/* Hero Section */}
-        <section className="py-12 bg-gradient-to-br from-orange-600 via-red-600 to-pink-600 text-white relative overflow-hidden">
+        <section className="py-10 bg-gradient-to-br from-orange-600 via-red-600 to-pink-600 text-white relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-10 left-10 w-32 h-32 bg-white opacity-5 rounded-full blur-2xl animate-pulse-slow"></div>
             <div className="absolute bottom-10 right-20 w-24 h-24 bg-white opacity-5 rounded-full blur-xl animate-float"></div>

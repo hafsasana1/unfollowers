@@ -11,7 +11,7 @@ export function FollowersInsightsPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+      <section className="pt-12 pb-10 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 right-10 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl animate-pulse-slow"></div>
           <div className="absolute bottom-20 left-20 w-48 h-48 bg-white opacity-5 rounded-full blur-2xl animate-float"></div>
@@ -40,7 +40,7 @@ export function FollowersInsightsPage() {
       </section>
 
       {/* Key Insights Features */}
-      <section id="insights-features" className="py-20 bg-gray-50">
+      <section id="insights-features" className="py-12 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">

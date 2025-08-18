@@ -30,9 +30,9 @@ export function HowItWorks() {
   ];
 
   return (
-    <section className="py-16 bg-white" id="how-it-works">
+    <section className="py-10 bg-white" id="how-it-works">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">How It Works</h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto leading-relaxed">
             Simple 3-step process that ensures your privacy while giving you complete follower insights

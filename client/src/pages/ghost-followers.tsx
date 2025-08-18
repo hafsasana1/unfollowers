@@ -168,9 +168,9 @@ export function GhostFollowersPage() {
         </div>
 
         {/* What Are Ghost Followers */}
-        <section className="py-16 bg-white">
+        <section className="py-10 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 What Are Instagram Ghost Followers?
               </h2>
@@ -197,7 +197,7 @@ export function GhostFollowersPage() {
         </section>
 
         {/* Why Remove Ghost Followers */}
-        <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+        <section className="py-10 bg-gradient-to-br from-gray-50 to-blue-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -257,9 +257,9 @@ export function GhostFollowersPage() {
         </section>
 
         {/* How It Works */}
-        <section className="py-16 bg-white">
+        <section className="py-10 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 How Ghost Followers Detection Works
               </h2>

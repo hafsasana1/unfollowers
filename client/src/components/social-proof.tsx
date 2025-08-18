@@ -3,10 +3,10 @@ import { Star, Users, Shield, TrendingUp } from 'lucide-react';
 
 export function SocialProof() {
   return (
-    <section className="py-12 bg-gradient-to-r from-purple-50 via-pink-50 to-blue-50">
+    <section className="py-8 bg-gradient-to-r from-purple-50 via-pink-50 to-blue-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
             Trusted by Instagram Users Worldwide
           </h2>
@@ -16,7 +16,7 @@ export function SocialProof() {
         </div>
 
         {/* Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="text-center">
             <div className="bg-white rounded-lg p-5 shadow-sm">
               <Users className="mx-auto mb-3 text-purple-600" size={24} />

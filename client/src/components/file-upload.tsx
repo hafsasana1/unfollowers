@@ -92,9 +92,9 @@ export function FileUpload({ onFileUploaded }: FileUploadProps) {
   });
 
   return (
-    <section className="py-16 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50" id="upload">
+    <section className="py-10 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50" id="upload">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Track Your Instagram Unfollowers Now</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             Upload your Instagram data export and discover who unfollowed you in seconds. 

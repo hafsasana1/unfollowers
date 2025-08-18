@@ -11,9 +11,9 @@ export function FAQSection() {
   };
 
   return (
-    <section className="py-16 bg-gray-50" id="faq">
+    <section className="py-10 bg-gray-50" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
           <p className="text-base sm:text-lg text-gray-600 leading-relaxed">Common questions about tracking Instagram unfollowers and followers</p>
         </div>
@@ -47,7 +47,7 @@ export function FAQSection() {
           ))}
         </div>
         
-        <div className="text-center mt-10">
+        <div className="text-center mt-8">
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100">
             <h3 className="text-lg font-semibold text-gray-900 mb-3">Still have questions?</h3>
             <p className="text-sm text-gray-600 mb-4">

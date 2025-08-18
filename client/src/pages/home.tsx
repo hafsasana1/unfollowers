@@ -63,7 +63,7 @@ export default function Home() {
         <SEOContent />
         
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 relative overflow-hidden">
+        <section className="py-10 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 relative overflow-hidden">
           {/* Floating elements */}
           <div className="absolute inset-0">
             <div className="absolute top-10 left-10 w-24 h-24 bg-white opacity-5 rounded-full animate-pulse-slow"></div>

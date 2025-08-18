@@ -73,9 +73,9 @@ export function Features() {
   };
 
   return (
-    <section className="py-16 bg-gray-50" id="features">
+    <section className="py-10 bg-gray-50" id="features">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Instagram Analytics Features</h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto leading-relaxed">
             Comprehensive insights for tracking your followers and unfollowers

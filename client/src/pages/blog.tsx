@@ -31,7 +31,7 @@ export default function BlogPage() {
       
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 py-16">
+        <section className="bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 py-12">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -68,7 +68,7 @@ export default function BlogPage() {
         </section>
 
         {/* Blog Articles */}
-        <section className="py-16 bg-white">
+        <section className="py-10 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">

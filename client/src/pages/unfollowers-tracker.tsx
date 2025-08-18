@@ -21,7 +21,7 @@ export function UnfollowersTrackerPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 text-white relative overflow-hidden">
+      <section className="pt-12 pb-10 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 text-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl animate-pulse-slow"></div>
           <div className="absolute bottom-20 right-20 w-48 h-48 bg-white opacity-5 rounded-full blur-2xl animate-float"></div>

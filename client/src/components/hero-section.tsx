@@ -17,7 +17,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative py-20 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 overflow-hidden">
+    <section className="relative py-12 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 overflow-hidden">
       {/* Floating elements for visual appeal */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-20 h-20 bg-white opacity-10 rounded-full animate-float"></div>

@@ -21,7 +21,7 @@ export function HowItWorksPage() {
       </section>
 
       {/* Hero Section */}
-      <section className="py-12 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 text-white">
+      <section className="py-10 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
             How It Works
@@ -33,9 +33,9 @@ export function HowItWorksPage() {
       </section>
 
       {/* Step by Step Process */}
-      <section className="py-16 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-3">
               Simple 3-Step Process
             </h2>
@@ -44,7 +44,7 @@ export function HowItWorksPage() {
             </p>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-8">
             {/* Step 1 */}
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="flex-1">
