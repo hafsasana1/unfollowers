@@ -11,21 +11,24 @@ export function FAQSection() {
   };
 
   return (
-    <section className="py-10 bg-gray-50" id="faq">
+    <section className="py-10 bg-gray-50" id="faq" aria-labelledby="faq-heading">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
+          <h2 id="faq-heading" className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
           <p className="text-base sm:text-lg text-gray-600 leading-relaxed">Common questions about tracking Instagram unfollowers and followers</p>
         </div>
         
-        <div className="space-y-4">
+        <div className="space-y-4" role="region" aria-label="Frequently asked questions">
           {mockFAQs.map((faq) => (
             <Card key={faq.id} className="overflow-hidden shadow-sm">
               <button 
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                 onClick={() => toggleFAQ(faq.id)}
+                aria-expanded={openFAQ === faq.id}
+                aria-controls={`faq-answer-${faq.id}`}
+                data-testid={`faq-question-${faq.id}`}
               >
-                <h3 className="text-base font-semibold text-gray-900 pr-4">
+                <h3 className="text-base font-semibold text-gray-900 pr-4 faq-question">
                   {faq.question}
                 </h3>
                 <ChevronDown 
@@ -33,11 +36,12 @@ export function FAQSection() {
                     openFAQ === faq.id ? 'rotate-180' : ''
                   }`}
                   size={18}
+                  aria-hidden="true"
                 />
               </button>
               
               {openFAQ === faq.id && (
-                <CardContent className="px-6 pb-4">
+                <CardContent className="px-6 pb-4" id={`faq-answer-${faq.id}`} role="region" aria-labelledby={`faq-question-${faq.id}`}>
                   <div className="text-sm text-gray-600 leading-relaxed">
                     {faq.answer}
                   </div>

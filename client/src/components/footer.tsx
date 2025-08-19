@@ -2,61 +2,68 @@ import { Users, Instagram, Twitter, Youtube } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-12" role="contentinfo">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {/* Brand Column */}
-          <div className="lg:col-span-2">
+          <section className="lg:col-span-2" aria-labelledby="footer-brand">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-7 h-7 instagram-gradient rounded-lg flex items-center justify-center">
-                <Users className="text-white" size={14} />
+                <Users className="text-white" size={14} aria-hidden="true" />
               </div>
-              <span className="text-lg font-semibold">Unfollowers Tracker</span>
+              <h2 id="footer-brand" className="text-lg font-semibold">Unfollowers Tracker</h2>
             </div>
             <p className="text-gray-400 mb-4 max-w-md text-sm leading-relaxed">
               The safest and most comprehensive way to analyze your Instagram followers. 
               Discover who unfollowed you without compromising your account security.
             </p>
-            <div className="flex space-x-3">
+            <div className="flex space-x-3" role="list" aria-label="Social media links">
               <a 
-                href="#" 
+                href="https://instagram.com/unfollowerstracker" 
                 className="w-8 h-8 bg-gray-800 rounded-md flex items-center justify-center hover:bg-purple-600 transition-colors"
+                aria-label="Follow us on Instagram"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <Instagram size={14} />
+                <Instagram size={14} aria-hidden="true" />
               </a>
               <a 
-                href="#" 
+                href="https://twitter.com/unfollowerstracker" 
                 className="w-8 h-8 bg-gray-800 rounded-md flex items-center justify-center hover:bg-purple-600 transition-colors"
+                aria-label="Follow us on Twitter"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <Twitter size={14} />
+                <Twitter size={14} aria-hidden="true" />
               </a>
               <a 
-                href="#" 
+                href="https://youtube.com/@unfollowerstracker" 
                 className="w-8 h-8 bg-gray-800 rounded-md flex items-center justify-center hover:bg-purple-600 transition-colors"
+                aria-label="Subscribe to our YouTube channel"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <Youtube size={14} />
+                <Youtube size={14} aria-hidden="true" />
               </a>
             </div>
-          </div>
+          </section>
           
 
           
           {/* Resources & Guides */}
-          <div>
-            <h4 className="text-base font-semibold mb-4">Resources & Guides</h4>
-            <ul className="space-y-2">
+          <nav aria-labelledby="footer-resources">
+            <h4 id="footer-resources" className="text-base font-semibold mb-4">Resources & Guides</h4>
+            <ul className="space-y-2" role="list">
               <li>
-                <button 
-                  onClick={() => document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
-                >
+                <a href="/blog" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Blog & Guides
-                </button>
+                </a>
               </li>
               <li>
                 <button 
                   onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
                   className="text-gray-400 hover:text-white transition-colors text-sm"
+                  aria-label="Jump to frequently asked questions section"
                 >
                   FAQ
                 </button>
@@ -87,12 +94,12 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2024 Unfollowers Tracker. All rights reserved.
+            © <time dateTime="2024">2024</time> Unfollowers Tracker. All rights reserved.
           </p>
           <div className="flex items-center space-x-6 text-sm text-gray-400">
             <span>Made with ❤️ for Instagram users</span>

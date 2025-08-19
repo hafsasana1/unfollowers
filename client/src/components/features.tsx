@@ -73,39 +73,40 @@ export function Features() {
   };
 
   return (
-    <section className="py-10 bg-gray-50" id="features">
+    <section className="py-10 bg-gray-50" id="features" aria-labelledby="features-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Instagram Analytics Features</h2>
+          <h2 id="features-heading" className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Instagram Analytics Features</h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto leading-relaxed">
             Comprehensive insights for tracking your followers and unfollowers
           </p>
           
           {/* Key Benefits */}
-          <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 max-w-3xl mx-auto">
-            <div className="text-center bg-gradient-to-br from-purple-50 to-pink-50 p-2 rounded-lg">
+          <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 max-w-3xl mx-auto" role="list" aria-label="Key feature highlights">
+            <div className="text-center bg-gradient-to-br from-purple-50 to-pink-50 p-2 rounded-lg" role="listitem">
               <div className="font-medium text-purple-700 text-xs">✓ Track Unfollowers</div>
             </div>
-            <div className="text-center bg-gradient-to-br from-blue-50 to-purple-50 p-2 rounded-lg">
+            <div className="text-center bg-gradient-to-br from-blue-50 to-purple-50 p-2 rounded-lg" role="listitem">
               <div className="font-medium text-blue-700 text-xs">✓ New Followers</div>
             </div>
-            <div className="text-center bg-gradient-to-br from-green-50 to-blue-50 p-2 rounded-lg">
+            <div className="text-center bg-gradient-to-br from-green-50 to-blue-50 p-2 rounded-lg" role="listitem">
               <div className="font-medium text-green-700 text-xs">✓ Mutual Followers</div>
             </div>
-            <div className="text-center bg-gradient-to-br from-orange-50 to-pink-50 p-2 rounded-lg">
+            <div className="text-center bg-gradient-to-br from-orange-50 to-pink-50 p-2 rounded-lg" role="listitem">
               <div className="font-medium text-orange-700 text-xs">✓ Instant Insights</div>
             </div>
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" role="list" aria-label="Detailed feature list">
           {features.map((feature, index) => (
             <Card 
               key={index} 
               className="hover:shadow-lg transition-all hover:-translate-y-1 duration-300"
+              role="listitem"
             >
               <CardContent className="p-5">
-                <div className={`w-10 h-10 ${getColorClasses(feature.color)} rounded-lg flex items-center justify-center mb-3`}>
+                <div className={`w-10 h-10 ${getColorClasses(feature.color)} rounded-lg flex items-center justify-center mb-3`} aria-hidden="true">
                   <feature.icon size={18} />
                 </div>
                 
@@ -114,7 +115,7 @@ export function Features() {
                 <p className="text-sm text-gray-600 mb-3 leading-relaxed">{feature.description}</p>
                 
                 <div className={`flex items-center ${getHighlightColor(feature.color)} text-xs font-medium`}>
-                  <CheckCircle className="mr-1" size={12} />
+                  <CheckCircle className="mr-1" size={12} aria-hidden="true" />
                   {feature.highlight}
                 </div>
               </CardContent>

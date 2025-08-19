@@ -12,6 +12,7 @@ import { WhyUseOurTool } from '@/components/why-use-our-tool';
 import { BlogSection } from '@/components/blog-section';
 import { FAQSection } from '@/components/faq-section';
 import { Footer } from '@/components/footer';
+import { SEOStructuredData } from '@/components/seo-structured-data';
 import { Button } from '@/components/ui/button';
 import { Rocket, HelpCircle } from 'lucide-react';
 
@@ -45,25 +46,60 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <SEOStructuredData />
       <Header />
-      <main>
+      <main role="main">
         <HeroSection />
-        <FileUpload onFileUploaded={handleFileUploaded} />
+        <section id="upload" aria-labelledby="upload-heading">
+          <h2 id="upload-heading" className="sr-only">Upload Instagram Data</h2>
+          <FileUpload onFileUploaded={handleFileUploaded} />
+        </section>
         
         {/* Show results dashboard after file upload */}
-        {hasUploadedFile && <StatsDashboard />}
+        {hasUploadedFile && (
+          <section id="results" aria-labelledby="results-heading">
+            <h2 id="results-heading" className="sr-only">Analysis Results</h2>
+            <StatsDashboard />
+          </section>
+        )}
         
-        <LiveDemo />
-        <HowItWorks />
-        <WhyUseOurTool />
-        <Features />
-        <SocialProof />
-        <BlogSection />
-        <SEOContent />
-        <FAQSection />
+        <section id="demo" aria-labelledby="demo-heading">
+          <h2 id="demo-heading" className="sr-only">Live Demo</h2>
+          <LiveDemo />
+        </section>
+        
+        <section id="how-it-works" aria-labelledby="how-it-works-heading">
+          <HowItWorks />
+        </section>
+        
+        <section id="why-choose-us" aria-labelledby="why-choose-heading">
+          <WhyUseOurTool />
+        </section>
+        
+        <section id="features" aria-labelledby="features-heading">
+          <Features />
+        </section>
+        
+        <section id="social-proof" aria-labelledby="social-proof-heading">
+          <h2 id="social-proof-heading" className="sr-only">User Reviews and Testimonials</h2>
+          <SocialProof />
+        </section>
+        
+        <section id="blog" aria-labelledby="blog-heading">
+          <BlogSection />
+        </section>
+        
+        <section id="seo-content" aria-labelledby="seo-content-heading">
+          <h2 id="seo-content-heading" className="sr-only">Instagram Analytics Information</h2>
+          <SEOContent />
+        </section>
+        
+        <section id="faq" aria-labelledby="faq-heading">
+          <FAQSection />
+        </section>
         
         {/* CTA Section */}
-        <section className="py-10 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 relative overflow-hidden">
+        <section className="py-10 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 relative overflow-hidden" aria-labelledby="cta-heading">
           {/* Floating elements */}
           <div className="absolute inset-0">
             <div className="absolute top-10 left-10 w-24 h-24 bg-white opacity-5 rounded-full animate-pulse-slow"></div>
@@ -72,7 +108,7 @@ export default function Home() {
           </div>
           
           <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            <h2 id="cta-heading" className="text-2xl sm:text-3xl font-bold text-white mb-4">
               Ready to Discover Your Instagram Insights?
             </h2>
             <p className="text-base sm:text-lg text-gray-100 mb-6 max-w-xl mx-auto">

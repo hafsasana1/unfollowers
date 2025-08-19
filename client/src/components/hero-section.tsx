@@ -17,9 +17,9 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative py-12 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 overflow-hidden">
+    <section className="relative py-12 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 overflow-hidden" role="banner" aria-labelledby="hero-heading">
       {/* Floating elements for visual appeal */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" aria-hidden="true">
         <div className="absolute top-20 left-10 w-20 h-20 bg-white opacity-10 rounded-full animate-float"></div>
         <div className="absolute top-40 right-20 w-16 h-16 bg-white opacity-10 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
         <div className="absolute bottom-32 left-1/4 w-12 h-12 bg-white opacity-10 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
@@ -28,10 +28,10 @@ export function HeroSection() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 leading-tight tracking-tight">
+          <h1 id="hero-heading" className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 leading-tight tracking-tight">
             Free Instagram Unfollowers Tracker
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-yellow-300 mb-6 font-semibold">
+          <p className="text-lg sm:text-xl lg:text-2xl text-yellow-300 mb-6 font-semibold" role="doc-subtitle">
             See Who Unfollowed You Instantly
           </p>
           
@@ -39,14 +39,15 @@ export function HeroSection() {
             Track unfollowers, new followers, and Instagram insights – no password required, 100% secure.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10" role="group" aria-label="Primary actions">
             <Button 
               size="lg"
               onClick={scrollToUpload}
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold text-base hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
               data-testid="button-start-tracking"
+              aria-label="Start tracking Instagram unfollowers - no login required"
             >
-              <Upload className="mr-2" size={18} />
+              <Upload className="mr-2" size={18} aria-hidden="true" />
               Track Unfollowers Free
             </Button>
             <Button 
@@ -60,28 +61,29 @@ export function HeroSection() {
               }}
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-medium text-base hover:bg-white hover:text-purple-600 transition-all bg-transparent"
               data-testid="button-discover-insights"
+              aria-label="View live demo of Instagram analytics features"
             >
-              <Play className="mr-2" size={16} />
+              <Play className="mr-2" size={16} aria-hidden="true" />
               See Live Demo
             </Button>
           </div>
           
           {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center items-center gap-6 text-white/90">
-            <div className="flex items-center gap-2">
-              <Shield className="text-green-300" size={14} />
+          <div className="flex flex-wrap justify-center items-center gap-6 text-white/90" role="list" aria-label="Key benefits">
+            <div className="flex items-center gap-2" role="listitem">
+              <Shield className="text-green-300" size={14} aria-hidden="true" />
               <span className="text-xs font-medium">100% Secure</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Lock className="text-blue-300" size={14} />
+            <div className="flex items-center gap-2" role="listitem">
+              <Lock className="text-blue-300" size={14} aria-hidden="true" />
               <span className="text-xs font-medium">No Login Required</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Zap className="text-yellow-300" size={14} />
+            <div className="flex items-center gap-2" role="listitem">
+              <Zap className="text-yellow-300" size={14} aria-hidden="true" />
               <span className="text-xs font-medium">Instant Results</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Gift className="text-pink-300" size={14} />
+            <div className="flex items-center gap-2" role="listitem">
+              <Gift className="text-pink-300" size={14} aria-hidden="true" />
               <span className="text-xs font-medium">Completely Free</span>
             </div>
           </div>

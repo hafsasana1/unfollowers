@@ -2,44 +2,56 @@ import { useEffect } from 'react';
 import { useLocation } from 'wouter';
 import { getSEOData, getCanonicalUrl, generateStructuredData } from '@/lib/seo-config';
 
-// Hook to manage SEO meta tags dynamically
+// Simplified SEO hook to manage meta tags dynamically
 export const useSEO = () => {
   const [location] = useLocation();
 
   useEffect(() => {
-    const seoData = getSEOData(location);
-    const canonicalUrl = getCanonicalUrl(location);
-    const structuredData = generateStructuredData(location);
+    try {
+      const seoData = getSEOData(location);
+      const canonicalUrl = getCanonicalUrl(location);
 
-    // Update title
-    document.title = seoData.title;
+      // Update title
+      document.title = seoData.title;
 
-    // Update or create meta description
-    updateMetaTag('name', 'description', seoData.description);
+      // Update canonical URL
+      updateCanonicalLink(canonicalUrl);
 
-    // Update or create meta keywords
-    if (seoData.keywords) {
-      updateMetaTag('name', 'keywords', seoData.keywords);
+      // Basic structured data
+      const structuredData = generateStructuredData(location);
+      updateStructuredData(structuredData, 'page');
+
+      // Enhanced Open Graph meta tags
+      const enhancedOGTags = {
+        'og:title': seoData.title,
+        'og:description': seoData.description,
+        'og:type': 'website',
+        'og:site_name': 'Instagram Unfollowers Tracker',
+        'og:locale': 'en_US',
+        'og:url': canonicalUrl,
+      };
+
+      Object.entries(enhancedOGTags).forEach(([property, content]) => {
+        updateMetaTag('property', property, content);
+      });
+
+      // Basic AI-optimized meta tags
+      const aiTags = {
+        'ai:type': 'tool',
+        'ai:category': 'instagram-analytics',
+        'ai:safety': 'no-login-required',
+        'ai:cost': 'free',
+        'robot-instructions': 'index,follow,max-snippet:320,max-image-preview:large',
+        'crawl-hints': 'follow-links,index-content'
+      };
+
+      Object.entries(aiTags).forEach(([name, content]) => {
+        updateMetaTag('name', name, content);
+      });
+
+    } catch (error) {
+      console.warn('SEO optimization failed:', error);
     }
-
-    // Update Open Graph tags
-    updateMetaTag('property', 'og:title', seoData.ogTitle || seoData.title);
-    updateMetaTag('property', 'og:description', seoData.ogDescription || seoData.description);
-    updateMetaTag('property', 'og:url', canonicalUrl);
-
-    // Update Twitter Card tags
-    updateMetaTag('name', 'twitter:title', seoData.ogTitle || seoData.title);
-    updateMetaTag('name', 'twitter:description', seoData.ogDescription || seoData.description);
-
-    // Update canonical URL
-    updateCanonicalLink(canonicalUrl);
-
-    // Update structured data
-    updateStructuredData(structuredData);
-
-    // Update robots meta
-    updateMetaTag('name', 'robots', 'index, follow');
-
   }, [location]);
 };
 
@@ -69,19 +81,19 @@ const updateCanonicalLink = (href: string) => {
   canonical.href = href;
 };
 
-// Helper function to update structured data
-const updateStructuredData = (data: any) => {
-  // Remove existing page-specific structured data
-  const existingScript = document.querySelector('script[data-page-schema="true"]');
+// Enhanced helper function to update structured data with multiple schemas
+const updateStructuredData = (data: any, schemaType: string = 'page') => {
+  // Remove existing schema of this type
+  const existingScript = document.querySelector(`script[data-schema-type="${schemaType}"]`);
   if (existingScript) {
     existingScript.remove();
   }
 
-  // Add new structured data
+  // Add new structured data with proper formatting for AI/LLM consumption
   const script = document.createElement('script');
   script.type = 'application/ld+json';
-  script.setAttribute('data-page-schema', 'true');
-  script.textContent = JSON.stringify(data);
+  script.setAttribute('data-schema-type', schemaType);
+  script.textContent = JSON.stringify(data, null, 2); // Pretty formatting for better parsing
   document.head.appendChild(script);
 };
 

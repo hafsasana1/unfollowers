@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Disallow admin pages from crawling
+Disallow: /admin/
+Disallow: /admin/*
+
+# Allow crawling of all important pages
+Allow: /unfollowers-tracker
+Allow: /ghost-followers
+Allow: /inactive-followers
+Allow: /how-it-works
+Allow: /blog
+Allow: /about
+Allow: /contact
+Allow: /help-center
+Allow: /privacy-policy
+Allow: /terms-of-service
+Allow: /disclaimer
+
+# Sitemap location
+Sitemap: https://unfollowerstracker.com/sitemap.xml
+
+# Crawl-delay for respectful crawling (optional)
+Crawl-delay: 1
