@@ -3,7 +3,7 @@ import { useSEO } from '../hooks/use-seo';
 import { Header } from '../components/header';
 import { Footer } from '../components/footer';
 import { Breadcrumbs } from '../components/breadcrumbs';
-import { Upload, AlertTriangle, Shield, Clock, Users, TrendingDown, Eye, Target, Calendar, User } from 'lucide-react';
+import { Upload, AlertTriangle, Shield, Clock, Users, TrendingDown, Eye, Target, Calendar, User, ArrowRight } from 'lucide-react';
 
 export default function InstagramAutoUnfollowExplained() {
   useSEO();
@@ -424,6 +424,116 @@ export default function InstagramAutoUnfollowExplained() {
                   </Link>
                 </div>
               </div>
+
+              {/* Related Articles Section for Topical Authority */}
+              <section className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 mt-8">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">Related Instagram Guides</h2>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
+                    <div className="flex items-center mb-3">
+                      <Upload className="w-5 h-5 text-purple-500 mr-2" />
+                      <span className="text-xs font-medium text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/30 px-2 py-1 rounded-full">Tool</span>
+                    </div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      <Link href="/unfollowers-tracker" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                        Instagram Unfollowers Tracker
+                      </Link>
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                      Safe and secure way to track who unfollowed you using your Instagram data export.
+                    </p>
+                    <Link 
+                      href="/unfollowers-tracker" 
+                      className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 text-sm font-medium inline-flex items-center"
+                    >
+                      Start Tracking <ArrowRight className="w-3 h-3 ml-1" />
+                    </Link>
+                  </div>
+
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
+                    <div className="flex items-center mb-3">
+                      <Shield className="w-5 h-5 text-green-500 mr-2" />
+                      <span className="text-xs font-medium text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/30 px-2 py-1 rounded-full">Guide</span>
+                    </div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      <Link href="/how-it-works" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                        How It Works: Safe Tracking
+                      </Link>
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                      Step-by-step guide to safely download and analyze your Instagram data export.
+                    </p>
+                    <Link 
+                      href="/how-it-works" 
+                      className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 text-sm font-medium inline-flex items-center"
+                    >
+                      Learn Process <ArrowRight className="w-3 h-3 ml-1" />
+                    </Link>
+                  </div>
+
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
+                    <div className="flex items-center mb-3">
+                      <Eye className="w-5 h-5 text-orange-500 mr-2" />
+                      <span className="text-xs font-medium text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/30 px-2 py-1 rounded-full">Analytics</span>
+                    </div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      <Link href="/ghost-followers" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                        Ghost Followers Tracker
+                      </Link>
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                      Identify inactive followers and fake accounts that don't engage with your content.
+                    </p>
+                    <Link 
+                      href="/ghost-followers" 
+                      className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 text-sm font-medium inline-flex items-center"
+                    >
+                      Find Ghost Followers <ArrowRight className="w-3 h-3 ml-1" />
+                    </Link>
+                  </div>
+
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
+                    <div className="flex items-center mb-3">
+                      <Users className="w-5 h-5 text-blue-500 mr-2" />
+                      <span className="text-xs font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded-full">Analytics</span>
+                    </div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      <Link href="/inactive-followers" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                        Inactive Followers Tracker
+                      </Link>
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                      Find followers who are no longer active on Instagram and clean up your following list.
+                    </p>
+                    <Link 
+                      href="/inactive-followers" 
+                      className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 text-sm font-medium inline-flex items-center"
+                    >
+                      Check Inactive Followers <ArrowRight className="w-3 h-3 ml-1" />
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Topic Cluster Navigation */}
+                <div className="mt-8 text-center">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Explore More Instagram Tools</h3>
+                  <div className="flex flex-wrap justify-center gap-3">
+                    <Link 
+                      href="/blog" 
+                      className="text-sm text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors px-3 py-1 rounded-full border border-gray-200 dark:border-gray-600 hover:border-purple-300 dark:hover:border-purple-500"
+                    >
+                      📖 All Guides
+                    </Link>
+                    <Link 
+                      href="/about" 
+                      className="text-sm text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors px-3 py-1 rounded-full border border-gray-200 dark:border-gray-600 hover:border-purple-300 dark:hover:border-purple-500"
+                    >
+                      ℹ️ About Our Safety-First Approach
+                    </Link>
+                  </div>
+                </div>
+              </section>
 
             </article>
           </div>

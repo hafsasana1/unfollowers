@@ -3,23 +3,14 @@ import { Footer } from '@/components/footer';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Download, Upload, BarChart3, Shield, Clock, CheckCircle, ArrowRight, Instagram, FileArchive } from 'lucide-react';
+import { Download, Upload, BarChart3, Shield, Clock, CheckCircle, ArrowRight, Instagram, FileArchive, ExternalLink, Eye } from 'lucide-react';
+import { Link } from 'wouter';
 
 export function HowItWorksPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      {/* Breadcrumbs */}
-      <section className="bg-white py-4 border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs items={[
-            { label: 'Home', href: '/' },
-            { label: 'How It Works', current: true }
-          ]} />
-        </div>
-      </section>
-
       {/* Hero Section */}
       <section className="py-10 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -29,6 +20,16 @@ export function HowItWorksPage() {
           <p className="text-lg text-gray-100 mb-6 max-w-2xl mx-auto">
             Track Instagram unfollowers safely in 3 simple steps. No passwords required.
           </p>
+        </div>
+      </section>
+
+      {/* Breadcrumbs - Moved under hero */}
+      <section className="bg-gray-50 py-4 border-b border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={[
+            { label: 'Home', href: '/' },
+            { label: 'How It Works', current: true }
+          ]} />
         </div>
       </section>
 
@@ -55,7 +56,7 @@ export function HowItWorksPage() {
                   <h3 className="text-xl font-bold text-gray-900">Request Your Instagram Data</h3>
                 </div>
                 <p className="text-gray-600 mb-4 text-sm">
-                  Go to Instagram Settings → Privacy and Security → Download Your Information. Select JSON format.
+                  Go to Instagram Settings → Privacy and Security → Download Your Information. Select JSON format. This method is 100% safe and doesn't require sharing your login credentials with any <Link href="/instagram-auto-unfollow-explained" className="text-purple-600 hover:text-purple-700 font-medium">third-party auto unfollow tools</Link>.
                 </p>
                 
                 <div className="space-y-2">
@@ -131,7 +132,7 @@ export function HowItWorksPage() {
                   <h3 className="text-xl font-bold text-gray-900">Download Your ZIP File</h3>
                 </div>
                 <p className="text-gray-600 mb-4 text-sm">
-                  Instagram prepares your data (24-48 hours) and sends an email when ready. Download the ZIP file.
+                  Instagram prepares your data (24-48 hours) and sends an email when ready. Download the ZIP file. Your data includes followers, following lists, and engagement history - everything needed for our <Link href="/unfollowers-tracker" className="text-purple-600 hover:text-purple-700 font-medium">Instagram unfollowers tracker</Link>.
                 </p>
                 
                 <div className="space-y-2">
@@ -157,7 +158,7 @@ export function HowItWorksPage() {
                   <h3 className="text-xl font-bold text-gray-900">Upload & Get Instant Results</h3>
                 </div>
                 <p className="text-gray-600 mb-4 text-sm">
-                  Upload your ZIP file to our secure tracker. Data is processed locally in your browser for complete privacy.
+                  Upload your ZIP file to our secure tracker. Data is processed locally in your browser for complete privacy. Unlike <Link href="/instagram-auto-unfollow-explained" className="text-purple-600 hover:text-purple-700 font-medium">automatic follow/unfollow tools</Link>, our method keeps your account completely safe.
                 </p>
                 
                 <div className="space-y-2">
@@ -227,7 +228,7 @@ export function HowItWorksPage() {
               Why Our Method is Safest
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm">
-              Unlike apps requiring Instagram login, we use only official data export for complete security.
+              Unlike apps requiring Instagram login, we use only official data export for complete security. Learn more about <Link href="/instagram-auto-unfollow-explained" className="text-purple-600 hover:text-purple-700 font-medium">Instagram auto unfollow risks</Link> and why our method is safest.
             </p>
           </div>
 
@@ -285,6 +286,118 @@ export function HowItWorksPage() {
           >
             Start Free Analysis
           </Button>
+        </div>
+      </section>
+
+      {/* Related Articles Section for Topical Authority */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">
+              Learn More About Instagram Tracking
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm">
+              Comprehensive guides to help you understand Instagram analytics and stay safe online.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Auto Unfollow Guide */}
+            <Card className="hover:shadow-lg transition-shadow border-0 shadow-sm">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <Shield className="w-5 h-5 text-red-500 mr-2" />
+                  <span className="text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">Safety Guide</span>
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2 text-sm">
+                  <Link href="/instagram-auto-unfollow-explained" className="hover:text-purple-600 transition-colors">
+                    Does Instagram Auto Unfollow People?
+                  </Link>
+                </h3>
+                <p className="text-gray-600 text-xs mb-4">
+                  Learn about automatic follow/unfollow tools, Instagram's policies, and why they're risky for your account.
+                </p>
+                <Link 
+                  href="/instagram-auto-unfollow-explained" 
+                  className="text-purple-600 hover:text-purple-700 text-xs font-medium inline-flex items-center"
+                >
+                  Read Safety Guide <ArrowRight className="w-3 h-3 ml-1" />
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Unfollowers Tracker Tool */}
+            <Card className="hover:shadow-lg transition-shadow border-0 shadow-sm">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <BarChart3 className="w-5 h-5 text-purple-500 mr-2" />
+                  <span className="text-xs font-medium text-purple-600 bg-purple-50 px-2 py-1 rounded-full">Tool</span>
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2 text-sm">
+                  <Link href="/unfollowers-tracker" className="hover:text-purple-600 transition-colors">
+                    Instagram Unfollowers Tracker
+                  </Link>
+                </h3>
+                <p className="text-gray-600 text-xs mb-4">
+                  Track who unfollowed you on Instagram safely using your data export. No login required.
+                </p>
+                <Link 
+                  href="/unfollowers-tracker" 
+                  className="text-purple-600 hover:text-purple-700 text-xs font-medium inline-flex items-center"
+                >
+                  Start Tracking <ArrowRight className="w-3 h-3 ml-1" />
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Ghost Followers */}
+            <Card className="hover:shadow-lg transition-shadow border-0 shadow-sm">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <Eye className="w-5 h-5 text-orange-500 mr-2" />
+                  <span className="text-xs font-medium text-orange-600 bg-orange-50 px-2 py-1 rounded-full">Analytics</span>
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2 text-sm">
+                  <Link href="/ghost-followers" className="hover:text-purple-600 transition-colors">
+                    Ghost Followers Tracker
+                  </Link>
+                </h3>
+                <p className="text-gray-600 text-xs mb-4">
+                  Identify inactive followers and fake accounts that don't engage with your content.
+                </p>
+                <Link 
+                  href="/ghost-followers" 
+                  className="text-purple-600 hover:text-purple-700 text-xs font-medium inline-flex items-center"
+                >
+                  Find Ghost Followers <ArrowRight className="w-3 h-3 ml-1" />
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Additional Internal Links */}
+          <div className="mt-8 text-center">
+            <div className="inline-flex flex-wrap gap-3 justify-center">
+              <Link 
+                href="/blog" 
+                className="text-sm text-gray-600 hover:text-purple-600 transition-colors px-3 py-1 rounded-full border border-gray-200 hover:border-purple-300"
+              >
+                📖 All Guides
+              </Link>
+              <Link 
+                href="/inactive-followers" 
+                className="text-sm text-gray-600 hover:text-purple-600 transition-colors px-3 py-1 rounded-full border border-gray-200 hover:border-purple-300"
+              >
+                😴 Inactive Followers
+              </Link>
+              <Link 
+                href="/about" 
+                className="text-sm text-gray-600 hover:text-purple-600 transition-colors px-3 py-1 rounded-full border border-gray-200 hover:border-purple-300"
+              >
+                ℹ️ About Us
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
