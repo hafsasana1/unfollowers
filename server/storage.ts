@@ -266,6 +266,34 @@ export class DatabaseStorage implements IStorage {
       avgBounceRate: summary.count > 0 ? (summary.bounceRateSum / summary.count).toFixed(2) : '0',
     };
   }
+
+  // AdSense sites methods (placeholder for future database implementation)
+  async getAdSenseSites(): Promise<any[]> {
+    return [];
+  }
+
+  async createAdSenseSite(siteData: any): Promise<any> {
+    return { 
+      id: Math.random().toString(36), 
+      ...siteData, 
+      status: 'pending', 
+      isVerified: false, 
+      submittedAt: new Date().toISOString() 
+    };
+  }
+
+  async verifyAdSenseSite(siteId: string): Promise<any> {
+    return { 
+      id: siteId, 
+      status: 'verified', 
+      isVerified: true, 
+      verifiedAt: new Date().toISOString() 
+    };
+  }
+
+  async deleteAdSenseSite(siteId: string): Promise<void> {
+    // In a real implementation, this would delete from database
+  }
 }
 
 export const storage = new DatabaseStorage();

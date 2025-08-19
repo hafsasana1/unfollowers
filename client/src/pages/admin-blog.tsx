@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+// Rich text editor component will be implemented inline
 import { AdminLayout } from "@/components/admin-layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -213,6 +214,31 @@ export default function AdminBlog() {
     }));
   };
 
+  const insertFormatting = (before: string, after: string, placeholder: string) => {
+    const textarea = document.getElementById('content') as HTMLTextAreaElement;
+    if (!textarea) return;
+
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const selectedText = textarea.value.substring(start, end);
+    
+    const newText = selectedText || placeholder;
+    const replacement = before + newText + after;
+    
+    const newValue = textarea.value.substring(0, start) + replacement + textarea.value.substring(end);
+    setFormData(prev => ({ ...prev, content: newValue }));
+    
+    // Set cursor position after insertion
+    setTimeout(() => {
+      if (selectedText) {
+        textarea.setSelectionRange(start, start + replacement.length);
+      } else {
+        textarea.setSelectionRange(start + before.length, start + before.length + placeholder.length);
+      }
+      textarea.focus();
+    }, 0);
+  };
+
   if (isLoading) {
     return (
       <AdminLayout>
@@ -300,17 +326,94 @@ export default function AdminBlog() {
 
                 <div className="space-y-2">
                   <Label htmlFor="content">Content *</Label>
-                  <Textarea
-                    id="content"
-                    placeholder="Write your blog post content here..."
-                    value={formData.content}
-                    onChange={(e) => setFormData(prev => ({ ...prev, content: e.target.value }))}
-                    rows={8}
-                    required
-                    data-testid="textarea-post-content"
-                  />
+                  <div className="space-y-2 border rounded-md p-3">
+                    <div className="flex flex-wrap gap-2 border-b pb-2 mb-2">
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="outline"
+                        onClick={() => insertFormatting('**', '**', 'Bold text')}
+                        data-testid="button-bold"
+                      >
+                        <strong>B</strong>
+                      </Button>
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="outline"
+                        onClick={() => insertFormatting('*', '*', 'Italic text')}
+                        data-testid="button-italic"
+                      >
+                        <em>I</em>
+                      </Button>
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="outline"
+                        onClick={() => insertFormatting('# ', '', 'Heading 1')}
+                        data-testid="button-h1"
+                      >
+                        H1
+                      </Button>
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="outline"
+                        onClick={() => insertFormatting('## ', '', 'Heading 2')}
+                        data-testid="button-h2"
+                      >
+                        H2
+                      </Button>
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="outline"
+                        onClick={() => insertFormatting('### ', '', 'Heading 3')}
+                        data-testid="button-h3"
+                      >
+                        H3
+                      </Button>
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="outline"
+                        onClick={() => insertFormatting('- ', '', 'List item')}
+                        data-testid="button-list"
+                      >
+                        List
+                      </Button>
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="outline"
+                        onClick={() => insertFormatting('[', '](url)', 'Link text')}
+                        data-testid="button-link"
+                      >
+                        Link
+                      </Button>
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="outline"
+                        onClick={() => insertFormatting('> ', '', 'Quote text')}
+                        data-testid="button-quote"
+                      >
+                        Quote
+                      </Button>
+                    </div>
+                    <Textarea
+                      id="content"
+                      placeholder="Write your blog post content here using Markdown formatting..."
+                      value={formData.content}
+                      onChange={(e) => setFormData(prev => ({ ...prev, content: e.target.value }))}
+                      rows={12}
+                      required
+                      className="resize-none"
+                      data-testid="textarea-post-content"
+                    />
+                  </div>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Supports Markdown formatting
+                    Supports Markdown formatting with heading buttons and rich text features
                   </p>
                 </div>
 
@@ -401,7 +504,7 @@ export default function AdminBlog() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            {!posts || posts.length === 0 ? (
+            {!posts || (Array.isArray(posts) && posts.length === 0) ? (
               <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                 <FileText className="w-12 h-12 mx-auto mb-4 opacity-50" />
                 <p className="text-lg mb-2">No blog posts yet</p>
@@ -409,7 +512,7 @@ export default function AdminBlog() {
               </div>
             ) : (
               <div className="space-y-4">
-                {posts.map((post: BlogPost) => (
+                {Array.isArray(posts) && posts.map((post: any) => (
                   <div key={post.id} className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
                     <div className="flex items-start justify-between">
                       <div className="flex-1">

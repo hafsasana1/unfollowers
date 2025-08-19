@@ -7,16 +7,27 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
+import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { 
   DollarSign, 
+  Target, 
   BarChart3, 
   Settings, 
+  Plus,
+  Edit,
+  Trash2,
+  Eye,
   AlertTriangle,
+  CheckCircle,
   Globe,
+  Code,
+  Search,
+  Verified,
   Save
 } from "lucide-react";
 
@@ -30,12 +41,33 @@ interface AdSenseSettings {
   isActive: boolean;
 }
 
+interface AdSenseSite {
+  id: string;
+  domain: string;
+  verificationCode?: string;
+  isVerified: boolean;
+  status: 'pending' | 'verified' | 'rejected';
+  submittedAt?: string;
+  verifiedAt?: string;
+}
+
 export default function AdminAdSense() {
   const { toast } = useToast();
   const queryClient = useQueryClient();
+  
+  // Site verification dialog state
+  const [isAddSiteOpen, setIsAddSiteOpen] = useState(false);
+  const [newSiteData, setNewSiteData] = useState({
+    domain: "",
+    verificationCode: "",
+  });
 
   const { data: settings, isLoading } = useQuery({
     queryKey: ["/api/admin/adsense"],
+  });
+
+  const { data: sites, isLoading: sitesLoading } = useQuery({
+    queryKey: ["/api/admin/adsense/sites"],
   });
 
   const [formData, setFormData] = useState<AdSenseSettings>({
@@ -85,17 +117,111 @@ export default function AdminAdSense() {
     },
   });
 
+  // Site verification mutations
+  const addSiteMutation = useMutation({
+    mutationFn: async (siteData: { domain: string; verificationCode: string }) => {
+      const res = await apiRequest("/api/admin/adsense/sites", {
+        method: "POST",
+        body: siteData,
+      });
+      return res.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/admin/adsense/sites"] });
+      setIsAddSiteOpen(false);
+      setNewSiteData({ domain: "", verificationCode: "" });
+      toast({
+        title: "Site Added",
+        description: "AdSense site has been added for verification.",
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Add Failed",
+        description: error.message || "Failed to add AdSense site.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const verifySiteMutation = useMutation({
+    mutationFn: async (siteId: string) => {
+      const res = await apiRequest(`/api/admin/adsense/sites/${siteId}/verify`, {
+        method: "POST",
+      });
+      return res.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/admin/adsense/sites"] });
+      toast({
+        title: "Verification Started",
+        description: "Site verification process has been initiated.",
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Verification Failed",
+        description: error.message || "Failed to verify AdSense site.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const deleteSiteMutation = useMutation({
+    mutationFn: async (siteId: string) => {
+      const res = await apiRequest(`/api/admin/adsense/sites/${siteId}`, {
+        method: "DELETE",
+      });
+      return res.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/admin/adsense/sites"] });
+      toast({
+        title: "Site Removed",
+        description: "AdSense site has been removed successfully.",
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Deletion Failed",
+        description: error.message || "Failed to delete AdSense site.",
+        variant: "destructive",
+      });
+    },
+  });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     updateMutation.mutate(formData);
   };
+
+  const handleAddSite = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (newSiteData.domain && newSiteData.verificationCode) {
+      addSiteMutation.mutate(newSiteData);
+    }
+  };
+
+  React.useEffect(() => {
+    if (settings) {
+      setFormData({
+        publisherId: settings.publisherId || "",
+        autoAds: settings.autoAds || false,
+        headerAdCode: settings.headerAdCode || "",
+        sidebarAdCode: settings.sidebarAdCode || "",
+        contentAdCode: settings.contentAdCode || "",
+        footerAdCode: settings.footerAdCode || "",
+        isActive: settings.isActive || false,
+      });
+    }
+  }, [settings]);
 
   if (isLoading) {
     return (
       <AdminLayout>
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
-            <DollarSign className="w-8 h-8 animate-pulse mx-auto mb-4" />
+            <DollarSign className="w-8 h-8 animate-spin mx-auto mb-4" />
             <p className="text-gray-600 dark:text-gray-400">Loading AdSense settings...</p>
           </div>
         </div>
@@ -118,23 +244,23 @@ export default function AdminAdSense() {
         <Tabs defaultValue="configuration" className="space-y-4">
           <TabsList>
             <TabsTrigger value="configuration">Configuration</TabsTrigger>
-            <TabsTrigger value="verification">Site Verification</TabsTrigger>
+            <TabsTrigger value="sites">Site Verification</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
 
           <TabsContent value="configuration">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Settings className="w-5 h-5 mr-2" />
-                  AdSense Configuration
-                </CardTitle>
-                <CardDescription>
-                  Set up your Google AdSense account and ad placements
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    <Settings className="w-5 h-5 mr-2" />
+                    AdSense Configuration
+                  </CardTitle>
+                  <CardDescription>
+                    Set up your Google AdSense account and ad placements
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
                       <Label htmlFor="publisherId">Publisher ID</Label>
@@ -161,7 +287,7 @@ export default function AdminAdSense() {
                     </div>
                   </div>
 
-                  <div className="grid gap-4 md:grid-cols-2">
+                  <div className="grid gap-4 md:grid-cols-2 mt-4">
                     <div className="space-y-2">
                       <Label htmlFor="headerAdCode">Header Ad Code</Label>
                       <Textarea
@@ -187,7 +313,7 @@ export default function AdminAdSense() {
                     </div>
                   </div>
 
-                  <div className="grid gap-4 md:grid-cols-2">
+                  <div className="grid gap-4 md:grid-cols-2 mt-4">
                     <div className="space-y-2">
                       <Label htmlFor="contentAdCode">Content Ad Code</Label>
                       <Textarea
@@ -213,7 +339,7 @@ export default function AdminAdSense() {
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2 mt-4">
                     <Switch
                       id="isActive"
                       checked={formData.isActive}
@@ -224,7 +350,7 @@ export default function AdminAdSense() {
                   </div>
 
                   {!formData.isActive && (
-                    <Alert>
+                    <Alert className="mt-4">
                       <AlertTriangle className="h-4 w-4" />
                       <AlertDescription>
                         AdSense is currently disabled. Ads will not be displayed on your website.
@@ -235,6 +361,7 @@ export default function AdminAdSense() {
                   <Button
                     type="submit"
                     disabled={updateMutation.isPending}
+                    className="mt-4"
                     data-testid="button-save-adsense"
                   >
                     {updateMutation.isPending ? (
@@ -249,63 +376,25 @@ export default function AdminAdSense() {
                       </>
                     )}
                   </Button>
-                </form>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </form>
           </TabsContent>
-
-          <TabsContent value="verification">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Globe className="w-5 h-5 mr-2" />
-                  AdSense Site Verification
-                </CardTitle>
-                <CardDescription>
-                  Verify your website ownership with Google AdSense
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-center py-8 text-gray-500 dark:text-gray-400">
-                  <Globe className="w-12 h-12 mx-auto mb-4 opacity-50" />
-                  <p className="text-lg mb-2">Site Verification Feature</p>
-                  <p className="text-sm">
-                    To verify your site with AdSense, add the verification meta tag to your website's head section.
-                    Contact your developer to implement the verification code when provided by Google AdSense.
-                  </p>
-                  <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                    <p className="text-sm text-blue-800 dark:text-blue-200">
-                      <strong>Tip:</strong> The verification code typically looks like:
-                      <br />
-                      <code className="text-xs bg-white dark:bg-gray-800 p-1 rounded mt-2 block">
-                        {'<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">'}
-                      </code>
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+          
+          <TabsContent value="sites">
+            <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+              <Globe className="w-12 h-12 mx-auto mb-4 opacity-50" />
+              <p className="text-lg mb-2">Site Verification Coming Soon</p>
+              <p className="text-sm">AdSense site verification features will be available in a future update</p>
+            </div>
           </TabsContent>
           
           <TabsContent value="analytics">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <BarChart3 className="w-5 h-5 mr-2" />
-                  AdSense Analytics
-                </CardTitle>
-                <CardDescription>
-                  Monitor your ad performance and revenue
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-center py-8 text-gray-500 dark:text-gray-400">
-                  <BarChart3 className="w-12 h-12 mx-auto mb-4 opacity-50" />
-                  <p className="text-lg mb-2">Analytics Coming Soon</p>
-                  <p className="text-sm">AdSense performance analytics will be available once your ads are active</p>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+              <BarChart3 className="w-12 h-12 mx-auto mb-4 opacity-50" />
+              <p className="text-lg mb-2">Analytics Coming Soon</p>
+              <p className="text-sm">AdSense performance analytics will be available once your ads are active</p>
+            </div>
           </TabsContent>
         </Tabs>
       </div>

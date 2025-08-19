@@ -459,6 +459,47 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // AdSense site verification routes
+  app.get("/api/admin/adsense/sites", authenticateAdmin, async (req, res) => {
+    try {
+      const sites = await storage.getAdSenseSites();
+      res.json(sites);
+    } catch (error) {
+      console.error("Error fetching AdSense sites:", error);
+      res.status(500).json({ message: "Failed to fetch AdSense sites" });
+    }
+  });
+
+  app.post("/api/admin/adsense/sites", authenticateAdmin, async (req, res) => {
+    try {
+      const site = await storage.createAdSenseSite(req.body);
+      res.json({ success: true, site });
+    } catch (error) {
+      console.error("Error creating AdSense site:", error);
+      res.status(500).json({ message: "Failed to create AdSense site" });
+    }
+  });
+
+  app.post("/api/admin/adsense/sites/:id/verify", authenticateAdmin, async (req, res) => {
+    try {
+      const site = await storage.verifyAdSenseSite(req.params.id);
+      res.json({ success: true, site });
+    } catch (error) {
+      console.error("Error verifying AdSense site:", error);
+      res.status(500).json({ message: "Failed to verify AdSense site" });
+    }
+  });
+
+  app.delete("/api/admin/adsense/sites/:id", authenticateAdmin, async (req, res) => {
+    try {
+      await storage.deleteAdSenseSite(req.params.id);
+      res.json({ success: true });
+    } catch (error) {
+      console.error("Error deleting AdSense site:", error);
+      res.status(500).json({ message: "Failed to delete AdSense site" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
