@@ -31,6 +31,7 @@ import AdminDashboard from "@/pages/admin-dashboard";
 import AdminSettings from "@/pages/admin-settings";
 import AdminSearchConsole from "@/pages/admin-search-console";
 import AdminAdSense from "@/pages/admin-adsense";
+import AdminBlog from "@/pages/admin-blog";
 
 function Router() {
   return (
@@ -61,6 +62,7 @@ function Router() {
       <Route path="/admin/settings" component={AdminSettings} />
       <Route path="/admin/search-console" component={AdminSearchConsole} />
       <Route path="/admin/adsense" component={AdminAdSense} />
+      <Route path="/admin/blog" component={AdminBlog} />
       
       {/* Fallback to 404 */}
       <Route component={NotFound} />

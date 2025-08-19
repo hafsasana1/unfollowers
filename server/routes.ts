@@ -34,7 +34,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
     if (cookieHeader) {
       cookieHeader.split(';').forEach(cookie => {
         const [name, value] = cookie.trim().split('=');
-        req.cookies[name] = decodeURIComponent(value);
+        if (name && value) {
+          req.cookies[name] = decodeURIComponent(value);
+        }
       });
     }
     next();

@@ -71,4 +71,4 @@ const mockJwt = {
 };
 
 // Use mock JWT for now
-const jwt_impl = typeof jwt !== "undefined" ? jwt : mockJwt;
+const jwt_impl = mockJwt;
