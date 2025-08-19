@@ -1,10 +1,27 @@
 import express, { type Request, Response, NextFunction } from "express";
+import compression from 'compression';
+import helmet from 'helmet';
+import cors from 'cors';
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 import { seedAdminUser } from "./seed-admin.js";
 
 const app = express();
-app.use(express.json());
+
+// Security and performance middleware
+app.use(helmet({
+  contentSecurityPolicy: false, // Disable for development with Vite HMR
+  crossOriginEmbedderPolicy: false
+}));
+app.use(compression());
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' 
+    ? ['https://your-domain.com'] // Replace with your actual domain
+    : true,
+  credentials: true
+}));
+
+app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
