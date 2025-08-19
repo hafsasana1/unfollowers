@@ -148,6 +148,14 @@ export const seoConfig: Record<string, SEOData> = {
     keywords: 'disclaimer, terms, limitations, instagram tracker disclaimer, liability, accuracy',
     ogTitle: 'Disclaimer - Terms and Limitations',
     ogDescription: 'Important legal disclaimers and service limitations for Instagram followers tracking tool.'
+  },
+
+  '/instagram-auto-unfollow-explained': {
+    title: 'Does Instagram Auto Unfollow People? Complete Guide to Instagram Unfollowing',
+    description: 'Learn about Instagram auto unfollow features, automatic follow/unfollow tools, and why Instagram might randomly unfollow accounts. Complete safety guide included.',
+    keywords: 'instagram auto unfollow, does instagram unfollow people, automatic follow unfollow instagram, instagram unfollowing people, does instagram randomly unfollow',
+    ogTitle: 'Instagram Auto Unfollow Guide - Complete Safety Information',
+    ogDescription: 'Understanding Instagram auto unfollowing, third-party tools, and safe tracking methods for your followers.'
   }
 };
 

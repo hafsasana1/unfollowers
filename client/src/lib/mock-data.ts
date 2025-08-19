@@ -90,6 +90,15 @@ export const mockBlogArticles: BlogArticle[] = [
     imageUrl: '/how-to-check-instagram-unfollowers.png?v=1',
     slug: 'how-to-check-instagram-unfollowers',
   },
+  {
+    id: '5',
+    title: 'Does Instagram Auto Unfollow People? Complete Guide to Instagram Unfollowing',
+    excerpt: 'Learn about Instagram auto unfollow features, automatic follow/unfollow tools, and why Instagram might randomly unfollow accounts.',
+    publishDate: '2025-08-19',
+    category: 'Instagram Guide',
+    imageUrl: 'https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250',
+    slug: 'instagram-auto-unfollow-explained',
+  },
 ];
 
 export const mockFAQs: FAQItem[] = [

@@ -6,6 +6,13 @@ This is a full-stack web application that helps users analyze their Instagram fo
 
 ## Recent Updates (August 19, 2025)
 
+### SEO Article Enhancement
+- **New Article Created**: "Does Instagram Auto Unfollow People? Complete Guide to Instagram Unfollowing"
+- **Keywords Targeted**: instagram auto unfollow, automatic follow unfollow instagram, does instagram unfollow people, instagram unfollowing people, does instagram randomly unfollow
+- **SEO Integration**: Added to routing, SEO config, and blog listing with optimized meta tags
+- **Content Strategy**: Maintains topical authority for "instagram unfollowers tracker" through strategic keyword clustering
+- **Article Features**: Comprehensive safety guide, FAQ section, warning callouts, internal linking strategy
+
 ### Project Successfully Migrated to Replit Environment
 - **Migration Completed**: Successfully migrated Instagram Followers Tracker from Replit Agent to standard Replit environment
 - **Dependencies Resolved**: Fixed tsx dependency issue and installed all required Node.js packages
