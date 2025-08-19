@@ -18,10 +18,11 @@ export function useAdminAuth() {
 
   const loginMutation = useMutation({
     mutationFn: async (credentials: { username: string; password: string }) => {
-      return await apiRequest("/api/admin/login", {
+      const res = await apiRequest("/api/admin/login", {
         method: "POST",
         body: credentials,
       });
+      return res.json();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/admin/me"] });
@@ -30,9 +31,10 @@ export function useAdminAuth() {
 
   const logoutMutation = useMutation({
     mutationFn: async () => {
-      return await apiRequest("/api/admin/logout", {
+      const res = await apiRequest("/api/admin/logout", {
         method: "POST",
       });
+      return res.json();
     },
     onSuccess: () => {
       queryClient.setQueryData(["/api/admin/me"], null);
@@ -46,10 +48,11 @@ export function useAdminAuth() {
       password: string;
       isActive?: boolean;
     }) => {
-      return await apiRequest("/api/admin/setup", {
+      const res = await apiRequest("/api/admin/setup", {
         method: "POST",
         body: adminData,
       });
+      return res.json();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/admin/me"] });
