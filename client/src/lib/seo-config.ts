@@ -11,8 +11,8 @@ export interface SEOData {
 export const seoConfig: Record<string, SEOData> = {
   // Homepage - Main landing page
   '/': {
-    title: 'Instagram Unfollowers Tracker - See Who Unfollowed You Free 2025',
-    description: 'Free Instagram unfollowers tracker tool. Discover who unfollowed you, see mutual followers, and get detailed analytics. No login required, 100% secure and private.',
+    title: 'Instagram Unfollowers Tracker – See Who Unfollowed You?',
+    description: 'See who unfollowed you on Instagram, spot ghost & inactive followers, and track changes in real time. Simple insights to clean your audience and grow faster.',
     keywords: 'instagram unfollowers tracker, who unfollowed me instagram, instagram followers analysis, free unfollowers tracker, instagram analytics',
     ogTitle: 'Free Instagram Unfollowers Tracker - Secure & Private',
     ogDescription: 'Track who unfollowed you on Instagram instantly. No login required, completely secure data processing.'
