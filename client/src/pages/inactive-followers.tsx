@@ -73,8 +73,8 @@ export function InactiveFollowersPage() {
   return (
     <>
       {/* SEO Meta Tags */}
-      <title>Instagram Inactive Followers Tracker - Find Non-Engaging Followers | UnfollowersTracker</title>
-      <meta name="description" content="Identify inactive Instagram followers who don't engage with your content. Free tool to analyze follower activity and boost engagement rates effectively." />
+      <title>Inactive Followers Tracker – Find & Remove Non-Engaging Instagram Users</title>
+      <meta name="description" content="Track and remove inactive Instagram followers who don't engage with your posts. Our Inactive Followers Tracker helps you improve reach and engagement rates." />
       <meta name="keywords" content="instagram inactive followers, silent followers, dormant followers, engagement analysis, instagram analytics, follower activity, engagement rate" />
       <meta property="og:title" content="Instagram Inactive Followers Tracker - Find Non-Engaging Followers" />
       <meta property="og:description" content="Identify inactive Instagram followers who don't engage with your content. Free tool to analyze follower activity and boost engagement rates." />

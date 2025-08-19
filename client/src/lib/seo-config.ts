@@ -28,28 +28,28 @@ export const seoConfig: Record<string, SEOData> = {
   },
 
   '/ghost-followers': {
-    title: 'Instagram Ghost Followers Checker - Find Inactive Followers 2025',
-    description: 'Identify ghost followers on Instagram who never engage with your content. Clean your follower list and improve engagement rates with our free ghost followers checker.',
+    title: 'Ghost Followers Tracker – Detect Fake & Inactive Instagram Accounts',
+    description: 'Use our Ghost Followers Tracker to spot fake or inactive Instagram accounts. Clean your audience, boost engagement, and grow with real, active followers.',
     keywords: 'instagram ghost followers, ghost followers checker, inactive followers instagram, fake followers detector',
-    ogTitle: 'Ghost Followers Checker - Clean Your Instagram',
-    ogDescription: 'Find and remove ghost followers to boost your Instagram engagement and authenticity.'
+    ogTitle: 'Ghost Followers Tracker – Detect Fake & Inactive Instagram Accounts',
+    ogDescription: 'Use our Ghost Followers Tracker to spot fake or inactive Instagram accounts. Clean your audience, boost engagement, and grow with real, active followers.'
   },
 
   '/inactive-followers': {
-    title: 'Instagram Inactive Followers Tracker - Boost Your Engagement',
-    description: 'Discover inactive followers who don\'t engage with your Instagram posts. Identify low-engagement accounts and optimize your follower quality for better reach.',
+    title: 'Inactive Followers Tracker – Find & Remove Non-Engaging Instagram Users',
+    description: 'Track and remove inactive Instagram followers who don\'t engage with your posts. Our Inactive Followers Tracker helps you improve reach and engagement rates.',
     keywords: 'inactive followers instagram, low engagement followers, instagram engagement analysis, follower quality checker',
-    ogTitle: 'Inactive Followers Tracker - Improve Engagement',
-    ogDescription: 'Track inactive followers and optimize your Instagram engagement with detailed follower activity analysis.'
+    ogTitle: 'Inactive Followers Tracker – Find & Remove Non-Engaging Instagram Users',
+    ogDescription: 'Track and remove inactive Instagram followers who don\'t engage with your posts. Our Inactive Followers Tracker helps you improve reach and engagement rates.'
   },
 
   // Information Pages
   '/how-it-works': {
-    title: 'How It Works - Instagram Followers Tracking Made Simple',
-    description: 'Learn how our Instagram followers tracker works. Step-by-step guide to safely track unfollowers using your Instagram data export without compromising security.',
+    title: 'How Our Instagram Unfollowers Tracker Works – Step-by-Step Guide',
+    description: 'Learn how our Instagram unfollowers tracker works: detect unfollows, ghost and inactive followers, with secure, real-time insights to grow your account safely.',
     keywords: 'how to track instagram followers, instagram data export, safe followers tracking, instagram analytics guide',
-    ogTitle: 'How to Track Instagram Followers Safely',
-    ogDescription: 'Simple 3-step process to track your Instagram followers and unfollowers securely.'
+    ogTitle: 'How Our Instagram Unfollowers Tracker Works – Step-by-Step Guide',
+    ogDescription: 'Learn how our Instagram unfollowers tracker works: detect unfollows, ghost and inactive followers, with secure, real-time insights to grow your account safely.'
   },
 
   '/about': {
@@ -70,11 +70,11 @@ export const seoConfig: Record<string, SEOData> = {
 
   // Blog Pages
   '/blog': {
-    title: 'Instagram Tips & Guides Blog - Followers Growth Strategies',
-    description: 'Expert guides on Instagram growth, follower tracking, and social media analytics. Learn proven strategies to grow your Instagram following and increase engagement.',
+    title: 'Instagram Tracker Blog – Unfollowers, Ghosts & Growth Tips',
+    description: 'Read the latest on Instagram unfollowers, ghost & inactive trackers, and growth strategies. Tips, insights, and guides to manage and grow your Instagram.',
     keywords: 'instagram growth blog, followers tips, instagram marketing guides, social media strategies',
-    ogTitle: 'Instagram Growth & Analytics Blog',
-    ogDescription: 'Expert tips and strategies for Instagram growth, follower tracking, and social media success.'
+    ogTitle: 'Instagram Tracker Blog – Unfollowers, Ghosts & Growth Tips',
+    ogDescription: 'Read the latest on Instagram unfollowers, ghost & inactive trackers, and growth strategies. Tips, insights, and guides to manage and grow your Instagram.'
   },
 
   '/how-to-see-who-unfollowed-you': {

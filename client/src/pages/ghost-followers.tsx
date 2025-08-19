@@ -55,8 +55,8 @@ export function GhostFollowersPage() {
   return (
     <>
       {/* SEO Meta Tags */}
-      <title>Instagram Ghost Followers Tracker - Find Fake Followers Free | UnfollowersTracker</title>
-      <meta name="description" content="Detect and remove ghost followers from Instagram. Free tool to identify fake accounts, bot followers, and inactive users. Improve engagement rates instantly with our secure tracker." />
+      <title>Ghost Followers Tracker – Detect Fake & Inactive Instagram Accounts</title>
+      <meta name="description" content="Use our Ghost Followers Tracker to spot fake or inactive Instagram accounts. Clean your audience, boost engagement, and grow with real, active followers." />
       <meta name="keywords" content="instagram ghost followers, fake followers detector, bot followers, instagram engagement, ghost followers tracker, remove fake followers, instagram analytics" />
       <meta property="og:title" content="Instagram Ghost Followers Tracker - Find Fake Followers Free" />
       <meta property="og:description" content="Detect and remove ghost followers from Instagram. Free tool to identify fake accounts, bot followers, and inactive users." />

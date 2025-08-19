@@ -17,12 +17,12 @@ export default function BlogPage() {
     <div className="min-h-screen">
       {/* SEO Meta Tags */}
       <head>
-        <title>Instagram Analytics Blog | Expert Tips & Guides | Instagram Followers Tracker</title>
-        <meta name="description" content="Expert insights on Instagram analytics, follower tracking, and growth strategies. Latest guides on how to track unfollowers and optimize your Instagram presence." />
+        <title>Instagram Tracker Blog – Unfollowers, Ghosts & Growth Tips</title>
+        <meta name="description" content="Read the latest on Instagram unfollowers, ghost & inactive trackers, and growth strategies. Tips, insights, and guides to manage and grow your Instagram." />
         <meta name="keywords" content="Instagram blog, follower tracking guides, Instagram analytics tips, unfollowers tracking, Instagram growth" />
         <link rel="canonical" href="/blog" />
-        <meta property="og:title" content="Instagram Analytics Blog | Expert Tips & Guides" />
-        <meta property="og:description" content="Expert insights on Instagram analytics, follower tracking, and growth strategies." />
+        <meta property="og:title" content="Instagram Tracker Blog – Unfollowers, Ghosts & Growth Tips" />
+        <meta property="og:description" content="Read the latest on Instagram unfollowers, ghost & inactive trackers, and growth strategies. Tips, insights, and guides to manage and grow your Instagram." />
         <meta property="og:type" content="blog" />
         <meta property="og:url" content="/blog" />
       </head>
