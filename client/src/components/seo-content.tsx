@@ -86,32 +86,7 @@ export function SEOContent() {
           </div>
         </div>
 
-        {/* SEO Keywords Section */}
-        <div className="bg-gray-50 rounded-2xl p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Popular Instagram Analytics Searches
-          </h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              'Instagram unfollowers tracker',
-              'Who unfollowed me on Instagram',
-              'Free Instagram analytics',
-              'Track Instagram followers',
-              'Instagram follower insights',
-              'See Instagram unfollowers',
-              'Instagram growth tracker',
-              'Mutual followers Instagram'
-            ].map((keyword, index) => (
-              <div key={index} className="bg-white rounded-lg p-3 border">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-700">{keyword}</span>
-                  <ArrowRight className="text-purple-600" size={14} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+
       </div>
     </section>
   );

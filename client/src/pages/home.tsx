@@ -58,9 +58,9 @@ export default function Home() {
         <WhyUseOurTool />
         <Features />
         <SocialProof />
-        <FAQSection />
         <BlogSection />
         <SEOContent />
+        <FAQSection />
         
         {/* CTA Section */}
         <section className="py-10 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 relative overflow-hidden">
