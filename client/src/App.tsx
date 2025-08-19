@@ -25,6 +25,13 @@ import HowToCheckInstagramUnfollowers from "@/pages/how-to-check-instagram-unfol
 import BlogPage from "@/pages/blog";
 import DisclaimerPage from "@/pages/disclaimer";
 
+// Admin pages
+import AdminLogin from "@/pages/admin-login";
+import AdminDashboard from "@/pages/admin-dashboard";
+import AdminSettings from "@/pages/admin-settings";
+import AdminSearchConsole from "@/pages/admin-search-console";
+import AdminAdSense from "@/pages/admin-adsense";
+
 function Router() {
   return (
     <Switch>
@@ -47,6 +54,14 @@ function Router() {
       <Route path="/cookie-policy" component={CookiePolicy} />
       <Route path="/help-center" component={HelpCenter} />
       <Route path="/disclaimer" component={DisclaimerPage} />
+      
+      {/* Admin routes */}
+      <Route path="/admin/login" component={AdminLogin} />
+      <Route path="/admin" component={AdminDashboard} />
+      <Route path="/admin/settings" component={AdminSettings} />
+      <Route path="/admin/search-console" component={AdminSearchConsole} />
+      <Route path="/admin/adsense" component={AdminAdSense} />
+      
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
