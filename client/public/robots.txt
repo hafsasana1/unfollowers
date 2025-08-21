@@ -5,6 +5,12 @@ Allow: /
 Disallow: /admin/
 Disallow: /admin/*
 
+# Disallow development files
+Disallow: /*.json
+Disallow: /*.js.map
+Disallow: /*.css.map
+Disallow: /src/
+
 # Allow crawling of all important pages
 Allow: /unfollowers-tracker
 Allow: /ghost-followers
@@ -18,8 +24,27 @@ Allow: /privacy-policy
 Allow: /terms-of-service
 Allow: /disclaimer
 
+# Enhanced crawling for blog articles
+Allow: /how-to-see-who-unfollowed-you
+Allow: /who-doesnt-follow-back
+Allow: /instagram-who-doesnt-follow-me-back
+Allow: /how-to-check-instagram-unfollowers
+Allow: /instagram-auto-unfollow-explained
+
 # Sitemap location
 Sitemap: https://instaunfollowerstracker.com/sitemap.xml
 
-# Crawl-delay for respectful crawling (optional)
+# Google specific crawling rules
+User-agent: Googlebot
+Allow: /
 Crawl-delay: 1
+
+# Bing specific crawling rules  
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yandex specific crawling rules
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
