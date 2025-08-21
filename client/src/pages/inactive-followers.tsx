@@ -1,4 +1,5 @@
 import { Header } from '@/components/header';
+import { SEOHead } from '@/components/seo-head';
 import { Footer } from '@/components/footer';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Button } from '@/components/ui/button';
@@ -72,6 +73,7 @@ export function InactiveFollowersPage() {
 
   return (
     <>
+      <SEOHead />
       {/* SEO Meta Tags */}
       <title>Inactive Followers Tracker – Find & Remove Non-Engaging Instagram Users</title>
       <meta name="description" content="Track and remove inactive Instagram followers who don't engage with your posts. Our Inactive Followers Tracker helps you improve reach and engagement rates." />

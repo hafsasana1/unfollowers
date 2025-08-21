@@ -1,4 +1,5 @@
 import { Header } from '@/components/header';
+import { SEOHead } from '@/components/seo-head';
 import { Footer } from '@/components/footer';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Card, CardContent } from '@/components/ui/card';
@@ -90,6 +91,7 @@ export default function HowToSeeWhoUnfollowedYou() {
 
   return (
     <>
+      <SEOHead />
       {/* SEO Meta Tags */}
       <title>How to See Who Unfollowed You on Instagram (2024 Guide) | Free Unfollowers Tracker</title>
       <meta name="description" content="Learn how to see who unfollowed you on Instagram safely and instantly. Free guide with step-by-step instructions for tracking unfollowers without passwords." />

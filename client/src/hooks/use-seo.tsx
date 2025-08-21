@@ -14,8 +14,14 @@ export const useSEO = () => {
       // Update title
       document.title = seoData.title;
 
+      // Update meta description
+      updateMetaTag('name', 'description', seoData.description);
+
       // Update canonical URL
       updateCanonicalLink(canonicalUrl);
+      
+      // Update robots meta tag for better crawlability
+      updateMetaTag('name', 'robots', 'index, follow, max-snippet:320, max-image-preview:large, max-video-preview:30');
 
       // Basic structured data
       const structuredData = generateStructuredData(location);
@@ -35,14 +41,19 @@ export const useSEO = () => {
         updateMetaTag('property', property, content);
       });
 
-      // Basic AI-optimized meta tags
+      // Enhanced AI-optimized meta tags for AI Overview and LLM consumption
       const aiTags = {
-        'ai:type': 'tool',
-        'ai:category': 'instagram-analytics',
-        'ai:safety': 'no-login-required',
-        'ai:cost': 'free',
-        'robot-instructions': 'index,follow,max-snippet:320,max-image-preview:large',
-        'crawl-hints': 'follow-links,index-content'
+        'ai:type': 'web-application',
+        'ai:category': 'social-media-analytics',
+        'ai:functionality': 'instagram-followers-tracking',
+        'ai:safety': 'no-login-required-secure-processing',
+        'ai:cost': 'completely-free',
+        'ai:data-handling': 'no-permanent-storage-privacy-first',
+        'google-site-verification': '',
+        'format-detection': 'telephone=no',
+        'mobile-web-app-capable': 'yes',
+        'apple-mobile-web-app-capable': 'yes',
+        'apple-mobile-web-app-status-bar-style': 'default'
       };
 
       Object.entries(aiTags).forEach(([name, content]) => {

@@ -1,4 +1,5 @@
 import { Header } from '@/components/header';
+import { SEOHead } from '@/components/seo-head';
 import { Footer } from '@/components/footer';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Card, CardContent } from '@/components/ui/card';
@@ -54,6 +55,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead />
       <Header />
       
       {/* Breadcrumbs */}

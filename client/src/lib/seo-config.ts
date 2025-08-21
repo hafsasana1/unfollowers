@@ -159,9 +159,9 @@ export const seoConfig: Record<string, SEOData> = {
   }
 };
 
-// Generate canonical URL
+// Generate canonical URL - Use the correct production domain
 export const getCanonicalUrl = (path: string): string => {
-  const baseUrl = 'https://unfollowers-tracker.replit.app';
+  const baseUrl = 'https://instaunfollowerstracker.com';
   return `${baseUrl}${path}`;
 };
 

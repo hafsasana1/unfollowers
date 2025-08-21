@@ -1,4 +1,5 @@
 import { Header } from '@/components/header';
+import { SEOHead } from '@/components/seo-head';
 import { Footer } from '@/components/footer';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Button } from '@/components/ui/button';
@@ -54,6 +55,7 @@ export function GhostFollowersPage() {
 
   return (
     <>
+      <SEOHead />
       {/* SEO Meta Tags */}
       <title>Ghost Followers Tracker – Detect Fake & Inactive Instagram Accounts</title>
       <meta name="description" content="Use our Ghost Followers Tracker to spot fake or inactive Instagram accounts. Clean your audience, boost engagement, and grow with real, active followers." />

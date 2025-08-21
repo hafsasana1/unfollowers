@@ -13,6 +13,7 @@ import { BlogSection } from '@/components/blog-section';
 import { FAQSection } from '@/components/faq-section';
 import { Footer } from '@/components/footer';
 import { SEOStructuredData } from '@/components/seo-structured-data';
+import { SEOHead } from '@/components/seo-head';
 import { Button } from '@/components/ui/button';
 import { Rocket, HelpCircle } from 'lucide-react';
 
@@ -46,6 +47,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead />
       <SEOStructuredData />
       <Header />
       <main role="main">

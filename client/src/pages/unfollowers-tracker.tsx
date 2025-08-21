@@ -1,4 +1,5 @@
 import { Header } from '@/components/header';
+import { SEOHead } from '@/components/seo-head';
 import { Footer } from '@/components/footer';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Button } from '@/components/ui/button';
@@ -18,6 +19,7 @@ export function UnfollowersTrackerPage() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead />
       <Header />
       
       {/* Hero Section */}

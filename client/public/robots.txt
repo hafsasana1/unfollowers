@@ -19,7 +19,7 @@ Allow: /terms-of-service
 Allow: /disclaimer
 
 # Sitemap location
-Sitemap: https://unfollowerstracker.com/sitemap.xml
+Sitemap: https://instaunfollowerstracker.com/sitemap.xml
 
 # Crawl-delay for respectful crawling (optional)
 Crawl-delay: 1
