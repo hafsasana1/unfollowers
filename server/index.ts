@@ -13,13 +13,31 @@ app.use(helmet({
   contentSecurityPolicy: false, // Disable for development with Vite HMR
   crossOriginEmbedderPolicy: false
 }));
-app.use(compression());
+app.use(compression({
+  level: 6, // Balanced compression
+  threshold: 1024, // Only compress files larger than 1KB
+  filter: (req, res) => {
+    if (req.headers['x-no-compression']) return false;
+    return compression.filter(req, res);
+  }
+}));
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-domain.com'] // Replace with your actual domain
+    ? ['https://instaunfollowerstracker.com', 'https://unfollowers-tracker.replit.app'] 
     : true,
   credentials: true
 }));
+
+// Add caching headers for static assets
+app.use((req, res, next) => {
+  if (req.url.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|woff2|woff|ttf|eot)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000'); // 1 year
+    res.setHeader('Expires', new Date(Date.now() + 31536000000).toUTCString());
+  } else if (req.url.match(/\.(html)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=3600'); // 1 hour
+  }
+  next();
+});
 
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: false }));

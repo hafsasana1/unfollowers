@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { SEOWrapper } from "@/hooks/use-seo";
+import { MobileOptimizations, usePerformanceMonitoring } from "@/components/mobile-optimization";
 import Home from "@/pages/home";
 import Results from "@/pages/results";
 import About from "@/pages/about";
@@ -73,10 +74,14 @@ function Router() {
 }
 
 function App() {
+  // Initialize performance monitoring
+  usePerformanceMonitoring();
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <SEOWrapper>
+          <MobileOptimizations />
           <Toaster />
           <Router />
         </SEOWrapper>

@@ -121,7 +121,7 @@ export function FileUpload({ onFileUploaded }: FileUploadProps) {
         {!uploadedFile ? (
           <Card 
             {...getRootProps()}
-            className={`border-3 border-dashed rounded-3xl p-16 text-center cursor-pointer transition-all hover:shadow-2xl transform hover:scale-[1.02] ${
+            className={`border-3 border-dashed rounded-3xl p-8 sm:p-16 text-center cursor-pointer transition-all hover:shadow-2xl transform hover:scale-[1.02] touch-manipulation ${
               isDragActive 
                 ? 'border-purple-500 bg-purple-100 shadow-2xl scale-[1.02]' 
                 : 'border-purple-400 bg-gradient-to-br from-white via-purple-50 to-pink-50 hover:border-purple-500'

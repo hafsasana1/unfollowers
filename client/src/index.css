@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* Font import moved to HTML head for better performance */
 
 @tailwind base;
 @tailwind components;
@@ -107,6 +107,105 @@
   
   .animate-pulse-slow {
     animation: pulse 3s ease-in-out infinite;
+  }
+  
+  /* Performance optimizations */
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  /* Mobile-first responsive utilities */
+  .text-responsive {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+  
+  .text-responsive-lg {
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+  }
+  
+  .text-responsive-xl {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+  }
+  
+  .text-responsive-2xl {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  
+  /* Better scrolling on mobile */
+  .smooth-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-float,
+    .animate-pulse-slow {
+      animation: none;
+    }
+    
+    .smooth-scroll {
+      scroll-behavior: auto;
+    }
+  }
+  
+  /* Cross-browser compatibility fixes */
+  .webkit-appearance-none {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* iOS specific fixes */
+  .ios-device input[type="text"],
+  .ios-device input[type="email"],
+  .ios-device input[type="search"],
+  .ios-device textarea {
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+  
+  /* Safari specific fixes */
+  .safari-browser {
+    -webkit-transform: translateZ(0);
+  }
+  
+  /* Fallback for browsers without CSS variables */
+  .no-css-vars {
+    background: #ffffff;
+    color: #000000;
+  }
+  
+  /* Better touch targets for mobile */
+  @media (hover: none) and (pointer: coarse) {
+    button,
+    [role="button"],
+    input[type="submit"],
+    input[type="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid #000;
+    }
+  }
+  
+  /* Dark mode optimizations */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+    }
   }
 }
 
