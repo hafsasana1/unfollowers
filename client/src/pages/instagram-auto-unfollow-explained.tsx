@@ -49,7 +49,7 @@ export default function InstagramAutoUnfollowExplained() {
               "name": "Instagram Followers Tracker",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://unfollowers-tracker.replit.app/favicon.svg"
+                "url": "https://instaunfollowerstracker.com/favicon.svg"
               }
             },
             "datePublished": "2025-08-19T00:00:00Z",
@@ -58,7 +58,7 @@ export default function InstagramAutoUnfollowExplained() {
             "keywords": ["instagram auto unfollow", "automatic follow unfollow instagram", "instagram unfollowing people", "does instagram randomly unfollow"],
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://unfollowers-tracker.replit.app/instagram-auto-unfollow-explained"
+              "@id": "https://instaunfollowerstracker.com/instagram-auto-unfollow-explained"
             }
           })}
         </script>

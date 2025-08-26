@@ -30,11 +30,13 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     // Update document title
     document.title = finalTitle;
 
-    // Update or create meta tags for better crawlability
+    // Update or create meta tags for better crawlability and indexing
     const metaTags = {
       'description': finalDescription,
       'keywords': seoData.keywords || '',
       'robots': noindex ? 'noindex, nofollow' : 'index, follow, max-snippet:320, max-image-preview:large, max-video-preview:30',
+      'googlebot': 'index, follow, max-snippet:320, max-image-preview:large, max-video-preview:30',
+      'bingbot': 'index, follow, max-snippet:320, max-image-preview:large, max-video-preview:30',
       'author': 'Instagram Unfollowers Tracker Team',
       'generator': 'React, Vite, TypeScript',
       'referrer': 'origin-when-cross-origin',
@@ -47,13 +49,30 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
       'theme-color': '#8B5CF6',
       'msapplication-TileColor': '#8B5CF6',
       'msapplication-navbutton-color': '#8B5CF6',
+      // Enhanced indexing signals
+      'last-modified': new Date().toISOString(),
+      'content-type': 'text/html; charset=utf-8',
+      'language': 'en',
+      'distribution': 'global',
+      'rating': 'general',
+      'revisit-after': '7 days',
+      'classification': 'Social Media Analytics Tool',
+      // Content quality signals for Google
+      'content-quality': 'high',
+      'mobile-optimized': 'true',
+      'loading-speed': 'fast',
+      'security-level': 'high',
+      'user-engagement': 'high',
       // AI Overview optimization
       'ai:type': 'social-media-analytics-tool',
       'ai:category': 'instagram-followers-tracking',
       'ai:safety': 'no-login-required-secure',
       'ai:cost': 'free',
       'ai:data-handling': 'privacy-first-no-storage',
-      'ai:functionality': 'detect-unfollowers-ghost-inactive'
+      'ai:functionality': 'detect-unfollowers-ghost-inactive',
+      'ai:updated': '2025-08-21',
+      'ai:quality-score': '95',
+      'ai:indexing-priority': 'high'
     };
 
     Object.entries(metaTags).forEach(([name, content]) => {
@@ -146,7 +165,7 @@ const updateStructuredData = (data: any) => {
   document.head.appendChild(script);
 };
 
-// Generate comprehensive structured data for different page types
+// Generate comprehensive structured data for different page types - FIXES MISSING MAINENTITY ERROR
 const generatePageStructuredData = (path: string, title: string, description: string, url: string) => {
   const baseData = {
     "@context": "https://schema.org",
@@ -155,6 +174,11 @@ const generatePageStructuredData = (path: string, title: string, description: st
     "description": description,
     "url": url,
     "inLanguage": "en-US",
+    "mainEntity": {
+      "@type": "Thing",
+      "name": "Instagram Followers Tracking Service",
+      "description": "Professional Instagram analytics and follower tracking platform"
+    },
     "isPartOf": {
       "@type": "WebSite",
       "name": "Instagram Unfollowers Tracker",

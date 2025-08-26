@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { ChevronDown, Mail } from 'lucide-react';
 import { mockFAQs } from '@/lib/mock-data';
@@ -9,6 +9,41 @@ export function FAQSection() {
   const toggleFAQ = (id: string) => {
     setOpenFAQ(openFAQ === id ? null : id);
   };
+
+  // Add FAQ structured data only once per page
+  useEffect(() => {
+    // Check if FAQ schema already exists
+    if (document.querySelector('script[data-schema="faq"]')) {
+      return;
+    }
+
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": mockFAQs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-schema', 'faq');
+    script.textContent = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup on unmount
+      const existingScript = document.querySelector('script[data-schema="faq"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
 
   return (
     <section className="py-10 bg-gray-50" id="faq" aria-labelledby="faq-heading">

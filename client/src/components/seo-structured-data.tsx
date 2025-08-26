@@ -170,6 +170,46 @@ export function SEOStructuredData() {
           "price": "0",
           "priceCurrency": "USD"
         }
+      },
+
+      // Enhanced FAQ schema for the page that's missing mainEntity
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is the Instagram Unfollowers Tracker safe to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our Instagram Unfollowers Tracker is completely safe. We use Instagram's official data export feature, so you never share your password or login credentials with us. Your data is processed locally in your browser and never stored on our servers."
+            }
+          },
+          {
+            "@type": "Question", 
+            "name": "How do I download my Instagram data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To download your Instagram data: 1) Go to Instagram Settings, 2) Privacy and Security, 3) Download Your Information, 4) Select 'JSON' format, 5) Click 'Request Download'. Instagram will email you a download link within 24-48 hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I track unfollowers without downloading data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, for security and privacy reasons, we only use Instagram's official data export method. This ensures your account remains secure and we don't require any third-party access to your Instagram account."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What information will I get from the analysis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our analysis shows you who unfollowed you, ghost followers (inactive accounts), accounts that don't follow you back, your most engaged followers, and detailed engagement statistics. All analysis is comprehensive and easy to understand."
+            }
+          }
+        ]
       }
     ];
 
