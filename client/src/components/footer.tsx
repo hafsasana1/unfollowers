@@ -75,13 +75,22 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <button 
-                  onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                <a 
+                  href="/#faq"
+                  className="text-gray-400 hover:text-white transition-colors text-sm cursor-pointer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const faqSection = document.getElementById('faq');
+                    if (faqSection) {
+                      faqSection.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      window.location.href = '/#faq';
+                    }
+                  }}
                   aria-label="Jump to frequently asked questions section"
                 >
                   FAQ
-                </button>
+                </a>
               </li>
             </ul>
           </nav>
@@ -143,7 +152,7 @@ export function Footer() {
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © <time dateTime="2024">2024</time> Unfollowers Tracker. All rights reserved.
+            © <time dateTime="2025">2025</time> Unfollowers Tracker. All rights reserved.
           </p>
           <div className="flex items-center space-x-6 text-sm text-gray-400">
             <span>Made with ❤️ for Instagram users</span>
