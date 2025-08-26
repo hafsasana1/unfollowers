@@ -4,9 +4,9 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12" role="contentinfo">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {/* Brand Column */}
-          <section className="lg:col-span-2" aria-labelledby="footer-brand">
+          <section className="lg:col-span-1" aria-labelledby="footer-brand">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-7 h-7 instagram-gradient rounded-lg flex items-center justify-center">
                 <Users className="text-white" size={14} aria-hidden="true" />
@@ -55,8 +55,23 @@ export function Footer() {
             <h4 id="footer-resources" className="text-base font-semibold mb-4">Resources & Guides</h4>
             <ul className="space-y-2" role="list">
               <li>
+                <a href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  About Us
+                </a>
+              </li>
+              <li>
                 <a href="/blog" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Blog & Guides
+                </a>
+              </li>
+              <li>
+                <a href="/how-it-works" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  How It Works
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Contact Us
                 </a>
               </li>
               <li>
@@ -68,6 +83,35 @@ export function Footer() {
                   FAQ
                 </button>
               </li>
+            </ul>
+          </nav>
+
+          {/* Tools */}
+          <nav aria-labelledby="footer-tools">
+            <h4 id="footer-tools" className="text-base font-semibold mb-4">Our Tools</h4>
+            <ul className="space-y-2" role="list">
+              <li>
+                <a href="/unfollowers-tracker" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Unfollowers Tracker
+                </a>
+              </li>
+              <li>
+                <a href="/ghost-followers" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Ghost Followers
+                </a>
+              </li>
+              <li>
+                <a href="/inactive-followers" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Inactive Followers
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          {/* Legal Pages */}
+          <nav aria-labelledby="footer-legal">
+            <h4 id="footer-legal" className="text-base font-semibold mb-4">Legal & Privacy</h4>
+            <ul className="space-y-2" role="list">
               <li>
                 <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Privacy Policy
@@ -79,18 +123,18 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a href="/help-center" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Help Center
+                <a href="/cookie-policy" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Cookie Policy
                 </a>
               </li>
               <li>
                 <a href="/disclaimer" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Disclaimer
+                </a>
+              </li>
+              <li>
+                <a href="/help-center" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Help Center
                 </a>
               </li>
             </ul>

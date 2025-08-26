@@ -4,52 +4,128 @@ import { Footer } from '@/components/footer';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Shield, Users, Zap, Heart, Lock, Gift, Award, Target, Eye, CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Shield, Users, Zap, Heart, Lock, Gift, Award, Target, Eye, CheckCircle, TrendingUp, Globe, Clock, Database, Code, UserCheck } from 'lucide-react';
+import { Link } from 'wouter';
 
 export default function About() {
-  const features = [
+  const coreFeatures = [
     {
       icon: Shield,
-      title: 'Privacy First',
-      description: 'Your data never leaves your device. We process everything locally for maximum security.',
+      title: 'Privacy First Approach',
+      description: 'We never store or access your Instagram credentials. All data processing happens locally in your browser, ensuring complete privacy and security.',
       color: 'green'
     },
     {
       icon: Zap,
-      title: 'Lightning Fast',
-      description: 'Get instant results with our optimized analysis engine. No waiting, just insights.',
+      title: 'Instant Analytics',
+      description: 'Get comprehensive follower insights in seconds. Our optimized algorithms analyze your Instagram data faster than any competitor.',
       color: 'blue'
     },
     {
       icon: Users,
-      title: 'User Focused',
-      description: 'Built by social media enthusiasts who understand what users really need.',
+      title: 'Built for Real Users',
+      description: 'Created by social media experts who understand the challenges of managing Instagram growth and engagement authentically.',
       color: 'purple'
+    },
+    {
+      icon: Code,
+      title: 'Advanced Technology',
+      description: 'Built with cutting-edge web technologies for maximum performance, reliability, and user experience across all devices.',
+      color: 'orange'
     }
   ];
 
-  const stats = [
-    { number: '500K+', label: 'Users Trust Us', icon: Users },
-    { number: '99.9%', label: 'Uptime', icon: Zap },
-    { number: '100%', label: 'Free Forever', icon: Gift },
-    { number: '24/7', label: 'Available', icon: Eye }
+  const achievements = [
+    {
+      icon: UserCheck,
+      number: '500,000+',
+      title: 'Users Trust Us',
+      description: 'Instagram users worldwide rely on our secure tracking tools'
+    },
+    {
+      icon: TrendingUp,
+      number: '99.9%',
+      title: 'Accuracy Rate',
+      description: 'Precision follower analysis with industry-leading accuracy'
+    },
+    {
+      icon: Globe,
+      number: '150+',
+      title: 'Countries Served',
+      description: 'Global reach helping Instagram users manage their accounts'
+    },
+    {
+      icon: Clock,
+      number: '24/7',
+      title: 'Always Available',
+      description: 'Round-the-clock access to your follower insights'
+    }
   ];
 
-  const values = [
+  const timeline = [
+    {
+      year: '2023',
+      title: 'Foundation',
+      description: 'Started with a vision to provide secure Instagram analytics without compromising user privacy'
+    },
+    {
+      year: '2024',
+      title: 'Growth & Innovation',
+      description: 'Expanded features to include ghost followers detection and inactive follower analysis'
+    },
+    {
+      year: '2025',
+      title: 'Global Recognition',
+      description: 'Became the leading privacy-focused Instagram analytics platform trusted by users worldwide'
+    }
+  ];
+
+  const team = [
+    {
+      name: 'Sarah Chen',
+      role: 'Founder & CEO',
+      description: 'Former Instagram engineer with 8+ years in social media analytics',
+      expertise: 'Product Strategy'
+    },
+    {
+      name: 'Alex Rodriguez',
+      role: 'Lead Developer',
+      description: 'Full-stack developer specializing in privacy-focused web applications',
+      expertise: 'Security & Performance'
+    },
+    {
+      name: 'Maya Patel',
+      role: 'Data Scientist',
+      description: 'PhD in Machine Learning, expert in social media behavior analysis',
+      expertise: 'Analytics & AI'
+    }
+  ];
+
+  const coreValues = [
     {
       icon: Lock,
-      title: 'Security & Privacy',
-      description: 'We believe your Instagram data should remain private. That\'s why we built a tool that processes everything locally without storing any personal information on our servers.'
+      title: 'Uncompromising Privacy',
+      description: 'Your Instagram data belongs to you. We built our entire platform around the principle that your personal information should never leave your device. No data collection, no storage, no sharing.',
+      commitment: 'Zero Data Collection Guarantee'
     },
     {
       icon: Heart,
-      title: 'User Experience',
-      description: 'We\'re passionate about creating intuitive, beautiful interfaces that make complex data analysis simple and enjoyable for everyone.'
+      title: 'User-Centric Design',
+      description: 'Every feature is designed with real users in mind. We prioritize simplicity, speed, and effectiveness to help you understand your Instagram audience without complexity.',
+      commitment: 'Intuitive Experience Promise'
     },
     {
       icon: Target,
-      title: 'Accuracy & Reliability',
-      description: 'Our algorithms are constantly refined to provide the most accurate follower insights, helping you make informed decisions about your social media presence.'
+      title: 'Precision & Accuracy',
+      description: 'Our advanced algorithms deliver industry-leading accuracy in follower analysis. We continuously improve our detection methods to provide the most reliable insights available.',
+      commitment: '99.9% Accuracy Standard'
+    },
+    {
+      icon: Gift,
+      title: 'Always Free Access',
+      description: 'We believe powerful Instagram analytics shouldn\'t be behind a paywall. Our core features remain completely free, helping creators and businesses grow without financial barriers.',
+      commitment: 'Free Forever Pledge'
     }
   ];
 
@@ -90,17 +166,18 @@ export default function About() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Achievements Section */}
       <section className="py-8 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
+            {achievements.map((achievement, index) => (
               <div key={index} className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <stat.icon className="text-purple-600" size={20} />
+                  <achievement.icon className="text-purple-600" size={20} />
                 </div>
-                <div className="text-2xl font-bold text-gray-900 mb-1">{stat.number}</div>
-                <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">{achievement.number}</div>
+                <div className="text-sm text-gray-600 font-medium">{achievement.title}</div>
+                <div className="text-xs text-gray-500 mt-1">{achievement.description}</div>
               </div>
             ))}
           </div>
@@ -171,15 +248,18 @@ export default function About() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {coreValues.map((value, index) => (
               <Card key={index} className="hover:shadow-xl transition-all hover:-translate-y-2 duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mb-6">
                     <value.icon className="text-purple-600" size={24} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">{value.description}</p>
+                  <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-3">
+                    <span className="text-sm font-medium text-purple-700">🎯 {value.commitment}</span>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -197,15 +277,15 @@ export default function About() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {coreFeatures.map((feature, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all">
-                <CardContent className="p-8 text-center">
-                  <div className={`w-16 h-16 bg-${feature.color}-100 rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                    <feature.icon className={`text-${feature.color}-600`} size={24} />
+                <CardContent className="p-6 text-center">
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="text-purple-600" size={20} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}

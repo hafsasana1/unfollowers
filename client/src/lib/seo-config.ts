@@ -53,11 +53,11 @@ export const seoConfig: Record<string, SEOData> = {
   },
 
   '/about': {
-    title: 'About Us - Instagram Analytics & Followers Tracking Experts',
-    description: 'Learn about our mission to provide secure, privacy-focused Instagram analytics tools. Trusted by thousands to track followers without compromising account security.',
-    keywords: 'instagram analytics company, followers tracker team, privacy-focused social media tools',
-    ogTitle: 'About Our Instagram Analytics Platform',
-    ogDescription: 'Dedicated to providing secure and private Instagram follower tracking solutions.'
+    title: 'About Us - Privacy-First Instagram Analytics & Followers Tracking Experts',
+    description: 'Learn about our mission to provide secure, privacy-focused Instagram analytics tools. Trusted by 500,000+ users worldwide to track followers without compromising account security.',
+    keywords: 'instagram analytics company, followers tracker team, privacy-focused social media tools, about instagram tracker, secure analytics platform',
+    ogTitle: 'About Our Privacy-First Instagram Analytics Platform',
+    ogDescription: 'Dedicated to providing secure and private Instagram follower tracking solutions trusted by over 500,000 users worldwide.'
   },
 
   '/contact': {
