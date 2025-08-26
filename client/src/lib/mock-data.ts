@@ -56,6 +56,15 @@ export const mockAnalysisResults: AnalysisResults = {
 export const mockBlogArticles: BlogArticle[] = [
   {
     id: '1',
+    title: 'Instagram Follower vs Unfollower Tracker: Complete Comparison Guide',
+    excerpt: 'Discover the key differences between Instagram follower and unfollower trackers. Learn which tracking method delivers better insights for content strategy and audience growth.',
+    publishDate: '2025-01-26',
+    category: 'Analytics Comparison',
+    imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250',
+    slug: 'instagram-follower-vs-unfollower-tracker',
+  },
+  {
+    id: '2',
     title: 'How to See Who Unfollowed You on Instagram',
     excerpt: 'Complete step-by-step guide to track Instagram unfollowers safely and securely without compromising your account.',
     publishDate: '2025-08-18',

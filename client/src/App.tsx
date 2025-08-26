@@ -24,6 +24,7 @@ import WhoDoesntFollowBack from "@/pages/who-doesnt-follow-back";
 import InstagramWhoDoesntFollowMeBack from "@/pages/instagram-who-doesnt-follow-me-back";
 import HowToCheckInstagramUnfollowers from "@/pages/how-to-check-instagram-unfollowers";
 import InstagramAutoUnfollowExplained from "@/pages/instagram-auto-unfollow-explained";
+import InstagramFollowerVsUnfollowerTracker from "@/pages/instagram-follower-vs-unfollower-tracker";
 import BlogPage from "@/pages/blog";
 import DisclaimerPage from "@/pages/disclaimer";
 
@@ -49,6 +50,7 @@ function Router() {
       <Route path="/instagram-who-doesnt-follow-me-back" component={InstagramWhoDoesntFollowMeBack} />
       <Route path="/how-to-check-instagram-unfollowers" component={HowToCheckInstagramUnfollowers} />
       <Route path="/instagram-auto-unfollow-explained" component={InstagramAutoUnfollowExplained} />
+      <Route path="/instagram-follower-vs-unfollower-tracker" component={InstagramFollowerVsUnfollowerTracker} />
       <Route path="/blog" component={BlogPage} />
       <Route path="/results" component={Results} />
       <Route path="/about" component={About} />

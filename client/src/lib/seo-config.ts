@@ -156,6 +156,14 @@ export const seoConfig: Record<string, SEOData> = {
     keywords: 'instagram auto unfollow, does instagram unfollow people, automatic follow unfollow instagram, instagram unfollowing people, does instagram randomly unfollow',
     ogTitle: 'Instagram Auto Unfollow Guide - Complete Safety Information',
     ogDescription: 'Understanding Instagram auto unfollowing, third-party tools, and safe tracking methods for your followers.'
+  },
+
+  '/instagram-follower-vs-unfollower-tracker': {
+    title: 'Instagram Follower vs Unfollower Tracker: Complete Comparison Guide 2024',
+    description: 'Discover the key differences between Instagram follower and unfollower trackers. Learn which tracking method delivers better insights for content strategy and audience growth.',
+    keywords: 'instagram follower tracker, instagram unfollower tracker, follower vs unfollower tracking, instagram analytics, social media tracking tools',
+    ogTitle: 'Instagram Follower vs Unfollower Tracker: Which Delivers Better Insights?',
+    ogDescription: 'Compare Instagram tracking methods and discover which approach gives you actionable insights for real audience growth and content optimization.'
   }
 };
 
