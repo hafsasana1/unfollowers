@@ -184,50 +184,208 @@ export const getFullTitle = (path: string): string => {
   return data.title;
 };
 
-// Generate structured data for different page types
+// Comprehensive structured data generator for all page types
 export const generateStructuredData = (path: string) => {
   const data = getSEOData(path);
-  const baseStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": data.title,
-    "description": data.description,
-    "url": getCanonicalUrl(path)
+  const baseUrl = 'https://instaunfollowerstracker.com';
+  const currentDate = '2025-01-26';
+
+  // Base organization schema
+  const organizationSchema = {
+    "@type": "Organization",
+    "name": "Instagram Unfollowers Tracker",
+    "url": baseUrl,
+    "logo": `${baseUrl}/favicon.svg`,
+    "description": "Leading privacy-first Instagram analytics platform for tracking unfollowers, ghost followers, and engagement insights",
+    "foundingDate": "2023",
+    "sameAs": [
+      "https://twitter.com/instagramtracker",
+      "https://instagram.com/instagramtracker"
+    ]
   };
 
-  // Add specific structured data based on page type
-  if (path.includes('blog') || path.includes('how-to')) {
-    return {
-      ...baseStructuredData,
-      "@type": "Article",
-      "headline": data.title,
-      "author": {
-        "@type": "Organization",
-        "name": "Instagram Followers Tracker"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Instagram Followers Tracker"
+  // Base website schema
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Instagram Unfollowers Tracker",
+    "alternateName": ["Unfollowers Tracker", "Instagram Analytics Tool"],
+    "url": baseUrl,
+    "description": "Free and secure Instagram analytics tool for tracking unfollowers, ghost followers, and engagement insights",
+    "inLanguage": "en-US",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${baseUrl}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": organizationSchema
+  };
+
+  // Homepage and tracker pages - SoftwareApplication schema
+  if (path === '/' || path.includes('tracker') || path.includes('ghost') || path.includes('inactive')) {
+    return [
+      websiteSchema,
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Instagram Unfollowers Tracker",
+        "alternateName": ["Unfollowers Tracker", "Instagram Analytics Tool"],
+        "applicationCategory": "SocialNetworkingApplication",
+        "applicationSubCategory": "Social Media Analytics",
+        "operatingSystem": "Web Browser",
+        "browserRequirements": "Requires JavaScript. Compatible with Chrome, Firefox, Safari, Edge",
+        "permissions": "No Instagram login required",
+        "url": getCanonicalUrl(path),
+        "downloadUrl": baseUrl,
+        "screenshot": "https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        "description": data.description,
+        "featureList": [
+          "Track Instagram unfollowers securely",
+          "Detect ghost and inactive followers",
+          "Analyze follower engagement patterns",
+          "No login credentials required",
+          "Privacy-first data processing",
+          "Instant results in seconds",
+          "Free lifetime access",
+          "Mobile-responsive design"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "category": "Free Software"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "1250",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "author": organizationSchema,
+        "publisher": organizationSchema,
+        "datePublished": "2023-01-01",
+        "dateModified": currentDate,
+        "softwareVersion": "2.0"
       }
-    };
+    ];
   }
 
-  if (path.includes('tracker') || path.includes('tool')) {
-    return {
-      ...baseStructuredData,
-      "@type": "SoftwareApplication",
+  // Blog and article pages - Article schema
+  if (path.includes('blog') || path.includes('how-to') || path.includes('who-doesnt') || path.includes('instagram-') || path.includes('check-') || path.includes('auto-unfollow')) {
+    return [
+      websiteSchema,
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": data.title,
+        "description": data.description,
+        "url": getCanonicalUrl(path),
+        "mainEntityOfPage": getCanonicalUrl(path),
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+          "width": 1200,
+          "height": 630
+        },
+        "author": organizationSchema,
+        "publisher": organizationSchema,
+        "datePublished": currentDate,
+        "dateModified": currentDate,
+        "articleSection": "Instagram Analytics",
+        "keywords": data.keywords?.split(', ') || [],
+        "wordCount": 2000,
+        "inLanguage": "en-US"
+      }
+    ];
+  }
+
+  // About page - AboutPage schema
+  if (path === '/about') {
+    return [
+      websiteSchema,
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": data.title,
+        "description": data.description,
+        "url": getCanonicalUrl(path),
+        "mainEntity": {
+          ...organizationSchema,
+          "foundingDate": "2023",
+          "numberOfEmployees": "10-50",
+          "areaServed": "Worldwide",
+          "knowsAbout": ["Instagram Analytics", "Social Media Marketing", "Privacy Protection", "Data Security"]
+        }
+      }
+    ];
+  }
+
+  // Contact page - ContactPage schema
+  if (path === '/contact') {
+    return [
+      websiteSchema,
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": data.title,
+        "description": data.description,
+        "url": getCanonicalUrl(path),
+        "mainEntity": {
+          ...organizationSchema,
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "availableLanguage": ["English"],
+            "areaServed": "Worldwide"
+          }
+        }
+      }
+    ];
+  }
+
+  // Legal pages - WebPage schema
+  if (path.includes('privacy') || path.includes('terms') || path.includes('cookie') || path.includes('disclaimer')) {
+    return [
+      websiteSchema,
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": data.title,
+        "description": data.description,
+        "url": getCanonicalUrl(path),
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Instagram Unfollowers Tracker",
+          "url": baseUrl
+        },
+        "datePublished": currentDate,
+        "dateModified": currentDate,
+        "inLanguage": "en-US"
+      }
+    ];
+  }
+
+  // Default WebPage schema
+  return [
+    websiteSchema,
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
       "name": data.title,
-      "applicationCategory": "SocialNetworkingApplication",
-      "operatingSystem": "Web Browser",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    };
-  }
-
-  return baseStructuredData;
+      "description": data.description,
+      "url": getCanonicalUrl(path),
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Instagram Unfollowers Tracker",
+        "url": baseUrl
+      },
+      "datePublished": currentDate,
+      "dateModified": currentDate,
+      "inLanguage": "en-US"
+    }
+  ];
 };
 
 // Enhanced indexing signals for Google Search Console - FIXES CRAWLED BUT NOT INDEXED

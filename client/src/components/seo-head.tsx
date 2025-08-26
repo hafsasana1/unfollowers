@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'wouter';
-import { getSEOData, getCanonicalUrl } from '@/lib/seo-config';
+import { getSEOData, getCanonicalUrl, generateStructuredData } from '@/lib/seo-config';
 
 interface SEOHeadProps {
   title?: string;
@@ -117,8 +117,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     // Update canonical link - CRITICAL for fixing GSC errors
     updateCanonicalLink(finalCanonical);
 
-    // Add structured data for AI and search engines
-    updateStructuredData(generatePageStructuredData(location, finalTitle, finalDescription, finalCanonical));
+    // Add comprehensive structured data for AI and search engines
+    const structuredDataArray = generatePageStructuredData(location, finalTitle, finalDescription, finalCanonical);
+    updateStructuredData(structuredDataArray);
 
   }, [location, customTitle, customDescription, customCanonical, noindex]);
 
@@ -151,103 +152,26 @@ const updateCanonicalLink = (href: string) => {
   canonical.href = href;
 };
 
-// Helper function to update structured data
+// Helper function to update structured data (supports multiple schemas)
 const updateStructuredData = (data: any) => {
   // Remove existing structured data
   const existingScripts = document.querySelectorAll('script[data-seo-generated="true"]');
   existingScripts.forEach(script => script.remove());
 
-  // Add new structured data
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.setAttribute('data-seo-generated', 'true');
-  script.textContent = JSON.stringify(data, null, 2);
-  document.head.appendChild(script);
+  // Handle both single schema and array of schemas
+  const schemas = Array.isArray(data) ? data : [data];
+  
+  schemas.forEach((schema, index) => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-seo-generated', 'true');
+    script.setAttribute('data-schema-index', index.toString());
+    script.textContent = JSON.stringify(schema, null, 2);
+    document.head.appendChild(script);
+  });
 };
 
-// Generate comprehensive structured data for different page types - FIXES MISSING MAINENTITY ERROR
+// Generate comprehensive structured data for different page types
 const generatePageStructuredData = (path: string, title: string, description: string, url: string) => {
-  const baseData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": title,
-    "description": description,
-    "url": url,
-    "inLanguage": "en-US",
-    "mainEntity": {
-      "@type": "Thing",
-      "name": "Instagram Followers Tracking Service",
-      "description": "Professional Instagram analytics and follower tracking platform"
-    },
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Instagram Unfollowers Tracker",
-      "url": "https://instaunfollowerstracker.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://instaunfollowerstracker.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-  };
-
-  // Tool pages get SoftwareApplication schema
-  if (path.includes('tracker') || path === '/' || path.includes('ghost') || path.includes('inactive')) {
-    return {
-      ...baseData,
-      "@type": "SoftwareApplication",
-      "applicationCategory": "SocialNetworkingApplication",
-      "operatingSystem": "Web Browser",
-      "softwareVersion": "2.0",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      },
-      "featureList": [
-        "Track Instagram unfollowers securely",
-        "Detect ghost and inactive followers", 
-        "No login required",
-        "Privacy-first data processing",
-        "Real-time follower analysis"
-      ],
-      "screenshot": "https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "1250",
-        "bestRating": "5",
-        "worstRating": "1"
-      }
-    };
-  }
-
-  // Blog and how-to pages get Article schema
-  if (path.includes('blog') || path.includes('how-to') || path.includes('who-doesnt')) {
-    return {
-      ...baseData,
-      "@type": "Article",
-      "headline": title,
-      "author": {
-        "@type": "Organization",
-        "name": "Instagram Unfollowers Tracker Team",
-        "url": "https://instaunfollowerstracker.com/about"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Instagram Unfollowers Tracker",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://instaunfollowerstracker.com/favicon.svg"
-        }
-      },
-      "datePublished": "2025-08-21",
-      "dateModified": "2025-08-21",
-      "mainEntityOfPage": url,
-      "image": "https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630"
-    };
-  }
-
-  return baseData;
+  return generateStructuredData(path);
 };
