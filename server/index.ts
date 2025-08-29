@@ -28,6 +28,23 @@ app.use(cors({
   credentials: true
 }));
 
+// HTTPS and www redirect middleware - CRITICAL FOR SEO
+app.use((req, res, next) => {
+  // Force HTTPS in production
+  if (process.env.NODE_ENV === 'production' && req.header('x-forwarded-proto') !== 'https') {
+    return res.redirect(301, `https://${req.header('host')}${req.url}`);
+  }
+  
+  // Force non-www domain
+  if (req.headers.host && req.headers.host.startsWith('www.')) {
+    const protocol = req.header('x-forwarded-proto') || 'https';
+    const newHost = req.headers.host.replace(/^www\./, '');
+    return res.redirect(301, `${protocol}://${newHost}${req.url}`);
+  }
+  
+  next();
+});
+
 // Add caching headers for static assets
 app.use((req, res, next) => {
   if (req.url.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|woff2|woff|ttf|eot)$/)) {

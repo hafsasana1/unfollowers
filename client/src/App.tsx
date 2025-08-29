@@ -27,6 +27,8 @@ import InstagramAutoUnfollowExplained from "@/pages/instagram-auto-unfollow-expl
 import InstagramFollowerVsUnfollowerTracker from "@/pages/instagram-follower-vs-unfollower-tracker";
 import BlogPage from "@/pages/blog";
 import DisclaimerPage from "@/pages/disclaimer";
+import { InstagramAnalyticsPage } from "@/pages/instagram-analytics";
+import { FollowersInsightsPage } from "@/pages/followers-insights";
 
 // Admin pages
 import AdminLogin from "@/pages/admin-login";
@@ -51,6 +53,8 @@ function Router() {
       <Route path="/how-to-check-instagram-unfollowers" component={HowToCheckInstagramUnfollowers} />
       <Route path="/instagram-auto-unfollow-explained" component={InstagramAutoUnfollowExplained} />
       <Route path="/instagram-follower-vs-unfollower-tracker" component={InstagramFollowerVsUnfollowerTracker} />
+      <Route path="/instagram-analytics" component={InstagramAnalyticsPage} />
+      <Route path="/followers-insights" component={FollowersInsightsPage} />
       <Route path="/blog" component={BlogPage} />
       <Route path="/results" component={Results} />
       <Route path="/about" component={About} />

@@ -1,0 +1,31 @@
+# Robots.txt for Instagram Unfollowers Tracker
+# Updated: 2025-01-26
+
+User-agent: *
+Allow: /
+
+# Disallow admin and sensitive paths
+Disallow: /admin/
+Disallow: /api/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /src/
+
+# Allow specific important pages
+Allow: /unfollowers-tracker
+Allow: /ghost-followers  
+Allow: /inactive-followers
+Allow: /instagram-analytics
+Allow: /followers-insights
+Allow: /blog
+Allow: /about
+Allow: /contact
+Allow: /privacy-policy
+Allow: /terms-of-service
+Allow: /help-center
+
+# Crawl-delay to be respectful
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://instaunfollowerstracker.com/sitemap.xml

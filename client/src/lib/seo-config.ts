@@ -164,6 +164,22 @@ export const seoConfig: Record<string, SEOData> = {
     keywords: 'instagram follower tracker, instagram unfollower tracker, follower vs unfollower tracking, instagram analytics, social media tracking tools',
     ogTitle: 'Instagram Follower vs Unfollower Tracker: Which Delivers Better Insights?',
     ogDescription: 'Compare Instagram tracking methods and discover which approach gives you actionable insights for real audience growth and content optimization.'
+  },
+
+  '/instagram-analytics': {
+    title: 'Instagram Analytics Dashboard - Track Performance & Growth Metrics',
+    description: 'Comprehensive Instagram analytics dashboard to track performance, analyze growth, monitor engagement, and optimize your Instagram strategy with detailed insights.',
+    keywords: 'instagram analytics, instagram metrics, instagram performance tracking, instagram insights, social media analytics',
+    ogTitle: 'Instagram Analytics Dashboard - Complete Performance Tracking',
+    ogDescription: 'Track your Instagram performance with comprehensive analytics. Monitor growth, engagement, and optimize your social media strategy.'
+  },
+
+  '/followers-insights': {
+    title: 'Instagram Followers Insights - Deep Audience Analytics & Behavior',
+    description: 'Get deep insights into your Instagram followers behavior, engagement patterns, and growth metrics. Understand your audience like never before with detailed analytics.',
+    keywords: 'instagram followers insights, follower analytics, audience insights, instagram demographics, follower behavior analysis',
+    ogTitle: 'Instagram Followers Insights - Understand Your Audience Better',
+    ogDescription: 'Discover valuable insights about your Instagram followers, behavior patterns, and engagement preferences to optimize your content strategy.'
   }
 };
 
