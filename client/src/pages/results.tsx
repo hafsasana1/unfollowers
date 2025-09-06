@@ -2,6 +2,7 @@ import { Header } from '@/components/header';
 import { StatsDashboard } from '@/components/stats-dashboard';
 import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
+import { BannerAd, InArticleAd } from '@/components/adsense-ad';
 import { ArrowLeft, Download } from 'lucide-react';
 import { Link } from 'wouter';
 
@@ -33,8 +34,14 @@ export default function Results() {
             </Button>
           </div>
           
+          {/* High-value ad before results viewing */}
+          <BannerAd className="mb-6" />
+          
           {/* Results Dashboard */}
           <StatsDashboard />
+          
+          {/* Strategic ad after results for export/share engagement */}
+          <InArticleAd className="mt-8" />
         </div>
       </main>
       

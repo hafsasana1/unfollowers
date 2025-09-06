@@ -7,6 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { FileUpload } from '@/components/file-upload';
 import { StatsDashboard } from '@/components/stats-dashboard';
 import { FAQSection } from '@/components/faq-section';
+import { BannerAd, InArticleAd } from '@/components/adsense-ad';
 import { Users, Shield, Clock, Zap, CheckCircle, TrendingUp } from 'lucide-react';
 import { useState } from 'react';
 
@@ -78,10 +79,19 @@ export function UnfollowersTrackerPage() {
         </div>
       </section>
 
+      {/* High-converting ad before tool usage */}
+      <BannerAd className="bg-white border-b border-gray-100" />
+
       {/* Main Tracker Tool */}
       <div id="tracker-tool">
         <FileUpload onFileUploaded={handleFileUploaded} />
-        {hasUploadedFile && <StatsDashboard />}
+        {hasUploadedFile && (
+          <>
+            {/* Ad after file upload while users engage with results */}
+            <InArticleAd className="bg-gray-50" />
+            <StatsDashboard />
+          </>
+        )}
       </div>
 
       {/* Key Features Section */}
@@ -135,6 +145,9 @@ export function UnfollowersTrackerPage() {
           </div>
         </div>
       </section>
+
+      {/* Strategic ad placement between sections */}
+      <InArticleAd className="bg-gray-50" />
 
       {/* Why Use Our Unfollowers Tracker */}
       <section className="py-20 bg-white">

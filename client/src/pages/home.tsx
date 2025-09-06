@@ -15,6 +15,7 @@ import { Footer } from '@/components/footer';
 import { SEOStructuredData } from '@/components/seo-structured-data';
 import { SEOHead } from '@/components/seo-head';
 import { Button } from '@/components/ui/button';
+import { BannerAd, InArticleAd } from '@/components/adsense-ad';
 import { Rocket, HelpCircle } from 'lucide-react';
 
 export default function Home() {
@@ -52,6 +53,10 @@ export default function Home() {
       <Header />
       <main role="main">
         <HeroSection />
+        
+        {/* High-visibility banner ad after hero section */}
+        <BannerAd className="bg-gray-50" />
+        
         <section id="upload" aria-labelledby="upload-heading">
           <h2 id="upload-heading" className="sr-only">Upload Instagram Data</h2>
           <FileUpload onFileUploaded={handleFileUploaded} />
@@ -69,6 +74,9 @@ export default function Home() {
           <h2 id="demo-heading" className="sr-only">Live Demo</h2>
           <LiveDemo />
         </section>
+        
+        {/* In-content ad between demo and how-it-works for engagement */}
+        <InArticleAd className="bg-white" />
         
         <section id="how-it-works" aria-labelledby="how-it-works-heading">
           <HowItWorks />
@@ -90,6 +98,9 @@ export default function Home() {
         <section id="blog" aria-labelledby="blog-heading">
           <BlogSection />
         </section>
+        
+        {/* Strategic ad placement before final content sections */}
+        <InArticleAd className="bg-gray-50" />
         
         <section id="seo-content" aria-labelledby="seo-content-heading">
           <h2 id="seo-content-heading" className="sr-only">Instagram Analytics Information</h2>
