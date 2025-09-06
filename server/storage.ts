@@ -7,11 +7,7 @@ import {
 } from "@shared/schema";
 import { db } from "./db";
 import { eq, and, gte, desc, asc } from "drizzle-orm";
-// import bcrypt from "bcryptjs"; // Will install later
-const bcrypt = {
-  hash: async (password: string, salt: number) => password + "_hashed",
-  compare: async (password: string, hash: string) => password + "_hashed" === hash
-};
+import bcrypt from "bcryptjs";
 import { randomUUID } from "crypto";
 
 // Storage interface with all CRUD operations
