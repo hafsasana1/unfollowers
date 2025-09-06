@@ -51,13 +51,13 @@ export default function AdminAdSense() {
   React.useEffect(() => {
     if (settings) {
       setFormData({
-        publisherId: settings.publisherId || "",
-        autoAds: settings.autoAds || false,
-        headerAdCode: settings.headerAdCode || "",
-        sidebarAdCode: settings.sidebarAdCode || "",
-        contentAdCode: settings.contentAdCode || "",
-        footerAdCode: settings.footerAdCode || "",
-        isActive: settings.isActive || false,
+        publisherId: (settings as any).publisherId || "",
+        autoAds: (settings as any).autoAds || false,
+        headerAdCode: (settings as any).headerAdCode || "",
+        sidebarAdCode: (settings as any).sidebarAdCode || "",
+        contentAdCode: (settings as any).contentAdCode || "",
+        footerAdCode: (settings as any).footerAdCode || "",
+        isActive: (settings as any).isActive || false,
       });
     }
   }, [settings]);

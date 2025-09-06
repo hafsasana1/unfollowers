@@ -31,9 +31,9 @@ export function AdSenseAd({
             window.adsbygoogle.push({});
           }
         }
-      } catch (error) {
+      } catch (error: any) {
         // Silently handle AdSense initialization errors to avoid console spam
-        if (error.message && !error.message.includes('already have ads')) {
+        if (error?.message && !error.message.includes('already have ads')) {
           console.warn('AdSense load issue:', error);
         }
       }
