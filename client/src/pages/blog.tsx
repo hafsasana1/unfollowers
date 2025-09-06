@@ -3,6 +3,7 @@ import { Footer } from '@/components/footer';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { BannerAd, InArticleAd } from '@/components/adsense-ad';
 import { Calendar, Clock, User } from 'lucide-react';
 import { mockBlogArticles } from '@/lib/mock-data';
 import { Link } from 'wouter';
@@ -67,6 +68,9 @@ export default function BlogPage() {
           </div>
         </section>
 
+        {/* High-visibility banner ad after hero */}
+        <BannerAd className="bg-white" />
+
         {/* Blog Articles */}
         <section className="py-10 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,7 +84,7 @@ export default function BlogPage() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {mockBlogArticles.map((article) => (
+              {mockBlogArticles.map((article, index) => (
                 <article key={article.id} className="group">
                   <Link href={`/${article.slug}`}>
                     <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer border-0 shadow-md">
@@ -127,6 +131,13 @@ export default function BlogPage() {
                       </CardContent>
                     </Card>
                   </Link>
+                  
+                  {/* Add strategic ad after every 3rd article */}
+                  {(index + 1) % 3 === 0 && (
+                    <div className="col-span-full my-6">
+                      <InArticleAd />
+                    </div>
+                  )}
                 </article>
               ))}
             </div>
@@ -151,6 +162,9 @@ export default function BlogPage() {
             </div>
           </div>
         </section>
+        
+        {/* Final engagement ad before footer */}
+        <InArticleAd className="bg-gray-50" />
       </main>
 
       <Footer />

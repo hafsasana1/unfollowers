@@ -5,6 +5,7 @@ import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { BannerAd, InArticleAd } from '@/components/adsense-ad';
 import { Shield, Users, Zap, Heart, Lock, Gift, Award, Target, Eye, CheckCircle, TrendingUp, Globe, Clock, Database, Code, UserCheck } from 'lucide-react';
 import { Link } from 'wouter';
 

@@ -3,6 +3,7 @@ import { Footer } from '@/components/footer';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { BannerAd, InArticleAd } from '@/components/adsense-ad';
 import { Download, Upload, BarChart3, Shield, Clock, CheckCircle, ArrowRight, Instagram, FileArchive, ExternalLink, Eye } from 'lucide-react';
 import { Link } from 'wouter';
 

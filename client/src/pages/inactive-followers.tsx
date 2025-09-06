@@ -7,6 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { FileUpload } from '@/components/file-upload';
 import { StatsDashboard } from '@/components/stats-dashboard';
+import { BannerAd, InArticleAd } from '@/components/adsense-ad';
 import { Users, UserX, Shield, Clock, Zap, CheckCircle, TrendingUp, Eye, Activity, BarChart3, UserCheck } from 'lucide-react';
 import { useState } from 'react';
 
