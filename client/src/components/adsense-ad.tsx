@@ -35,10 +35,14 @@ export function AdSenseAd({
   }, []);
 
   return (
-    <div className={`adsense-container ${className}`} style={style}>
+    <div className={`adsense-container w-full ${className}`} style={style}>
       <ins 
         className="adsbygoogle"
-        style={{ display: 'block' }}
+        style={{ 
+          display: 'block',
+          width: '100%',
+          textAlign: 'center'
+        }}
         data-ad-client="ca-pub-6786049558167016"
         data-ad-slot={adSlot}
         data-ad-format={adFormat}
@@ -52,13 +56,19 @@ export function AdSenseAd({
 // Component for in-article ads with better mobile spacing
 export function InArticleAd({ className = "" }: { className?: string }) {
   return (
-    <div className={`my-8 flex justify-center ${className}`}>
-      <AdSenseAd 
-        adSlot="8985801241"
-        adFormat="fluid"
-        className="w-full max-w-full"
-        style={{ minHeight: '200px' }}
-      />
+    <div className={`my-6 sm:my-8 flex justify-center ${className}`}>
+      <div className="w-full max-w-4xl px-4">
+        <div className="text-xs text-gray-500 text-center mb-2">Advertisement</div>
+        <AdSenseAd 
+          adSlot="8985801241"
+          adFormat="auto"
+          className="w-full"
+          style={{ 
+            minHeight: '250px',
+            maxHeight: '300px'
+          }}
+        />
+      </div>
     </div>
   );
 }
@@ -66,13 +76,18 @@ export function InArticleAd({ className = "" }: { className?: string }) {
 // Component for banner ads optimized for mobile
 export function BannerAd({ className = "" }: { className?: string }) {
   return (
-    <div className={`py-4 flex justify-center ${className}`}>
-      <AdSenseAd 
-        adSlot="8985801241"
-        adFormat="auto"
-        className="w-full max-w-full"
-        style={{ minHeight: '100px' }}
-      />
+    <div className={`py-3 sm:py-4 flex justify-center ${className}`}>
+      <div className="w-full max-w-7xl px-4">
+        <AdSenseAd 
+          adSlot="8985801241"
+          adFormat="auto"
+          className="w-full"
+          style={{ 
+            minHeight: '80px',
+            maxHeight: '120px'
+          }}
+        />
+      </div>
     </div>
   );
 }
