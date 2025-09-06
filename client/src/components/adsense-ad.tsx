@@ -22,16 +22,24 @@ export function AdSenseAd({
   responsive = true 
 }: AdSenseAdProps) {
   useEffect(() => {
-    try {
-      // Initialize adsbygoogle array if it doesn't exist
-      if (typeof window !== 'undefined') {
-        window.adsbygoogle = window.adsbygoogle || [];
-        // Push the ad configuration
-        window.adsbygoogle.push({});
+    const timer = setTimeout(() => {
+      try {
+        if (typeof window !== 'undefined') {
+          window.adsbygoogle = window.adsbygoogle || [];
+          // Only push if the ad hasn't been initialized yet
+          if (window.adsbygoogle) {
+            window.adsbygoogle.push({});
+          }
+        }
+      } catch (error) {
+        // Silently handle AdSense initialization errors to avoid console spam
+        if (error.message && !error.message.includes('already have ads')) {
+          console.warn('AdSense load issue:', error);
+        }
       }
-    } catch (error) {
-      console.error('AdSense initialization error:', error);
-    }
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -41,7 +49,8 @@ export function AdSenseAd({
         style={{ 
           display: 'block',
           width: '100%',
-          textAlign: 'center'
+          textAlign: 'center',
+          minHeight: '100px'
         }}
         data-ad-client="ca-pub-6786049558167016"
         data-ad-slot={adSlot}
