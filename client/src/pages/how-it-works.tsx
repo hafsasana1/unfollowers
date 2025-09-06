@@ -34,6 +34,9 @@ export function HowItWorksPage() {
         </div>
       </section>
 
+      {/* Banner ad after hero section */}
+      <BannerAd className="bg-white" />
+
       {/* Step by Step Process */}
       <section className="py-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -220,6 +223,9 @@ export function HowItWorksPage() {
           </div>
         </div>
       </section>
+
+      {/* Strategic ad between sections */}
+      <InArticleAd className="bg-gray-50" />
 
       {/* Why This Method Works */}
       <section className="py-12 bg-gray-50">
